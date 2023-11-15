@@ -20,7 +20,7 @@
       </div>
     </nav>
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
-      <div class="fixed inset-0 z-50" />
+      <div class="bg-white fill-transparent fixed inset-0 z-50" />
       <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <NuxtLink to="#" class="-m-1.5 p-1.5">
@@ -36,9 +36,6 @@
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
               <NuxtLink v-for="item in navigation" :key="item.name" :to="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</NuxtLink>
-            </div>
-            <div class="py-6">
-              <NuxtLink to="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</NuxtLink>
             </div>
           </div>
         </div>
