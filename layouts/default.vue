@@ -1,5 +1,5 @@
 <template>
-  <div class="main-layout bg-green-200">
+  <div class="main-layout bg-emerald-200">
     <DefaultHeader />
     <slot></slot>
   </div>
