@@ -9,7 +9,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             allComponents: [
                 {
                     label: 'Base Button',
-                    component: 'BaseButton',
+                    component: 'button',
                     route: '/docs/components/buttons/base-button',
                     props: [
                         {
@@ -18,9 +18,9 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             bind: { variant: 'primary' }
                         },
                         {
-                            label: 'Outlined Primary',
-                            route: '/docs/components/buttons/base-button/outlined-primary',
-                            bind: { variant: 'outlined-primary' }
+                            label: 'Outline Primary',
+                            route: '/docs/components/buttons/base-button/outline-primary',
+                            bind: { variant: 'outline-primary' }
                         },
                         {
                             label: 'Success',
@@ -28,9 +28,9 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             bind: { variant: 'success' }
                         },
                         {
-                            label: 'Outlined Success',
-                            route: '/docs/components/buttons/base-button/outlined-success',
-                            bind: { variant: 'outlined-success' }
+                            label: 'Outline Success',
+                            route: '/docs/components/buttons/base-button/outline-success',
+                            bind: { variant: 'outline-success' }
                         },
                         {
                             label: 'Danger',
@@ -38,9 +38,9 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             bind: { variant: 'danger' }
                         },
                         {
-                            label: 'Outlined Danger',
-                            route: '/docs/components/buttons/base-button/outlined-danger',
-                            bind: { variant: 'outlined-danger' }
+                            label: 'Outline Danger',
+                            route: '/docs/components/buttons/base-button/outline-danger',
+                            bind: { variant: 'outline-danger' }
                         },
                         {
                             label: 'Dark',
@@ -48,9 +48,9 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             bind: { variant: 'dark' }
                         },
                         {
-                            label: 'Outlined Dark',
-                            route: '/docs/components/buttons/base-button/outlined-dark',
-                            bind: { variant: 'outlined-dark' }
+                            label: 'Outline Dark',
+                            route: '/docs/components/buttons/base-button/outline-dark',
+                            bind: { variant: 'outline-dark' }
                         },
                     ]
                 }
