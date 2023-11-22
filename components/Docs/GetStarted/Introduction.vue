@@ -1,30 +1,37 @@
 <template>
-  <section>
-    <div class="content ml-2">
-      <PageSubTitle title="Introduction" hash="introduction" />
-      <p class="">
-        Vuetage is a library of custom Vue components designed to simplify and enhance web development experience to frontend developers. This library is a open source code where anyone with good intentions can contribute with new components and fix possible bugs.
-      </p>
-      <img class="mt-5 mx-auto" src="https://i.imgur.com/AjWJlr9.png" alt="vuetage">
-      <div class="flex gap-3 justify-center mt-4">
-        <a href="https://npm.im/vuetage">
-          <img src="https://badgen.net/npm/v/vuetage?color=blue">
-        </a>
-        <a href="https://npm.im/vuetage">
-          <img src="https://badgen.net/npm/dw/vuetage?color=blue">
-        </a>
-        <a href="https://npm.im/vuetage">
-          <img src="https://badgen.net/npm/types/tslib">
-        </a>
-        <a href="https://bundlephobia.com/result?p=vuetage">
-          <img src="https://badgen.net/bundlephobia/minzip/vuetage?color=blue">
-        </a>
-        <a href="https://bundlephobia.com/result?p=vuetage">
-          <img src="https://badgen.net/npm/license/vuetage">
-        </a>
-      </div>
+  <section class="introduction">
+    <PageSubTitle title="Introduction" hash="introduction" />
+    <p>
+      Vuetage is a library of custom Vue components designed to simplify and enhance web development experience to frontend developers. This library is a open source code where anyone with good intentions can contribute with new components and fix possible bugs.
+    </p>
+    <img class="mt-5 mx-auto" src="https://i.imgur.com/AjWJlr9.png" alt="vuetage">
+    <div class="flex gap-3 justify-center mt-4">
+      <a href="https://npm.im/vuetage">
+        <img src="https://badgen.net/npm/v/vuetage?color=blue">
+      </a>
+      <a href="https://npm.im/vuetage">
+        <img src="https://badgen.net/npm/dw/vuetage?color=blue">
+      </a>
+      <a href="https://npm.im/vuetage">
+        <img src="https://badgen.net/npm/types/tslib">
+      </a>
+      <a href="https://bundlephobia.com/result?p=vuetage">
+        <img src="https://badgen.net/bundlephobia/minzip/vuetage?color=blue">
+      </a>
+      <a href="https://bundlephobia.com/result?p=vuetage">
+        <img src="https://badgen.net/npm/license/vuetage">
+      </a>
     </div>
+  </section>
 
+  <section class="installation mt-10">
+    <PageSubTitle class="mt-4" title="Installation" hash="installation" />
+
+    <p>
+      You can install Vuetage library using your package manager like show above.
+    </p>
+
+    <CodeWriter class="mt-2" :code-instructions="installationInstructions"></CodeWriter>
   </section>
 </template>
 
@@ -33,4 +40,11 @@
 </style>
 <script setup lang="ts">
 import PageSubTitle from "~/components/Docs/Page/PageSubTitle.vue";
+import CodeWriter from "~/components/CodeWriter.vue"
+
+const installationInstructions = [
+  { tab: 'npm', code: 'npm install --save-dev vuetage' },
+  { tab: 'yarn', code: 'yarn add -D vuetage' },
+  { tab: 'pnpm', code: 'pnpm add -D vuetage' }
+];
 </script>

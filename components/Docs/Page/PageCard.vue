@@ -1,7 +1,7 @@
 <template>
   <div class="mx-3 rounded-lg w-full bg-slate-50">
     <h1 class="capitalize text-center mt-2 italic font-semibold">{{ title }}</h1>
-    <div class="m-5">
+    <div class="m-5 ml-8">
       <slot></slot>
     </div>
   </div>
