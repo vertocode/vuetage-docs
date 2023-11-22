@@ -13,43 +13,74 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     props: [
                         {
                             label: 'Primary',
-                            route: '/docs/components/buttons/base-button/primary',
+                            hash: 'primary',
                             bind: { variant: 'primary' }
                         },
                         {
                             label: 'Outline Primary',
-                            route: '/docs/components/buttons/base-button/outline-primary',
+                            hash: 'outline-primary',
                             bind: { variant: 'outline-primary' }
                         },
                         {
                             label: 'Success',
-                            route: '/docs/components/buttons/base-button/success',
+                            hash: 'success',
                             bind: { variant: 'success' }
                         },
                         {
                             label: 'Outline Success',
-                            route: '/docs/components/buttons/base-button/outline-success',
+                            hash: 'outline-success',
                             bind: { variant: 'outline-success' }
                         },
                         {
                             label: 'Danger',
-                            route: '/docs/components/buttons/base-button/danger',
+                            hash: 'danger',
                             bind: { variant: 'danger' }
                         },
                         {
                             label: 'Outline Danger',
-                            route: '/docs/components/buttons/base-button/outline-danger',
+                            hash: 'outline-danger',
                             bind: { variant: 'outline-danger' }
                         },
                         {
                             label: 'Dark',
-                            route: '/docs/components/buttons/base-button/dark',
+                            hash: 'dark',
                             bind: { variant: 'dark' }
                         },
                         {
                             label: 'Outline Dark',
-                            route: '/docs/components/buttons/base-button/outline-dark',
+                            hash: 'outline-dark',
                             bind: { variant: 'outline-dark' }
+                        },
+                        {
+                            label: 'Custom Style',
+                            hash: 'custom-style',
+                            bind: {
+                                variant: '',
+                                customStyle: 'color: yellow; border-radius: 0.4em; background-color: purple;'
+                            }
+                        },
+                        {
+                            label: 'Disabled',
+                            hash: 'disabled',
+                            bind: {
+                                variant: 'primary',
+                                disabled: true
+                            }
+                        },
+                        {
+                            label: 'Loading',
+                            hash: 'loading',
+                            bind: {
+                                variant: 'primary',
+                                loading: true
+                            }
+                        },
+                        {
+                            label: 'With Icon',
+                            hash: 'with-icon',
+                            bind: {
+                                leftIcon: 'fa fa-check',
+                            }
                         },
                     ]
                 }
