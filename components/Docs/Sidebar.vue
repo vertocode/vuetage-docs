@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <div
-        class="flex flex-col h-screen p-3 bg-white shadow whitespace-nowrap"
+        class="flex flex-col h-screen p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg"
     >
       <div class="space-y-3">
         <NuxtLink to="/docs/get-started">

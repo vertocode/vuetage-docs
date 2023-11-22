@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <h1>You start here</h1>
-  </div>
+  <PageCard title="Get Started">
+    <Introduction />
+  </PageCard>
 </template>
 
 <script setup lang="ts">
+import Introduction from "~/components/Docs/GetStarted/Introduction.vue";
+import PageCard from '~/components/Docs/Page/PageCard.vue'
 </script>

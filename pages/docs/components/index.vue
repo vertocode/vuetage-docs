@@ -1,7 +1,7 @@
 <template>
   <div class="mx-4 flex flex-wrap gap-3 container">
     <div class="max-w-screen-sm">
-      <div class="cursor-pointer hover:bg-green-100 w-full px-4 py-5 bg-white rounded-lg shadow" v-for="component in allComponents" :key="component.componentName">
+      <div class="cursor-pointer hover:bg-green-100 w-full px-4 py-5 bg-slate-50 rounded-lg shadow" v-for="component in allComponents" :key="component.componentName">
         <NuxtLink :to="component.route">
           <div class="text-lg text-center">
             <h3 class="text-gray-500">
