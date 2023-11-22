@@ -1,4 +1,3 @@
-
 export const useComponentDataStore = () => useState('componentsData', () => {
     const items = [
         {
@@ -9,7 +8,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             allComponents: [
                 {
                     label: 'Base Button',
-                    component: 'button',
+                    componentName: 'BaseButton',
                     route: '/docs/components/buttons/base-button',
                     props: [
                         {
