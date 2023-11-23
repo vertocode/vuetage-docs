@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetage']
   },
+  modules: [
+    'nuxt-particles'
+  ],
   plugins: [
     '~/plugins/fontawesome.ts'
   ],
