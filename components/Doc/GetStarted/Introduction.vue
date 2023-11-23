@@ -1,6 +1,6 @@
 <template>
   <section class="introduction">
-    <PageSubTitle title="Introduction" hash="introduction" />
+    <DocPageSubTitle title="Introduction" hash="introduction" />
     <p>
       Vuetage is a library of custom Vue components designed to simplify and enhance web development experience to frontend developers. This library is a open source code where anyone with good intentions can contribute with new components and fix possible bugs.
     </p>
@@ -25,7 +25,7 @@
   </section>
 
   <section class="installation mt-10">
-    <PageSubTitle class="mt-4" title="Installation" hash="installation" />
+    <DocPageSubTitle class="mt-4" title="Installation" hash="installation" />
 
     <p>
       You can install Vuetage library using your package manager like show above.
@@ -35,12 +35,7 @@
   </section>
 </template>
 
-<style>
-
-</style>
 <script setup lang="ts">
-import PageSubTitle from "~/components/Docs/Page/PageSubTitle.vue";
-import CodeWriter from "~/components/CodeWriter.vue"
 
 const installationInstructions = [
   { tab: 'npm', code: 'npm install --save-dev vuetage' },

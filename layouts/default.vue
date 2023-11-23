@@ -1,13 +1,9 @@
 <template>
   <div class="main-layout bg-emerald-200">
-    <DefaultHeader />
+    <HeaderDefaultHeader />
     <slot></slot>
   </div>
 </template>
-
-<script setup lang="ts">
-import DefaultHeader from "~/components/Header/DefaultHeader.vue"
-</script>
 
 <style lang="scss">
 .main-layout {

@@ -32,7 +32,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import DocCard from '~/components/Docs/DocCard.vue';
-</script>
