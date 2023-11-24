@@ -18,7 +18,8 @@
           <div>
             <p class="p-5 bg-black text-left text-white rounded-md">
               <code class="text-gray-400">
-                <slot>{{ code }}</slot>
+                <slot v-if="$slots.default"></slot>
+                <pre v-else v-html="code"></pre>
               </code>
             </p>
           </div>

@@ -48,8 +48,16 @@
 
     <h3 class="mt-3 font-semibold">Full Example: </h3>
 
-    <CodeWriter>
-      <pre v-html="formattedExample"></pre>
+    <CodeWriter :code-instructions="[
+        {
+          tab: 'Composition API',
+          code: formattedCompositionAPIExample
+        },
+        {
+          tab: 'Options API',
+          code: formattedOptionsAPIExample
+        }
+    ]">
     </CodeWriter>
   </section>
 </template>
@@ -62,7 +70,7 @@ const installationInstructions = [
   { tab: 'pnpm', code: 'pnpm add -D vuetage' }
 ]
 
-const fullExample = `<template>
+const fullExampleCompositionAPI = `<template>
   <BaseButton variant="success" :loading="isLoading" :disabled="isDisabled">
     Pay
   </BaseButton>
@@ -77,7 +85,32 @@ const isDisabled = ref(false)
 &lt;/script&gt;
 `;
 
-const formattedExample = fullExample.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const fullExampleOptionsAPI = `<template>
+  <BaseButton variant="success" :loading="isLoading" :disabled="isDisabled">
+    Pay
+  </BaseButton>
+</template>
+
+<script>
+import { BaseButton } from 'vuetage'
+
+export default {
+  components: {
+    BaseButton
+  },
+  data() {
+    return {
+      isLoading: false,
+      isDisabled: false
+    }
+  }
+}
+&lt;/script&gt;
+`
+
+
+const formattedCompositionAPIExample = fullExampleCompositionAPI.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const formattedOptionsAPIExample = fullExampleOptionsAPI.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 </script>
 
