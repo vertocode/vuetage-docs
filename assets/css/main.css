@@ -81,8 +81,5 @@
         @apply ring ring-primary-lighter;
     }
 
-    input:invalid.invalid,
-    textarea:invalid.invalid {
-        @apply ring ring-danger-light dark:ring-danger;
-    }
+    input:invalid.invalid
 }

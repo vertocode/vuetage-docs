@@ -31,7 +31,26 @@
       You can install Vuetage library using your package manager like show above.
     </p>
 
-    <CodeWriter class="mt-2" :code-instructions="installationInstructions"></CodeWriter>
+    <CodeWriter
+        class="mt-2"
+        :code-instructions="installationInstructions"
+    ></CodeWriter>
+  </section>
+
+  <section class="usage mt-10">
+    <DocPageSubTitle class="mt-4" title="Usage" hash="usage"/>
+
+    <p>
+      We can easily use the components just importing them. For example, to use BaseButton component we can import as show below.
+    </p>
+
+    <CodeWriter>import { BaseButton } from 'vuetage'</CodeWriter>
+
+    <h3 class="mt-3 font-semibold">Full Example: </h3>
+
+    <CodeWriter>
+      <pre v-html="formattedExample"></pre>
+    </CodeWriter>
   </section>
 </template>
 
@@ -41,5 +60,24 @@ const installationInstructions = [
   { tab: 'npm', code: 'npm install --save-dev vuetage' },
   { tab: 'yarn', code: 'yarn add -D vuetage' },
   { tab: 'pnpm', code: 'pnpm add -D vuetage' }
-];
+]
+
+const fullExample = `<template>
+  <BaseButton variant="success" :loading="isLoading" :disabled="isDisabled">
+    Pay
+  </BaseButton>
+</template>
+
+&lt;script setup lang="ts"&gt
+import { ref } from 'vue'
+import { BaseButton } from 'vuetage'
+
+const isLoading = ref(false)
+const isDisabled = ref(false)
+&lt;/script&gt;
+`;
+
+const formattedExample = fullExample.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
 </script>
+
