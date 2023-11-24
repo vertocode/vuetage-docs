@@ -59,10 +59,15 @@
         }
     ]">
     </CodeWriter>
+
+    <h3 class="mt-3 font-semibold">Result: </h3>
+
+    <BaseButton variant="success">Pay</BaseButton>
   </section>
 </template>
 
 <script setup lang="ts">
+import { BaseButton } from 'vuetage'
 
 const installationInstructions = [
   { tab: 'npm', code: 'npm install --save-dev vuetage' },
