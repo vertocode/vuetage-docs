@@ -41,6 +41,7 @@ definePageMeta({
 
   pre {
     background-color: #f8f8f8;
+    margin-bottom: 2em;
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 4px;
