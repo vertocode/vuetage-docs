@@ -23,3 +23,11 @@
 </template>
 <script setup lang="ts">
 </script>
+
+<style lang="scss">
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+</style>

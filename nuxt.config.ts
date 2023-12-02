@@ -15,8 +15,19 @@ export default defineNuxtConfig({
     transpile: ['vuetage']
   },
   modules: [
-    'nuxt-particles'
+    'nuxt-particles',
+    '@nuxt/content'
   ],
+  content: {
+    markdown: {
+      tags: {
+        p: 'P'
+      }
+    },
+    highlight: {
+      theme: 'github-light'
+    },
+  },
   plugins: [
     '~/plugins/fontawesome.ts'
   ],
