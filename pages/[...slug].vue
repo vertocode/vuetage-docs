@@ -1,5 +1,6 @@
 <template>
   <main class="mx-10 mb-20">
+
     <ContentDoc class="prose prose-light"/>
   </main>
 </template>
