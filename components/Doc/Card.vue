@@ -9,11 +9,16 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
 
 interface Props {
   route: string;
 }
 
-defineProps<Props>();
+defineProps<Props>()
 </script>
+
+<style lang="scss" scoped>
+a {
+  height: max-content;
+}
+</style>

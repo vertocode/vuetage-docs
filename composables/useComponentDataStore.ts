@@ -1,5 +1,15 @@
+import type { ComponentData } from '~/typing/Component'
+
+interface ComponentDataStore {
+    category: string
+    route: string
+    label: string
+    showComponents: boolean
+    allComponents: ComponentData[]
+}
+
 export const useComponentDataStore = () => useState('componentsData', () => {
-    const items = [
+    const items: ComponentDataStore[] = [
         {
             category: 'button',
             route: '/docs/components/buttons',
@@ -9,7 +19,8 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                 {
                     label: 'Base Button',
                     componentName: 'BaseButton',
-                    route: '/docs/components/buttons/base-button',
+                    description: 'The "BaseButton" is a versatile button component that serves as a foundation for creating different button styles. It includes primary, outlined, success, danger, dark-themed, and custom-styled buttons. You can customize the size, disable the button, add a loading indicator, and include an icon.',
+                    route: '/docs/components/base-button',
                     props: [
                         {
                             label: 'Primary',
@@ -73,6 +84,27 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             bind: {
                                 variant: 'primary',
                                 loading: true
+                            }
+                        },
+                        {
+                            label: 'Small',
+                            hash: 'small',
+                            bind: {
+                                size: 'small'
+                            }
+                        },
+                        {
+                            label: 'Medium',
+                            hash: 'medium',
+                            bind: {
+                                size: 'medium'
+                            }
+                        },
+                        {
+                            label: 'Large',
+                            hash: 'large',
+                            bind: {
+                                size: 'large'
                             }
                         },
                         {

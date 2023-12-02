@@ -27,24 +27,23 @@
         </NuxtLink>
 
         <div class="flex-1">
-          <ul class="pt-2 pb-4 space-y-1 text-sm">
-            <li class="rounded-sm" v-for="item in componentDataStore.items" :key="item.category">
+          <ul class="pb-4 text-sm">
+            <li class="rounded-sm" v-for="item in allComponents" :key="item.label">
               <NuxtLink
                   :to="item.route"
-                  class="flex items-center p-2 space-x-3 rounded-md overflow-hidden"
+                  class="flex items-center pl-2 space-x-3 rounded-md overflow-hidden"
               >
-                <span>
+                <span class="font-bold">
                   {{ item.label }}
-                  <font-awesome-icon :icon="['fas', 'caret-down']" v-if="!item.showComponents"/>
                 </span>
-                <ul v-if="item.showComponents">
-                  <li class="opacity-50 items-center break-all" v-for="component in item.allComponents" :key="component.label">
-                    <NuxtLink :to="component.route">
-                      {{ component.label }}
+              </NuxtLink>
+                <ul v-if="$route.path.includes(item.route)">
+                  <li class="pl-5 font-medium opacity-50 items-center break-all" v-for="props in item.props" :key="props.hash">
+                    <NuxtLink :to="`${item.route}#${props.hash}`">
+                      {{ props.label }}
                     </NuxtLink>
                   </li>
                 </ul>
-              </NuxtLink>
             </li>
           </ul>
         </div>
@@ -64,6 +63,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { ComponentData } from '~/typing/Component'
+
 const componentDataStore = useComponentDataStore()
+
+const allComponents = computed((): ComponentData[] => {
+  return componentDataStore.value.items.flatMap(category => category.allComponents)
+})
+console.log(allComponents.value)
 </script>
