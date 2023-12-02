@@ -26,6 +26,7 @@
 
 <style lang="scss">
 body {
+  overflow-y: hidden;
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #333;
