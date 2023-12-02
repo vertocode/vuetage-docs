@@ -1,6 +1,10 @@
 <template>
   <main class="mx-10 mb-20 nuxt-content">
-    <ContentDoc class="prose prose-light"/>
+    <ContentDoc class="prose prose-light">
+      <template #not-found>
+        <NotFound></NotFound>
+      </template>
+    </ContentDoc>
   </main>
 </template>
 
