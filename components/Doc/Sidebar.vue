@@ -39,9 +39,9 @@
               </NuxtLink>
                 <ul v-if="$route.path.includes(item.route)">
                   <li class="pl-5 font-medium opacity-50 items-center break-all" v-for="props in item.props" :key="props.hash">
-                    <NuxtLink :to="`${item.route}#${props.hash}`">
+                    <a :href="`${item.route}#${props.hash}`">
                       {{ props.label }}
-                    </NuxtLink>
+                    </a>
                   </li>
                 </ul>
             </li>

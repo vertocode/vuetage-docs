@@ -1,5 +1,5 @@
 <template>
-  <main class="mx-10 mb-20 nuxt-content">
+  <main class="mx-10 mb-20 nuxt-content" ref="scrollDiv">
     <ContentDoc class="prose prose-light">
       <template #not-found>
         <NotFound></NotFound>
@@ -31,16 +31,13 @@ definePageMeta({
     font-size: 2em;
     color: #555;
     margin-bottom: 0.5em;
+    text-decoration: underline;
   }
 
   h3 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #777;
     margin-bottom: 0.5em;
-  }
-
-  p {
-    margin-bottom: 2em;
   }
 
   pre {
@@ -63,8 +60,38 @@ definePageMeta({
     margin: 1em 0;
   }
 
+  blockquote {
+    border-left: 2px solid #6a737d;
+    padding-left: 10px;
+    margin: 10px 0;
+    color: #6a737d;
+  }
+
   a {
+    color: #236251;
     text-decoration: none;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 0.25em;
+    color: #333;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
 }
 </style>

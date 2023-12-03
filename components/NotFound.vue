@@ -3,7 +3,7 @@
     <div class="text-center opacity-0 transform -translate-y-10 transition-transform duration-500">
       <h1 class="text-6xl font-bold text-gray-800 mb-4">404</h1>
       <p class="text-gray-600 mb-4">Page not found</p>
-      <BaseButton variant="danger">Go back home</BaseButton>
+      <BaseButton variant="danger" @click="$router.push('/')">Go back home</BaseButton>
     </div>
   </div>
 </template>

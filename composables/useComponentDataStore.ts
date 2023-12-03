@@ -23,51 +23,34 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     route: '/docs/components/base-button',
                     props: [
                         {
-                            label: 'Primary',
-                            hash: 'primary',
-                            bind: { variant: 'primary' }
-                        },
-                        {
-                            label: 'Outline Primary',
-                            hash: 'outline-primary',
-                            bind: { variant: 'outline-primary' }
-                        },
-                        {
-                            label: 'Success',
-                            hash: 'success',
-                            bind: { variant: 'success' }
-                        },
-                        {
-                            label: 'Outline Success',
-                            hash: 'outline-success',
-                            bind: { variant: 'outline-success' }
-                        },
-                        {
-                            label: 'Danger',
-                            hash: 'danger',
-                            bind: { variant: 'danger' }
-                        },
-                        {
-                            label: 'Outline Danger',
-                            hash: 'outline-danger',
-                            bind: { variant: 'outline-danger' }
-                        },
-                        {
-                            label: 'Dark',
-                            hash: 'dark',
-                            bind: { variant: 'dark' }
-                        },
-                        {
-                            label: 'Outline Dark',
-                            hash: 'outline-dark',
-                            bind: { variant: 'outline-dark' }
+                            label: 'Variant',
+                            hash: 'variant',
+                            bind: {
+                                variant:
+                                    'primary'
+                                ||  'outline-primary'
+                                ||  'success'
+                                ||  'outline-success'
+                                ||  'danger'
+                                ||  'outline-danger'
+                                ||  'dark'
+                                ||  'outline-dark'
+                            }
                         },
                         {
                             label: 'Custom Style',
                             hash: 'custom-style',
                             bind: {
                                 variant: '',
-                                customStyle: 'color: yellow; border-radius: 0.4em; background-color: purple;'
+                                customStyle: 'color: blue; background-color: yellow; border-radius: 0.2em;'
+                            }
+                        },
+                        {
+                            label: 'Custom Class',
+                            hash: 'custom-class',
+                            bind: {
+                                variant: '',
+                                customClass: 'custom-button'
                             }
                         },
                         {
@@ -87,24 +70,10 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             }
                         },
                         {
-                            label: 'Small',
-                            hash: 'small',
+                            label: 'Size',
+                            hash: 'size',
                             bind: {
-                                size: 'small'
-                            }
-                        },
-                        {
-                            label: 'Medium',
-                            hash: 'medium',
-                            bind: {
-                                size: 'medium'
-                            }
-                        },
-                        {
-                            label: 'Large',
-                            hash: 'large',
-                            bind: {
-                                size: 'large'
+                                size: 'small' || 'medium' || 'large'
                             }
                         },
                         {
