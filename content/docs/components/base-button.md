@@ -234,3 +234,127 @@ Medium
 ::base-button{size="large"}
 Large
 ::
+
+<br>
+
+## With Icon
+
+We can add icon inside button, we can use leftIcon or rightIcon props. But for use we need to implement a class that 
+defines which icon will be used. The syntax implemented in the button is `<i :class="icon" />`, so we need some dependency to
+it works.
+
+<br>
+
+### Font Awesome
+
+For my personal usage, I always use [font awesome icons](https://fontawesome.com/icons), you can read the documentation to know more.
+
+<br>
+
+- Pure Vue 3
+
+Firstly, you need to add the dependency in your project:
+
+```bash
+yarn add -D font-awesome
+```
+
+Then, just include the import of font-awesome in your main vue file:
+
+```js
+// main.js | main.ts
+
+import App from './App.vue'
+import { createApp } from 'vue'
+import 'font-awesome/css/font-awesome.css' /* You just need to add this import */
+
+const app = createApp(App)
+```
+
+- Nuxt.js
+
+Firstly, you need to add the dependency in your project:
+
+```bash
+yarn add -D @fortawesome/vue-fontawesome@latest-3
+```
+
+Create a new file for font awesome configs in the path `plugins/fontawesome.{js|ts}`.
+
+```ts
+import { library, config } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+// This is important, we are going to let Nuxt worry about the CSS
+config.autoAddCss = false
+
+// You can add your icons directly in this plugin. See other examples for how you
+// can add other styles or just individual icons.
+library.add(fas)
+
+export default defineNuxtPlugin((nuxtApp) => {
+    nuxtApp.vueApp.component('font-awesome-icon', FontAwesomeIcon, {})
+})
+```
+
+Add it as a plugin inside `nuxt.config.ts`:
+
+```ts
+// nuxt.config.js | nuxt.config.ts
+export default defineNuxtConfig({
+  // Your other configs
+  plugins: ['~/plugins/fontawesome.ts']
+})
+```
+
+Now you can use icons as you need!
+
+<br>
+
+### Left Icon:
+
+- Pure Vue 3
+
+```html
+<BaseButton left-icon="fa fa-check">With left icon</BaseButton>
+```
+
+- Nuxt.js
+
+```html
+<BaseButton>
+    <template #left-icon>
+        <font-awesome-icon icon="fa fa-check" />
+    </template>
+</BaseButton>
+```
+
+::base-button-with-icon{left-icon="fa fa-check"}
+ With left icon
+::
+
+<br>
+
+### Right Icon:
+
+- Pure Vue 3
+
+```html
+<BaseButton right-icon="fa fa-check">With right icon</BaseButton>
+```
+
+- Nuxt.js
+
+```html
+<BaseButton>
+    <template #right-icon>
+        <font-awesome-icon icon="fa fa-check" />
+    </template>
+</BaseButton>
+```
+
+::base-button-with-icon{right-icon="fa fa-check"}
+With right icon
+::
+
