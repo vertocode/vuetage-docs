@@ -167,6 +167,20 @@ Custom Class
 
 <br>
 
+## Disabled
+
+We can control the disabled state of button using the props "disabled".
+
+```html
+<BaseButton :disabled="true">Loading</BaseButton>
+```
+
+::base-button{disabled="true"}
+Disabled
+::
+
+<br>
+
 ## Loading
 
 We can control the loading state of button using the props "loading".
