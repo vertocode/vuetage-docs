@@ -358,3 +358,57 @@ Now you can use icons as you need!
 With right icon
 ::
 
+<br>
+
+## Slots
+
+There are 4 slots that we can use for base button.
+
+<br>
+
+1. Label
+
+This is the default slot, basically we can use inside the tags as showing above.
+
+```html
+<BaseButton>Label</BaseButton>
+```
+
+2. Spinner
+
+This is a slot useful to change the default spinner when the button is loading.
+
+```html
+<BaseButton>
+ Label
+ <template #spinner>
+  <DifferentSpinner />
+ </template>
+</BaseButton>
+```
+
+3. Left Icon
+
+This is a slot useful to use left icon when the props "leftIcon" is not enough to add this icon.
+
+```html
+<BaseButton>
+ Label
+ <template #left-icon>
+  <img src="./assets/icon.png" alt="icon">
+ </template>
+</BaseButton>
+```
+
+4. Right Icon
+
+It works as the left icon slot, but for right side.
+
+```html
+<BaseButton>
+ Label
+ <template #right-icon>
+  <img src="./assets/icon.png" alt="icon">
+ </template>
+</BaseButton>
+```

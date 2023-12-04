@@ -83,6 +83,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                                 leftIcon: 'fa fa-check',
                             }
                         },
+                        {
+                            label: 'Slots',
+                            hash: 'slots',
+                            bind: {}
+                        },
                     ]
                 }
             ]
