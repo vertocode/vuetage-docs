@@ -1,3 +1,9 @@
+---
+title: 'Contributing to Vuetage'
+description: 'Welcome to the Vuetage project! Thank you for considering contributing. Your help is essential to make Vuetage even better.'
+---
+
+
 # Contributing to Vuetage
 
 Welcome to the Vuetage project! Thank you for considering contributing. Your help is essential to make Vuetage even better.

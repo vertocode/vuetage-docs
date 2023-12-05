@@ -1,5 +1,5 @@
 <template>
-  <main class="mx-10 mb-20 nuxt-content" ref="scrollDiv">
+  <main class="mx-10 mb-20 nuxt-content w-full" ref="scrollDiv">
     <ContentDoc class="prose prose-light">
       <template #not-found>
         <NotFound></NotFound>
