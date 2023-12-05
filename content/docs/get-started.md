@@ -3,9 +3,11 @@ title: 'Get Started with Vuetage library'
 description: 'Vuetage is a library of custom Vue components designed to simplify and enhance the web development experience for frontend developers. This library is open source, and anyone with good intentions can contribute new components and fix possible bugs.'
 ---
 
-# Introduction
+# {{ $doc.title }}
 
-Vuetage is a library of custom Vue components designed to simplify and enhance the web development experience for frontend developers. This library is open source, and anyone with good intentions can contribute new components and fix possible bugs.
+{{ $doc.description }}
+
+<br>
 
 <div>
   <img style="margin: auto" src="https://i.imgur.com/AjWJlr9.png" alt="vuetage">
