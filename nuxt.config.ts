@@ -19,11 +19,6 @@ export default defineNuxtConfig({
     '@nuxt/content'
   ],
   content: {
-    markdown: {
-      tags: {
-        p: 'P'
-      }
-    },
     highlight: {
       theme: 'github-light'
     },
