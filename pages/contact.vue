@@ -48,7 +48,7 @@
       </div>
     </form>
     <div
-        v-if="!isEmpty(alertStatus)"
+        v-if="!lodash.isEmpty(alertStatus)"
         :class="alertStatus?.status === 'success' ? 'bg-green-400' : 'bg-red-400'"
         class="text-white rounded h-10 mt-4 px-4 flex items-center"
     >
@@ -65,7 +65,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
-import { isEmpty } from 'lodash'
+import lodash from 'lodash'
 
 const agreed = ref(false)
 const formData = reactive({
@@ -76,7 +76,7 @@ const formData = reactive({
 })
 
 const isSendDisabled = computed(() => {
-  return isEmpty(formData.email) || isEmpty(formData.message) || !agreed.value
+  return lodash.isEmpty(formData.email) || lodash.isEmpty(formData.message) || !agreed.value
 })
 
 const alertStatus = ref({})
