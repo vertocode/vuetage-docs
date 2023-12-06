@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div>
     <div
         class="flex flex-col h-screen p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg"
     >

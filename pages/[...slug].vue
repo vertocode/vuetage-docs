@@ -8,12 +8,12 @@
       </ContentDoc>
     </main>
     <div class="footer flex gap-5 w-full">
-      <a :href="previousPageData?._path" class="recommended-page w-1/2 h-12" v-if="previousPageData?.title">
+      <a :href="previousPageData?._path" class="recommended-page w-1/2 min-h-12" v-if="previousPageData?.title">
         <font-awesome-icon icon="fa-solid fa-arrow-left" class="mr-2"/>
         {{ previousPageData.title }}
       </a>
       <span class="w-1/2" v-else></span>
-      <a :href="nextPageData?._path" class="recommended-page w-1/2 h-12" v-if="nextPageData?.title">
+      <a :href="nextPageData?._path" class="recommended-page w-1/2 min-h-12" v-if="nextPageData?.title">
         {{ nextPageData.title }}
         <font-awesome-icon icon="fa-solid fa-arrow-right" class="ml-2"/>
       </a>
@@ -134,6 +134,8 @@ definePageMeta({
       border-color: #e5e7eb;
       border-radius: 0 0 1.5em 1.5em;
       background-color: #F7FAFC;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 }

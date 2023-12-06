@@ -8,7 +8,7 @@
       />
     </div>
     <div class="flex">
-      <DocSidebar />
+      <DocSidebar class="hidden lg:flex"/>
       <slot></slot>
     </div>
   </div>
