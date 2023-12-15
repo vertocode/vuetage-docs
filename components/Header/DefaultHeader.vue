@@ -16,7 +16,7 @@
         <a v-for="item in navigation" :key="item.name" :href="item.route" class="z-50 text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <NuxtLink to="https://github.com/vertocode/vuetage" target="_blank" class="z-50 text-sm font-semibold leading-6 text-gray-900 cursor-pointer">Github <span aria-hidden="true">&rarr;</span></NuxtLink>
+        <NuxtLink to="https://vuetage-components.vertocode.com" target="_blank" class="z-50 text-sm font-semibold leading-6 text-gray-900 cursor-pointer">Storybook Components <span aria-hidden="true">&rarr;</span></NuxtLink>
       </div>
     </nav>
     <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -32,10 +32,16 @@
             <XMarkIcon class="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              <a v-for="item in navigation" :key="item.name" :href="item.route" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
+        <div class="mt-6 flow-root h-full">
+          <div class="-my-6 divide-y divide-gray-500/10 h-full">
+            <div class="space-y-2 py-10 flex flex-col justify-between h-full">
+              <div>
+                <a v-for="item in navigation" :key="item.name" :href="item.route" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
+              </div>
+              <div class="flex flex-col gap-3">
+                <NuxtLink to="https://github.com/vertocode/vuetage" target="_blank" class="z-50 text-sm font-semibold leading-6 text-gray-900 cursor-pointer">Github <span aria-hidden="true">&rarr;</span></NuxtLink>
+                <NuxtLink to="https://vuetage-components.vertocode.com" target="_blank" class="z-50 text-sm font-semibold leading-6 text-gray-900 cursor-pointer">Storybook Components <span aria-hidden="true">&rarr;</span></NuxtLink>
+              </div>
             </div>
           </div>
         </div>
