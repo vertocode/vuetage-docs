@@ -19,7 +19,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                 {
                     label: 'Base Button',
                     componentName: 'BaseButton',
-                    description: 'The "BaseButton" is a versatile button component that serves as a foundation for creating different button styles. It includes primary, outlined, success, danger, dark-themed, and custom-styled buttons. You can customize the size, disable the button, add a loading indicator, and include an icon.',
+                    description: 'The "BaseButton" is a versatile button component that serves as a foundation for creating different button styles. You can customize it as you need using the props.',
                     route: '/docs/components/base-button',
                     props: [
                         {
@@ -89,7 +89,25 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             bind: {}
                         },
                     ]
-                }
+                },
+                {
+                    label: 'Base Text Field',
+                    componentName: 'BaseTextField',
+                    description: 'The "BaseTextField" is a useful component that can help you with validations, easily change of styles, state, icons, and more.',
+                    route: '/docs/components/base-text-field',
+                    props: [
+                        {
+                            label: 'Variant',
+                            hash: '#variant',
+                            bind: {}
+                        },
+                        {
+                            label: 'Loading',
+                            hash: '#loading',
+                            bind: {}
+                        }
+                    ]
+                },
             ]
         }
     ]

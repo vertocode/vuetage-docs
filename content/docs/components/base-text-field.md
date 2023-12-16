@@ -3,7 +3,7 @@ title: 'Base Text Field component from Vuetage library'
 description: 'Base Text Field is a vue component useful to manage easily variants, validations, icons, and other things according to the props.'
 ---
 
-# Base Text Field
+# Base Text Field (In development)
 
 ## Variant
 
@@ -34,7 +34,8 @@ The outlined variant can be used with the props "variant" with value "outlined" 
 <BaseTextField variant="outlined" />
 ```
 
-::base-button{variant="outlined", label="Outlined"}
+::base-text-field{variant="outlined" label="Outlined"}
+::
 
 <br>
 
@@ -46,7 +47,8 @@ The underlined variant can be used with the props "variant" with value "underlin
 <BaseTextField variant="underlined" />
 ```
 
-::base-button{variant="underlined", label="Underlined"}
+::base-text-field{variant="underlined" label="Underlined"}
+::
 
 <br>
 
@@ -58,7 +60,8 @@ The dark variant can be used with the props "variant" with value "dark" as show 
 <BaseTextField variant="dark" />
 ```
 
-::base-button{variant="dark", label="Dark"}
+::base-text-field{variant="dark" label="Dark"}
+::
 
 <br>
 
@@ -66,13 +69,16 @@ The dark variant can be used with the props "variant" with value "dark" as show 
 
 There are 2 kinds of loading; the spinner loading, and border loading.
 
+<br>
+
 - Spinner (Default)
 
 ```vue
 <BaseTextField :loading="true" />
 ```
 
-::base-button{loading="true", label="Loading"}
+::base-text-field{loading="true" label="Loading"}
+::
 
 <br>
 
@@ -82,4 +88,7 @@ There are 2 kinds of loading; the spinner loading, and border loading.
 <BaseTextField :loading="true" use-border-loading />
 ```
 
-::base-button{loading="true", label="Loading", useBorderLoading="true"}
+::base-text-field{loading="true" label="Loading" useBorderLoading="true"}
+::
+
+<br>
