@@ -65,6 +65,25 @@ The dark variant can be used with the props "variant" with value "dark" as show 
 
 <br>
 
+## Model Value
+
+We can easily control the value of input passing some "ref" as a modelValue props. See the example below:
+
+```vue
+<template>
+  <BaseTextField v-model="myValue"/>
+</template>
+
+<script setup lang="ts">
+  import { ref } from 'vue'
+  import { BaseTextField } from 'vuetage'
+
+  const myValue = ref(null)
+</script>
+```
+::base-text-field{label="Value"}
+::
+
 ## Loading
 
 There are 2 kinds of loading; the spinner loading, and border loading.
@@ -102,3 +121,15 @@ There are some props related for the loading props:
 | loadingColor     | string  | #3498db                                            | Define the color of spinner or border loading.                                | 
 | loadingSize      | string  | small(0.7em) for spinner or 2px for border loading | Define the size of spinner or border loading.                                 |
 | disableOnLoading | boolean | false                                              | Define if when the props "loading" be true the field will be disabled or not. |
+
+## Bind
+
+Basically, we have a props to allow you to pass any attribute to the input. If you pass the attribute directly without using this props, 
+probably the attribute will appear in the parent element if you look in the DOM, for this reason we have this prop to allow you to put
+attributes directly in the input.
+
+As this component is using the classic "input", we can add any attribute as show in [MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input).
+
+```vue
+<BaseTextField :bind="{ autofocus: true }" />
+```

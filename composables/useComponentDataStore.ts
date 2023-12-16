@@ -98,12 +98,22 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     props: [
                         {
                             label: 'Variant',
-                            hash: '#variant',
+                            hash: 'variant',
+                            bind: {}
+                        },
+                        {
+                            label: 'Model Value',
+                            hash: 'model-value',
+                            bind: {}
+                        },
+                        {
+                            label: 'Bind',
+                            hash: 'bind',
                             bind: {}
                         },
                         {
                             label: 'Loading',
-                            hash: '#loading',
+                            hash: 'loading',
                             bind: {}
                         }
                     ]
