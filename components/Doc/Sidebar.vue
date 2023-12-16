@@ -28,18 +28,20 @@
 
         <div class="flex-1">
           <ul class="pb-4 text-sm">
-            <li class="rounded-sm" v-for="item in allComponents" :key="item.label">
+            <li class="rounded-sm pt-1" v-for="item in allComponents" :key="item.label">
               <NuxtLink
                   :to="item.route"
                   class="flex items-center pl-2 space-x-3 rounded-md overflow-hidden"
               >
                 <span class="font-bold">
+                  <font-awesome-icon icon="fa-solid fa-fire" class="mr-2"/>
                   {{ item.label }}
                 </span>
               </NuxtLink>
                 <ul v-if="$route.path.includes(item.route)">
-                  <li class="pl-5 font-medium opacity-50 items-center break-all" v-for="props in item.props" :key="props.hash">
+                  <li class="pl-4 pt-1 font-medium opacity-50 items-center break-all" v-for="props in item.props" :key="props.hash">
                     <a :href="`${item.route}#${props.hash}`">
+                      <font-awesome-icon icon="fa-solid fa-sitemap" class="mr-2"/>
                       {{ props.label }}
                     </a>
                   </li>
@@ -65,6 +67,7 @@
 
 <script setup lang="ts">
 import type { ComponentData } from '~/typing/Component'
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
 const componentDataStore = useComponentDataStore()
 
