@@ -19,7 +19,7 @@ Variant is a prop that defines one of some predefined styles available to each c
 
 - Primary
 
-The primary variant can be used just calling the component, this is the default value for "variant" props:
+The primary variant can be used just calling the component, this is the default value for "variant" prop.
 
 <br>
 
