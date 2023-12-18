@@ -281,3 +281,46 @@ You can test the input below typing any word with less than 5 characters.
 ::
 
 <br>
+
+## Styles 
+
+There are some ways to modify the input as you need.
+
+<br>
+
+### Width
+
+This is a prop to modify the width of input. You can specify any width following the CSS rules.
+
+```vue
+<BaseTextField width="500px" />
+```
+
+::base-text-field{:width="500px" label="Custom Width"}
+::
+
+<br>
+
+### Height
+
+This is a prop to modify the height of input. You can specify any height following the CSS rules.
+
+```vue
+<BaseTextField height="100px" />
+```
+
+::base-text-field{:height="100px" label="Custom Height"}
+::
+
+<br>
+
+### Custom Style
+
+This is a prop to modify any style of input inside a component. The syntax is the same that we can use in vue.js template.
+
+```vue
+<BaseTextField custom-style="background-color: yellow;" />
+```
+
+::base-text-field{custom-style="background-color: yellow;" label="Custom Style"}
+::

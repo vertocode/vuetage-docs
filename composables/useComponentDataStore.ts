@@ -140,6 +140,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             label: 'Required',
                             hash: 'required',
                             bind: {}
+                        },
+                        {
+                            label: 'Styles',
+                            hash: 'styles',
+                            bind: {}
                         }
                     ]
                 },
