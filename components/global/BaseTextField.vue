@@ -1,12 +1,22 @@
 <template>
   <div style="width: 200px">
-    <BaseTextField v-bind="$props"><slot></slot></BaseTextField>
+    <BaseTextField v-bind="$props" :rules="rules"><slot></slot></BaseTextField>
   </div>
 </template>
 
 <script setup lang="ts">
 import { BaseTextField } from 'vuetage'
 
-defineProps(BaseTextField.props)
+const props = defineProps({
+  useRules: {
+    type: Boolean,
+    default: false
+  },
+  ...BaseTextField.props
+})
+
+const rules = props.useRules ? [
+  (value: string) => value.includes('vuetage') || `The text "${value}" should include the word "vuetage".`
+] : []
 
 </script>

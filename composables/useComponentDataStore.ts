@@ -130,6 +130,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             label: 'Disabled',
                             hash: 'disabled',
                             bind: {}
+                        },
+                        {
+                            label: 'Rules',
+                            hash: 'rules',
+                            bind: {}
                         }
                     ]
                 },

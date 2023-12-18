@@ -206,17 +206,63 @@ We can add any validation in our BaseTextField component using the rules.
 
 <br>
 
+The prop "rules" is the principal prop to add validations; we can add any rule using this props.
+
+For example, if we want to check if the text includes the text "vuetage", we could add the following code:
+
+```vue
+<template>
+  <BaseTextField :rules="rules" />
+</template>
+
+<script setup lang="ts">
+
+const rules = [
+    // Look that we can use the model value as param to add the validation.
+    (value) => value.includes(value) || `The text "${value}" should include the word "vuetage".`
+]
+</script>
+```
+
+::base-text-field{:use-rules="true" label="Should include vuetage word"}
+::
+
+Type should be an array of function that will return a boolean or string.
+If the returned value is "true" the input is valid, else if the returned value is "false" the input is invalid and
+will just show the red border color, else if the returned value is a string the input is invalid
+and will show this string as an error message.
+
+<br>
+
+### There are 2 predefined rules to use as props:
+
 - MaxLength
 
 A predefined rule that is available for usage, it is useful to define the max length of input.
 
 
 ```vue
-<BaseTextField :max-length="5" v-model="123456" />
+<BaseTextField :max-length="5" />
 ```
 
-You can test the input below typing any word with more 5 characters.
+You can test the input below typing any word with more than 5 characters.
 
 ::base-text-field{:max-length="5" label="Max Length 5"}
 ::
 
+<br>
+
+- MinLength
+
+The same thing that "MaxLength" props, but for control minLength of characters.
+
+```vue
+<BaseTextField :min-length="5" />
+```
+
+You can test the input below typing any word with less than 5 characters.
+
+::base-text-field{:min-length="5" label="Min Length 5"}
+::
+
+<br>
