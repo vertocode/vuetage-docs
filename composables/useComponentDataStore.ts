@@ -135,6 +135,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             label: 'Rules',
                             hash: 'rules',
                             bind: {}
+                        },
+                        {
+                            label: 'Required',
+                            hash: 'required',
+                            bind: {}
                         }
                     ]
                 },

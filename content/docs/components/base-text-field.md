@@ -234,9 +234,24 @@ and will show this string as an error message.
 
 <br>
 
-### There are 2 predefined rules to use as props:
+## Predefined Rules
 
-- MaxLength
+### Required
+
+A predefined rule, and **attribute** to use, it indicates that the input should contain a value, otherwise will show an error message.
+It also affect as an required field when we use inside a form.
+
+```vue
+<BaseTextField required />
+```
+
+You can test it by clicking on the input, and then cause the blur event. Or type any value and after clear it.
+::base-text-field{:required="true" label="Required"}
+::
+
+<br>
+
+### Max Length
 
 A predefined rule that is available for usage, it is useful to define the max length of input.
 
@@ -252,7 +267,7 @@ You can test the input below typing any word with more than 5 characters.
 
 <br>
 
-- MinLength
+### Min Length
 
 The same thing that "MaxLength" props, but for control minLength of characters.
 
