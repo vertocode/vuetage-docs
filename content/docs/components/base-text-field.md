@@ -9,6 +9,8 @@ Base Text Field is a vue component useful to manage easily variants, validations
 
 <br>
 
+::base-text-field{ height="1.9em" margin="auto" modelValue="vuetage" label="Base Text Field" placeholder="Type your text" variant="underlined" left-icon="fa fa-fire" right-icon="fa fa-check" use-border-loading use-rules}
+::
 
 <h1> <a href="https://vuejs.org/guide/components/props.html" target="_blank">
 Props
@@ -316,7 +318,10 @@ This is a prop to modify the height of input. You can specify any height followi
 
 ### Custom Style
 
-This is a prop to modify any style of input inside a component. The syntax is the same that we can use in vue.js template.
+This is a prop to modify any style of input inside a component. The syntax is the same that we can use in
+<a href="https://vuejs.org/style-guide/rules-strongly-recommended.html#quoted-attribute-values" target="_blank">
+vue.js template
+</a>.
 
 ```vue
 <BaseTextField custom-style="background-color: yellow;" />
@@ -324,3 +329,24 @@ This is a prop to modify any style of input inside a component. The syntax is th
 
 ::base-text-field{custom-style="background-color: yellow;" label="Custom Style"}
 ::
+
+<br>
+
+### Custom Style Label
+
+This is a prop to modify any style of label inside a component. The syntax is the same that we can use in <a href="https://vuejs.org/style-guide/rules-strongly-recommended.html#quoted-attribute-values" target="_blank">
+vue.js template
+</a>.
+
+```vue
+<BaseTextField custom-style-label="color: blue;" />
+```
+
+::base-text-field{custom-style-label="color: blue;" label="Blue Label"}
+::
+
+<br>
+
+### Style
+
+This is a prop that will affect the parent element, the field. It works as the "Custom Style", and "Custom Style Label", but for the field.

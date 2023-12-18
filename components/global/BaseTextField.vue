@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 200px">
+  <div style="width: 200px;" :style="{ margin }">
     <BaseTextField v-bind="$props" :rules="rules"><slot></slot></BaseTextField>
   </div>
 </template>
@@ -11,6 +11,10 @@ const props = defineProps({
   useRules: {
     type: Boolean,
     default: false
+  },
+  margin: {
+    type: String,
+    default: undefined
   },
   ...BaseTextField.props
 })
