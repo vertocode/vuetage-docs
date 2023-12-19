@@ -12,36 +12,38 @@ Base Text Field is a vue component useful to manage easily variants, validations
 ::base-text-field{ height="1.9em" margin="auto" modelValue="vuetage" label="Base Text Field" placeholder="Type your text" variant="underlined" left-icon="fa fa-fire" right-icon="fa fa-check" use-border-loading use-rules}
 ::
 
+# Model Value
+
+We can easily control the value of input passing some "ref" as a v-model. See the example below:
+
+> ### Note
+>
+> The model value is updated using "input" event per default, if you want to change it to "change" or "blur" event, you can pass it as a value
+> using the props [eventEmitter](#event-emitter)
+
+```vue
+<template>
+  <main>
+    <BaseTextField v-model="myValue" label="Model Value" variant="outlined"/>
+    <p>Model Value: <br><span class="bold">{{ myValue }}</span></p>
+  </main>
+</template>
+
+<script setup lang="ts">
+  import { ref } from 'vue'
+  import { BaseTextField } from 'vuetage'
+
+  const myValue = ref('Hello World')
+</script>
+```
+::base-text-field-with-model-value{label="Model Value"}
+::
+
+<br>
+
 <h1> <a href="https://vuejs.org/guide/components/props.html" target="_blank">
 Props
 </a> </h1>
-
-## Label
-
-Basically define some label for the input.
-
-```vue
-<BaseTextField label="Label" />
-```
-
-::base-text-field{label="Label"}
-::
-
-<br>
-
-## Placeholder
-
-Basically define some placeholder for the input.
-
-```vue
-<BaseTextField placeholder="Type your text" />
-```
-
-::base-text-field{label="Focus to see placeholder" placeholder="Type your text"}
-::
-
-
-<br>
 
 ## Variant
 
@@ -103,24 +105,30 @@ The dark variant can be used with the props "variant" with value "dark" as show 
 
 <br>
 
-## Model Value
+## Label
 
-We can easily control the value of input passing some "ref" as a modelValue props. See the example below:
+Basically define some label for the input.
 
 ```vue
-<template>
-  <BaseTextField v-model="myValue"/>
-</template>
-
-<script setup lang="ts">
-  import { ref } from 'vue'
-  import { BaseTextField } from 'vuetage'
-
-  const myValue = ref(null)
-</script>
+<BaseTextField label="Label" />
 ```
-::base-text-field{label="Value"}
+
+::base-text-field{label="Label"}
 ::
+
+<br>
+
+## Placeholder
+
+Basically define some placeholder for the input.
+
+```vue
+<BaseTextField placeholder="Type your text" />
+```
+
+::base-text-field{label="Focus to see placeholder" placeholder="Type your text"}
+::
+
 
 <br>
 
@@ -350,3 +358,7 @@ vue.js template
 ### Style
 
 This is a prop that will affect the parent element, the field. It works as the "Custom Style", and "Custom Style Label", but for the field.
+
+<br>
+
+## Event emitter

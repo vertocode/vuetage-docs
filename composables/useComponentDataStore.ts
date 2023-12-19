@@ -97,13 +97,8 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     route: '/docs/components/base-text-field',
                     props: [
                         {
-                            label: 'Label',
-                            hash: 'label',
-                            bind: {}
-                        },
-                        {
-                            label: 'Placeholder',
-                            hash: 'placeholder',
+                            label: 'Model Value',
+                            hash: 'model-value',
                             bind: {}
                         },
                         {
@@ -112,8 +107,13 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                             bind: {}
                         },
                         {
-                            label: 'Model Value',
-                            hash: 'model-value',
+                            label: 'Label',
+                            hash: 'label',
+                            bind: {}
+                        },
+                        {
+                            label: 'Placeholder',
+                            hash: 'placeholder',
                             bind: {}
                         },
                         {
@@ -144,6 +144,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                         {
                             label: 'Styles',
                             hash: 'styles',
+                            bind: {}
+                        },
+                        {
+                            label: 'Event Emitter',
+                            hash: 'event-emitter',
                             bind: {}
                         }
                     ]
