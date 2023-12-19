@@ -1,12 +1,13 @@
 <template>
   <div style="width: 200px;" :style="{ margin }">
-    <BaseTextField v-bind="$props" :rules="rules"><slot></slot></BaseTextField>
+    <BaseTextField v-bind="$props" :rules="rules" v-model="value"><slot></slot></BaseTextField>
   </div>
 </template>
 
 <script setup lang="ts">
 import { BaseTextField } from 'vuetage'
 
+const value = ref(null)
 const props = defineProps({
   useRules: {
     type: Boolean,

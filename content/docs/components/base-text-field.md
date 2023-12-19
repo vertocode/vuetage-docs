@@ -16,10 +16,11 @@ Base Text Field is a vue component useful to manage easily variants, validations
 
 We can easily control the value of input passing some "ref" as a v-model. See the example below:
 
-> ### Note
->
-> The model value is updated using "input" event per default, if you want to change it to "change" or "blur" event, you can pass it as a value
-> using the props [eventEmitter](#event-emitter)
+> #### Note (Important)
+> 
+> The v-model property is the only required property of this component, if you don't define and try to use it, it will cause an error
+> in the application.
+
 
 ```vue
 <template>
@@ -36,8 +37,13 @@ We can easily control the value of input passing some "ref" as a v-model. See th
   const myValue = ref('Hello World')
 </script>
 ```
-::base-text-field-with-model-value{label="Model Value"}
+::base-text-field-with-model-value{label="Model Value" variant="underlined"}
 ::
+
+<br>
+
+The model value is updated using "input" event per default, if you want to change it to "change" or "blur" event, you can pass it as a value
+using the props [eventEmitter](#event-emitter).
 
 <br>
 
@@ -58,7 +64,7 @@ The default variant can be used just calling the component, this is the default 
 <br>
 
 ```vue
-<BaseTextField />
+<BaseTextField v-model="myValue" />
 ```
 
 ::base-text-field{label="Default"}
@@ -71,7 +77,7 @@ The default variant can be used just calling the component, this is the default 
 The outlined variant can be used with the props "variant" with value "outlined" as show below:
 
 ```vue
-<BaseTextField variant="outlined" />
+<BaseTextField v-model="myValue" variant="outlined" />
 ```
 
 ::base-text-field{variant="outlined" label="Outlined"}
@@ -84,7 +90,7 @@ The outlined variant can be used with the props "variant" with value "outlined" 
 The underlined variant can be used with the props "variant" with value "underlined" as show below:
 
 ```vue
-<BaseTextField variant="underlined" />
+<BaseTextField v-model="myValue" variant="underlined" />
 ```
 
 ::base-text-field{variant="underlined" label="Underlined"}
@@ -97,7 +103,7 @@ The underlined variant can be used with the props "variant" with value "underlin
 The dark variant can be used with the props "variant" with value "dark" as show below:
 
 ```vue
-<BaseTextField variant="dark" />
+<BaseTextField v-model="myValue" variant="dark" />
 ```
 
 ::base-text-field{variant="dark" label="Dark"}
@@ -110,7 +116,7 @@ The dark variant can be used with the props "variant" with value "dark" as show 
 Basically define some label for the input.
 
 ```vue
-<BaseTextField label="Label" />
+<BaseTextField v-model="myValue" label="Label" />
 ```
 
 ::base-text-field{label="Label"}
@@ -123,7 +129,7 @@ Basically define some label for the input.
 Basically define some placeholder for the input.
 
 ```vue
-<BaseTextField placeholder="Type your text" />
+<BaseTextField v-model="myValue" placeholder="Type your text" />
 ```
 
 ::base-text-field{label="Focus to see placeholder" placeholder="Type your text"}
@@ -141,7 +147,7 @@ attributes directly in the input.
 As this component is using the classic "input", we can add any attribute as show in [MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input).
 
 ```vue
-<BaseTextField :bind="{ autofocus: true }" />
+<BaseTextField v-model="myValue" :bind="{ autofocus: true }" />
 ```
 
 ## Loading
@@ -153,7 +159,7 @@ There are 2 kinds of loading; the spinner loading, and border loading.
 - Spinner (Default)
 
 ```vue
-<BaseTextField :loading="true" />
+<BaseTextField v-model="myValue" :loading="true" />
 ```
 
 ::base-text-field{:loading="true" label="Loading" loadingSize="20px"}
@@ -164,7 +170,7 @@ There are 2 kinds of loading; the spinner loading, and border loading.
 - Border Loading
 
 ```vue
-<BaseTextField :loading="true" use-border-loading />
+<BaseTextField v-model="myValue" :loading="true" use-border-loading />
 ```
 
 ::base-text-field{:loading="true" label="Loading" :use-border-loading="true"}
@@ -189,7 +195,7 @@ There are some props related for the loading props:
 Control the disabled state of the component.
 
 ```vue
-<BaseTextField :disabled="true" />
+<BaseTextField v-model="myValue" :disabled="true" />
 ```
 
 ::base-text-field{:disabled="true" label="Disabled"}
@@ -202,13 +208,24 @@ Control the disabled state of the component.
 Control the readonly state of the component.
 
 ```vue
-<BaseTextField :readonly="true" />
+<BaseTextField v-model="myValue" :readonly="true" />
 ```
 
 ::base-text-field{:readonly="true" label="Readonly"}
 ::
 
 <br>
+
+## Password
+
+This boolean prop defines if the base text field has the "password" type, it will apply a eye icon to show or hide the password.
+
+```vue
+<BaseTextField password v-model="myValue" :min-length="5" :max-length="20" label="true" />
+```
+
+::base-text-field{:max-length="20" :min-length="5" label="Password" :password="true"}
+::
 
 ## Rules
 
@@ -222,11 +239,14 @@ For example, if we want to check if the text includes the text "vuetage", we cou
 
 ```vue
 <template>
-  <BaseTextField :rules="rules" />
+  <BaseTextField v-model="myValue" :rules="rules" />
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+import { BaseTextField } from 'vuetage'
 
+const myValue = ref(null)
 const rules = [
     // Look that we can use the model value as param to add the validation.
     (value) => value.includes(value) || `The text "${value}" should include the word "vuetage".`
@@ -252,7 +272,7 @@ A predefined rule, and **attribute** to use, it indicates that the input should 
 It also affect as an required field when we use inside a form.
 
 ```vue
-<BaseTextField required />
+<BaseTextField v-model="myValue" required />
 ```
 
 You can test it by clicking on the input, and then cause the blur event. Or type any value and after clear it.
@@ -267,7 +287,7 @@ A predefined rule that is available for usage, it is useful to define the max le
 
 
 ```vue
-<BaseTextField :max-length="5" />
+<BaseTextField v-model="myValue" :max-length="5" />
 ```
 
 You can test the input below typing any word with more than 5 characters.
@@ -282,7 +302,7 @@ You can test the input below typing any word with more than 5 characters.
 The same thing that "MaxLength" props, but for control minLength of characters.
 
 ```vue
-<BaseTextField :min-length="5" />
+<BaseTextField v-model="myValue" :min-length="5" />
 ```
 
 You can test the input below typing any word with less than 5 characters.
@@ -303,7 +323,7 @@ There are some ways to modify the input as you need.
 This is a prop to modify the width of input. You can specify any width following the CSS rules.
 
 ```vue
-<BaseTextField width="500px" />
+<BaseTextField v-model="myValue" width="500px" />
 ```
 
 ::base-text-field{:width="500px" label="Custom Width"}
@@ -316,7 +336,7 @@ This is a prop to modify the width of input. You can specify any width following
 This is a prop to modify the height of input. You can specify any height following the CSS rules.
 
 ```vue
-<BaseTextField height="100px" />
+<BaseTextField v-model="myValue" height="100px" />
 ```
 
 ::base-text-field{:height="100px" label="Custom Height"}
@@ -332,7 +352,7 @@ vue.js template
 </a>.
 
 ```vue
-<BaseTextField custom-style="background-color: yellow;" />
+<BaseTextField v-model="myValue" custom-style="background-color: yellow;" />
 ```
 
 ::base-text-field{custom-style="background-color: yellow;" label="Custom Style"}
@@ -347,7 +367,7 @@ vue.js template
 </a>.
 
 ```vue
-<BaseTextField custom-style-label="color: blue;" />
+<BaseTextField v-model="myValue" custom-style-label="color: blue;" />
 ```
 
 ::base-text-field{custom-style-label="color: blue;" label="Blue Label"}
@@ -362,3 +382,13 @@ This is a prop that will affect the parent element, the field. It works as the "
 <br>
 
 ## Event emitter
+
+This is a useful prop to change the update model event, the ref value that you should pass as a "v-model" will be updated
+using this event, the default value is "input". You also have the option to use the "change" or "blur" event instead of input.
+
+```vue
+<BaseTextField v-model="myValue" event-emitter="blur" max-length="5" />
+```
+
+::base-text-field-with-model-value{max-length="5" label="Blur to update" event-emitter="blur"}
+::

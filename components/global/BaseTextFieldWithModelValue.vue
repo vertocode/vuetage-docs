@@ -1,6 +1,6 @@
 <template>
   <div style="width: 200px;" >
-    <BaseTextField v-bind="$props" variant="outlined" v-model="myValue"><slot></slot></BaseTextField>
+    <BaseTextField v-bind="$props" v-model="myValue"><slot></slot></BaseTextField>
     <p>Model Value: <br><span style="font-weight: bold; color: black;">{{ myValue }}</span> </p>
   </div>
 </template>
