@@ -1,13 +1,14 @@
 <template>
   <div>
     <div
-        class="flex flex-col h-screen p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg"
+        v-if="showSidebar"
+        class="duration-75 overflow-hidden op-0.1 flex flex-col justify-between h-auto p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg relative"
     >
-      <div class="space-y-3">
+      <div class="space-y-1">
         <NuxtLink to="/docs/get-started">
           <div class="flex items-center overflow-hidden">
             <h2 class="text-xl font-bold flex gap-3">
-              <svg class="mt-1  flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+              <svg class="mt-1 flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
                 <path d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z"/>
               </svg>
               Get Started
@@ -28,7 +29,7 @@
 
         <div class="flex-1">
           <ul class="pb-4 text-sm">
-            <li class="rounded-sm pt-1" v-for="item in allComponents" :key="item.label">
+            <li v-show="!item?.disabled" class="rounded-sm pt-1" v-for="item in componentDataStore.items" :key="item.label">
               <NuxtLink
                   :to="item.route"
                   class="flex items-center pl-2 space-x-3 rounded-md overflow-hidden"
@@ -61,18 +62,24 @@
           </div>
         </NuxtLink>
       </div>
+
+      <div class="bg-slate-50 inset-y-1/2 inset-x-1/2 cursor-pointer hover:bg-slate-200 p-2 flex justify-between" @click="showSidebar = false">
+        <font-awesome-icon class="mt-1 ml-2" icon="fa-solid fa-arrow-left"/>
+        <span>Hide Sidebar</span>
+      </div>
+    </div>
+    <div v-else class="w-2xl bg-slate-50 hover:bg-slate-200 flex justify-center items-center cursor-pointer" @click="showSidebar = true">
+      <div class="pr-2">
+        <font-awesome-icon class="mt-1 ml-2" icon="fa-solid fa-arrow-right" />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { ComponentData } from '~/typing/Component'
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const componentDataStore = useComponentDataStore()
 
-const allComponents = computed((): ComponentData[] => {
-  return componentDataStore.value.items.flatMap(category => category.allComponents)
-})
-console.log(allComponents.value)
+const showSidebar = ref(false)
 </script>

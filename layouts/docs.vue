@@ -7,7 +7,7 @@
           :options="options"
       />
     </div>
-    <div class="flex">
+    <div class="flex transition-all">
       <DocSidebar class="hidden lg:flex"/>
       <slot></slot>
     </div>

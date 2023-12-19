@@ -1,16 +1,12 @@
 <template>
-  <div class="mx-10 grid grid-cols-1 gap-8 md:grid-cols-2 h-max">
-    <DocCard v-for="component in allComponents" @click="$router.push(component.route)">
+  <div class="mx-10 flex flex-col gap-8 md:grid-cols-2">
+    <DocCard :disabled="component.disabled" v-for="component in componentDataStore.items" @click="$router.push(component.route)">
       <h3 class="font-semibold">{{ component.label }}</h3>
-      <p class="font-light opacity-60">{{ component.description }}</p>
+      <p class="font-light opacity-60" v-if="component.description.length">{{ component.description }}</p>
     </DocCard>
   </div>
 </template>
 
 <script setup lang="ts">
-const componentData = useComponentDataStore()
-
-const allComponents = computed(() => {
-  return componentData.value.items.flatMap(item => item.allComponents)
-})
+const componentDataStore = useComponentDataStore()
 </script>

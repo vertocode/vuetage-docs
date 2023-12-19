@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="route">
-    <div class="w-full p-6 bg-white rounded-lg shadow-lg transition-transform transform hover:scale-105 cursor-pointer">
-      <div class="text-gray-800">
+    <div :class="cardClasses" class="w-full p-6 bg-white rounded-lg shadow-lg transition-transform transform">
+      <div>
         <slot>Default slot content</slot>
       </div>
     </div>
@@ -9,12 +9,20 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 
 interface Props {
-  route: string;
+  route?: string;
+  disabled?: boolean;
 }
 
-defineProps<Props>()
+const props = defineProps<Props>()
+
+const cardClasses = ref({
+  'a': true,
+  'opacity-50 cursor-not-allowed text-gray-400': props.disabled,
+  'text-gray-800 hover:scale-105 cursor-pointer': !props.disabled
+})
 </script>
 
 <style lang="scss" scoped>
