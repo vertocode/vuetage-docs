@@ -1,5 +1,5 @@
 <template>
-  <div class="page mx-10 w-full">
+  <div class="page px-5 w-full">
     <main class="pb-2 nuxt-content " ref="scrollDiv">
       <ContentDoc class="prose prose-light">
         <template #not-found>

@@ -323,10 +323,10 @@ There are some ways to modify the input as you need.
 This is a prop to modify the width of input. You can specify any width following the CSS rules.
 
 ```vue
-<BaseTextField v-model="myValue" width="500px" />
+<BaseTextField v-model="myValue" width="50px" />
 ```
 
-::base-text-field{:width="500px" label="Custom Width"}
+::base-text-field{:width="50px" label="Width"}
 ::
 
 <br>
