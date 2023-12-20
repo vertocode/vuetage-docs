@@ -161,13 +161,77 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             props: []
         },
         {
+            label: 'Base Checkbox (Labs)',
+            componentName: 'BaseCheckbox',
+            description: '',
+            disabled: true,
+            route: '/docs/components/base-checkbox',
+            props: []
+        },
+        {
+            label: 'Base Switch (Labs)',
+            componentName: 'BaseSwitch',
+            description: '',
+            disabled: true,
+            route: '/docs/components/base-switch',
+            props: []
+        },
+        {
+            label: 'Base Radio (Labs)',
+            componentName: 'BaseRadio',
+            description: '',
+            disabled: true,
+            route: '/docs/components/base-radio',
+            props: []
+        },
+        {
+            label: 'Base Span (Labs)',
+            componentName: 'BaseSpan',
+            description: '',
+            disabled: true,
+            route: '/docs/components/base-span',
+            props: []
+        },
+        {
+            label: 'Base Tooltip (Labs)',
+            componentName: 'BaseSpan',
+            description: '',
+            disabled: true,
+            route: '/docs/components/base-tooltip',
+            props: []
+        },
+        {
+            label: 'Base Chip (Labs)',
+            componentName: 'BaseChip',
+            description: '',
+            disabled: true,
+            route: '/docs/components/base-chip',
+            props: []
+        },
+        {
+            label: 'Base Modal (Labs)',
+            componentName: 'BaseModal',
+            description: '',
+            disabled: true,
+            route: '/docs/components/base-modal',
+            props: []
+        },
+        {
+            label: 'Base Card (Labs)',
+            componentName: 'BaseCard',
+            description: '',
+            disabled: true,
+            route: '/docs/components/base-card',
+            props: []
+        },
+        {
             label: 'Base Code Writer (Labs)',
             componentName: 'BaseCodeWriter',
             description: '',
             disabled: true,
             route: '/docs/components/base-code-writer',
             props: []
-        }
+        },
     ]
 
     return {

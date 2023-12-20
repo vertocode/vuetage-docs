@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="fixed min-h-[45em]">
     <div
-        v-if="showSidebar"
+        v-if="generalStore.showSidebar"
         class="duration-75 overflow-hidden op-0.1 flex flex-col justify-between h-auto p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg relative"
     >
       <div class="space-y-1">
@@ -63,12 +63,12 @@
         </NuxtLink>
       </div>
 
-      <div class="bg-slate-50 inset-y-1/2 inset-x-1/2 cursor-pointer hover:bg-slate-200 p-2 flex justify-between" @click="showSidebar = false">
+      <div class="bg-slate-50 inset-y-1/2 inset-x-1/2 cursor-pointer hover:bg-slate-200 p-2 flex justify-between" @click="generalStore.showSidebar = false">
         <font-awesome-icon class="mt-1 ml-2" icon="fa-solid fa-arrow-left"/>
         <span>Hide Sidebar</span>
       </div>
     </div>
-    <div v-else class="w-2xl bg-slate-50 hover:bg-slate-200 flex justify-center items-center cursor-pointer" @click="showSidebar = true">
+    <div v-else class="w-2xl bg-slate-50 hover:bg-slate-200 flex justify-center items-center cursor-pointer" @click="generalStore.showSidebar = true">
       <div class="pr-2">
         <font-awesome-icon class="mt-1 ml-2" icon="fa-solid fa-arrow-right" />
       </div>
@@ -80,6 +80,5 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const componentDataStore = useComponentDataStore()
-
-const showSidebar = ref(true)
+const generalStore = useGeneralStore()
 </script>

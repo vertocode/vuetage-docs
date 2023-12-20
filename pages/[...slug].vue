@@ -1,23 +1,26 @@
 <template>
-  <div class="page px-5 w-full">
-    <main class="pb-2 nuxt-content " ref="scrollDiv">
+  <div class="page px-5 w-full mt-4" :class="{
+        'ml-0 lg:ml-[11em]': generalStore.showSidebar,
+        'lg:ml-6': !generalStore.showSidebar
+      }">
+    <main class="pb-2 nuxt-content" ref="scrollDiv">
       <ContentDoc class="prose prose-light">
         <template #not-found>
           <NotFound></NotFound>
         </template>
       </ContentDoc>
+      <div class="footer flex gap-5">
+        <a :href="previousPageData?._path" class="recommended-page w-1/2 min-h-12" v-if="previousPageData?.title">
+          <font-awesome-icon icon="fa-solid fa-arrow-left" class="mr-2"/>
+          {{ previousPageData.title }}
+        </a>
+        <span class="w-1/2" v-else></span>
+        <a :href="nextPageData?._path" class="recommended-page w-1/2 min-h-12" v-if="nextPageData?.title">
+          {{ nextPageData.title }}
+          <font-awesome-icon icon="fa-solid fa-arrow-right" class="ml-2"/>
+        </a>
+      </div>
     </main>
-    <div class="footer flex gap-5 w-full">
-      <a :href="previousPageData?._path" class="recommended-page w-1/2 min-h-12" v-if="previousPageData?.title">
-        <font-awesome-icon icon="fa-solid fa-arrow-left" class="mr-2"/>
-        {{ previousPageData.title }}
-      </a>
-      <span class="w-1/2" v-else></span>
-      <a :href="nextPageData?._path" class="recommended-page w-1/2 min-h-12" v-if="nextPageData?.title">
-        {{ nextPageData.title }}
-        <font-awesome-icon icon="fa-solid fa-arrow-right" class="ml-2"/>
-      </a>
-    </div>
   </div>
 </template>
 
@@ -25,6 +28,7 @@
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const route = useRoute()
+const generalStore = useGeneralStore()
 const previousPageData = ref({})
 const nextPageData = ref({})
 const { data } = await useAsyncData('home', () => queryContent(route.path).findOne())
@@ -44,7 +48,6 @@ definePageMeta({
 .page {
   .nuxt-content {
     max-height: 80vh;
-    overflow-y: auto;
 
     h1 {
       font-size: 2.5em;
@@ -141,22 +144,22 @@ definePageMeta({
     tr:hover {
       background-color: #f5f5f5;
     }
-  }
 
-  .footer {
-    .recommended-page {
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1em;
-      border-width: 1px;
-      border-style: solid;
-      border-color: #e5e7eb;
-      border-radius: 0 0 1.5em 1.5em;
-      background-color: #F7FAFC;
-      white-space: nowrap;
-      overflow: hidden;
+    .footer {
+      .recommended-page {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        margin: 1.5em 0;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #e5e7eb;
+        background-color: #F7FAFC;
+        white-space: nowrap;
+        overflow: hidden;
+      }
     }
   }
 }

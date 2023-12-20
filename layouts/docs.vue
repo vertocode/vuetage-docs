@@ -7,7 +7,10 @@
           :options="options"
       />
     </div>
-    <div class="flex transition-all">
+    <div class="flex transition-all" :class="{
+        'mt-[6.6em]': generalStore.showHeader,
+        'lg:ml-1 mt-[1em]': !generalStore.showHeader
+    }">
       <DocSidebar class="hidden lg:flex"/>
       <slot></slot>
     </div>
@@ -19,9 +22,10 @@ import { ref, onMounted, useRuntimeConfig } from '#imports'
 import { loadFull } from 'tsparticles'
 import { tsParticles } from 'tsparticles-engine'
 
-const { mode } = useRuntimeConfig().public.particles;
+const { mode } = useRuntimeConfig().public.particles
 
-const show = ref(true);
+const show = ref(true)
+const generalStore = useGeneralStore()
 
 const options = {
   fullScreen: {
