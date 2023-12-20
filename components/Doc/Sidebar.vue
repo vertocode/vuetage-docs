@@ -81,5 +81,5 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const componentDataStore = useComponentDataStore()
 
-const showSidebar = ref(false)
+const showSidebar = ref(true)
 </script>

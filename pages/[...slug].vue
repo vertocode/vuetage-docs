@@ -127,6 +127,8 @@ definePageMeta({
     }
 
     th, td {
+      max-width: 3px;
+      word-wrap: break-word;
       border: 1px solid #ddd;
       padding: 8px;
       text-align: left;
