@@ -279,6 +279,14 @@ You can test it by clicking on the input, and then cause the blur event. Or type
 ::base-text-field{:required="true" label="Required"}
 ::
 
+If you want to became a field required inside a form, but you don't want to show the error message(apply this rule to validation), you can use the prop "disableRequiredRule" as show below:
+
+```vue
+<BaseTextField v-model="myValue" required disable-required-rule />
+```
+
+```vue
+
 <br>
 
 ### Max Length
@@ -308,6 +316,38 @@ The same thing that "MaxLength" props, but for control minLength of characters.
 You can test the input below typing any word with less than 5 characters.
 
 ::base-text-field{:min-length="5" label="Min Length 5"}
+::
+
+<br>
+
+## Icons
+
+We can add icons to the input, we have 2 kinds of icons, the left icon, and the right icon.
+
+<br>
+
+### Left Icon
+
+This is a prop to add an icon to the left of the input.
+
+```vue
+<BaseTextField v-model="myValue" left-icon="fa fa-fire" />
+```
+
+::base-text-field{left-icon="fa fa-fire" label="Left Icon"}
+::
+
+<br>
+
+### Right Icon
+
+This is a prop to add an icon to the right of the input.
+
+```vue
+<BaseTextField v-model="myValue" right-icon="fa fa-check" />
+```
+
+::base-text-field{right-icon="fa fa-check" label="Right Icon"}
 ::
 
 <br>
@@ -392,3 +432,22 @@ using this event, the default value is "input". You also have the option to use 
 
 ::base-text-field-with-model-value{max-length="5" label="Blur to update" event-emitter="blur"}
 ::
+
+<br>
+
+## Events
+
+There are some events that you can use to control the component.
+
+1. `update:modelValue` - This event is emitted when the model value is updated. The event is emitted with the new value of the model updating automatically the modelValue(v-model passed). It will be dispared according to the [event emitter prop](#event-emitter).
+2. `hasError` - This event is emitted when the input has an error, it will be emitted with a boolean value.
+3. `input` - This event is emitted when the input is updated, it will be emitted with the new value of the input.
+4. `change` - This event is emitted when the input is updated, it will be emitted with the new value of the input.
+5. `blur` - This event is emitted when the input is updated, it will be emitted with the new value of the input.
+6. `focus` - This event is emitted when the input is updated, it will be emitted with the event of the input.
+7. `focusout` - This event is emitted when the input is updated, it will be emitted with the event of the input.
+8. `click` - This event is emitted when the input is updated, it will be emitted with the event of the input.
+9. `dblclick` - This event is emitted when the input is updated, it will be emitted with the event of the input.
+10. `mousedown` - This event is emitted when the input is updated, it will be emitted with the event of the input.
+11. `mouseup` - This event is emitted when the input is updated, it will be emitted with the event of the input.
+12. `mouseenter` - This event is emitted when the input is updated, it will be emitted with the event of the input.

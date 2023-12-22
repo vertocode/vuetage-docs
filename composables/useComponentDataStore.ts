@@ -133,6 +133,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     bind: {}
                 },
                 {
+                    label: 'Icons',
+                    hash: 'icons',
+                    bind: {}
+                },
+                {
                     label: 'Styles',
                     hash: 'styles',
                     bind: {}
@@ -140,6 +145,16 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                 {
                     label: 'Event Emitter',
                     hash: 'event-emitter',
+                    bind: {}
+                },
+                {
+                    label: 'Events',
+                    hash: 'events',
+                    bind: {}
+                },
+                {
+                    label: 'Slots',
+                    hash: 'slots',
                     bind: {}
                 }
             ]
