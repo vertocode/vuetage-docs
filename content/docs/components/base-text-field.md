@@ -320,7 +320,8 @@ You can test the input below typing any word with less than 5 characters.
 
 ## Icons
 
-We can add icons to the input, we have 2 kinds of icons, the left icon, and the right icon.
+We can add icons to the input, we have 2 kinds of icons, the left icon, and the right icon. The available icons are the same that we can use in <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">font awesome</a>.
+But if you have another library that adds an icon using this syntax "`<i class="icon"></i>`", you can use it passing it as a prop value.
 
 <br>
 
