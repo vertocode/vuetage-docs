@@ -2,11 +2,11 @@
   <header class="fixed border inset-x-0 top-0 bg-slate-50 z-10">
     <div v-show="generalStore.showHeader">
       <nav class="flex items-center justify-between p-2 ml-8 lg:px-6" aria-label="Global">
-        <div class="flex gap-10 lg:flex-1 justify-between">
-          <a href="/" class="-m-1.5 p-1.5 z-50">
+        <div class="flex gap-2 lg:flex-1 justify-between">
+          <a href="/" class="-my-1.5 py-1.5 z-50">
             <img class="h-8 w-auto" src="https://i.imgur.com/E8WdocW.png" alt="logo" />
           </a>
-          <div class="mr-32">
+          <div class="lg:mr-20">
             <QuickSearch />
           </div>
         </div>
