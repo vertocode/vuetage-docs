@@ -451,3 +451,18 @@ There are some events that you can use to control the component.
 10. `mousedown` - This event is emitted when the input is updated, it will be emitted with the event of the input.
 11. `mouseup` - This event is emitted when the input is updated, it will be emitted with the event of the input.
 12. `mouseenter` - This event is emitted when the input is updated, it will be emitted with the event of the input.
+
+<br>
+
+## Slots
+
+There are some slots that you can use to control the component.
+
+1. `left-icon` - This slot is used to control the left icon of the input.
+2. `right-icon` - This slot is used to control the right icon of the input.
+3. `label` - This slot is used to control the label of the input.
+4. `error-message` - This slot is used to control the error message of the input.
+5. `loadingBorder` - This slot is used to control the loading border of the input.
+6. `spinner` - This slot is used to control the spinner of the input.
+
+<br>
