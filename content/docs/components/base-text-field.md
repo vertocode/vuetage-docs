@@ -272,11 +272,11 @@ A predefined rule, and **attribute** to use, it indicates that the input should 
 It also affect as an required field when we use inside a form.
 
 ```vue
-<BaseTextField v-model="myValue" required />
+<BaseTextField v-model="myValue" required event-emitter="blur"/>
 ```
 
 You can test it by clicking on the input, and then cause the blur event. Or type any value and after clear it.
-::base-text-field{:required="true" label="Required"}
+::base-text-field{:required="true" label="Required" event-emitter="blur"}
 ::
 
 If you want to became a field required inside a form, but you don't want to show the error message(apply this rule to validation), you can use the prop "disableRequiredRule" as show below:
@@ -284,8 +284,6 @@ If you want to became a field required inside a form, but you don't want to show
 ```vue
 <BaseTextField v-model="myValue" required disable-required-rule />
 ```
-
-```vue
 
 <br>
 
@@ -435,7 +433,7 @@ using this event, the default value is "input". You also have the option to use 
 
 <br>
 
-## Events
+# Events
 
 There are some events that you can use to control the component.
 
@@ -454,7 +452,7 @@ There are some events that you can use to control the component.
 
 <br>
 
-## Slots
+# Slots
 
 There are some slots that you can use to control the component.
 
