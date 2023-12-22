@@ -1,6 +1,6 @@
 <template>
   <div class="main-layout">
-    <HeaderDefaultHeader />
+    <Navbar />
     <div>
       <NuxtParticles
           id="tsparticles"
@@ -8,7 +8,7 @@
       />
     </div>
     <div class="flex transition-all" :class="{
-        'mt-[6.6em]': generalStore.showHeader,
+        'mt-[3.6em]': generalStore.showHeader,
         'lg:ml-1 mt-[1em]': !generalStore.showHeader
     }">
       <DocSidebar class="hidden lg:flex"/>

@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed min-h-[45em]">
+  <div class="fixed min-h-[92vh]">
     <div
         v-if="generalStore.showSidebar"
         class="duration-75 overflow-hidden op-0.1 flex flex-col justify-between h-auto p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg relative"

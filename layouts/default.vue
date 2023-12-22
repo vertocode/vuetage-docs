@@ -1,6 +1,6 @@
 <template>
   <div class="main-layout">
-    <HeaderDefaultHeader />
+    <Navbar />
     <div>
       <NuxtParticles
           id="tsparticles"
