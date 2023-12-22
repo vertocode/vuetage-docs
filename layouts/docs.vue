@@ -7,13 +7,14 @@
           :options="options"
       />
     </div>
-    <div class="flex transition-all" :class="{
-        'mt-[3.6em]': generalStore.showHeader,
+    <div class="flex transition-all mb-20" :class="{
+        'mt-[3em]': generalStore.showHeader,
         'lg:ml-1 mt-[1em]': !generalStore.showHeader
     }">
       <DocSidebar class="hidden lg:flex"/>
       <slot></slot>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 

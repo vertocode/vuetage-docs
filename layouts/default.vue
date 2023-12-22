@@ -7,7 +7,10 @@
           :options="options"
       />
     </div>
-    <slot></slot>
+    <div class="min-h-[93.3vh]">
+      <slot ></slot>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 

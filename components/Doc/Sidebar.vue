@@ -63,7 +63,7 @@
         </NuxtLink>
       </div>
 
-      <div class="bg-slate-50 inset-y-1/2 inset-x-1/2 cursor-pointer hover:bg-slate-200 p-2 flex justify-between" @click="generalStore.showSidebar = false">
+      <div class="bg-slate-50 inset-y-1/2 inset-x-1/2 cursor-pointer hover:bg-slate-200 p-2 mb-10 flex justify-between" @click="generalStore.showSidebar = false">
         <font-awesome-icon class="mt-1 ml-2" icon="fa-solid fa-arrow-left"/>
         <span>Hide Sidebar</span>
       </div>

@@ -152,7 +152,7 @@ definePageMeta({
         justify-content: space-between;
         align-items: center;
         padding: 1em;
-        margin: 1.5em 0;
+        margin: 1em 0 5em 0;
         border-width: 1px;
         border-style: solid;
         border-color: #e5e7eb;
