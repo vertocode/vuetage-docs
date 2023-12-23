@@ -1,6 +1,6 @@
 <template>
   <div class="page px-5 w-full mt-4" :class="{
-        'ml-0 lg:ml-[11em]': generalStore.showSidebar,
+        'ml-0 lg:ml-[13em]': generalStore.showSidebar,
         'lg:ml-6': !generalStore.showSidebar
       }">
     <main class="pb-2 nuxt-content" ref="scrollDiv">

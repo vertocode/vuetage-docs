@@ -61,6 +61,15 @@
             </h2>
           </div>
         </NuxtLink>
+
+        <NuxtLink to="/docs/release-notes">
+          <div class="flex items-center overflow-hidden mt-2">
+            <h2 class="text-xl font-bold flex gap-3">
+              <font-awesome-icon class="mt-1 flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" icon="fa-solid fa-code-merge"/>
+              Release Notes
+            </h2>
+          </div>
+        </NuxtLink>
       </div>
 
       <div class="bg-slate-50 inset-y-1/2 inset-x-1/2 cursor-pointer hover:bg-slate-200 p-2 mb-10 flex justify-between" @click="generalStore.showSidebar = false">

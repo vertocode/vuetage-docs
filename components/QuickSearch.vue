@@ -8,14 +8,14 @@
         </svg>
       </div>
 
-      <ul class="bg-white border border-gray-100 w-full mt-2 absolute top-11 max-h-96" style="overflow-y: auto;" v-if="searchValue?.length">
+      <ul class="bg-white border border-gray-100 w-full mt-2 absolute top-8 max-h-96" style="overflow-y: auto;" v-if="searchValue?.length">
         <li
-            :class="{ 'opacity-30': item?.disabled, 'cursor-pointer hover:bg-yellow-50 hover:text-gray-900': !item?.disabled }"
-            class="pl-8 pr-2 py-1 border-b-2 border-gray-100 relative"
+            :class="{ 'opacity-30': item?.disabled, 'hover:bg-green-50 hover:text-gray-900': !item?.disabled }"
+            class="w-full pl-8 pr-2 py-1 border-b-2 border-gray-100 relative"
             v-for="item in filteredItems"
         >
-          <font-awesome-icon class="absolute left-2.5 top-2.5" icon="fa-solid fa-fire" />
-          <a :href="item?.disabled ? null : item.route">
+          <a class="block w-full" @click="searchValue = ''" :href="item?.disabled ? null : item.route">
+            <font-awesome-icon class="absolute left-2.5 top-2.5" icon="fa-solid fa-fire" />
             <span v-html="formatText(item.text)"></span>
           </a>
         </li>
@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const searchValue = ref('')
 
@@ -33,13 +33,15 @@ const componentStore = useComponentDataStore()
 
 const options = computed(() => {
   const options = [
-    ...componentStore.value.items.flatMap(({ label, componentName, description, route, disabled = false }) => [
+    ...componentStore.value.items.flatMap(({ label, componentName, description, route, disabled = false, props = [] }) => [
       { text: label, route, disabled },
-      { text:componentName, route, disabled },
+      { text: componentName, route, disabled },
       { text: description, route, disabled },
       { text: 'Get Started', route: '/docs/get-started' },
       { text: 'Contribute', route: '/docs/contribute' },
-      { text: 'Contact', route: '/contact' }
+      { text: 'Components', route: '/docs/components' },
+      { text: 'Contact', route: '/contact' },
+      ...props.map(({ label, hash }) => ({ text: `<b>${componentName}</b> <br> ${label}`, route: `${route}#${hash}`, disabled }))
     ])
   ]
   return options.filter((value, index) => options.map(option => option.text).indexOf(value.text) === index)

@@ -9,7 +9,7 @@ Base Text Field is a vue component useful to manage easily variants, validations
 
 <br>
 
-::base-text-field{ height="1.9em" margin="auto" modelValue="vuetage" label="Base Text Field" placeholder="Type your text" variant="underlined" left-icon="fa fa-fire" right-icon="fa fa-check" use-border-loading use-rules}
+::base-text-field{ height="1.9em" margin="auto" modelValue="vuetage" label="Base Text Field" placeholder="Type your text" variant="underlined" left-icon="fa fa-fire" use-border-loading use-rules}
 ::
 
 # Model Value
