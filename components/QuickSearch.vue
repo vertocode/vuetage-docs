@@ -33,14 +33,15 @@ const componentStore = useComponentDataStore()
 
 const options = computed(() => {
   const options = [
+    { text: 'Get Started', route: '/docs/get-started' },
+    { text: 'Contribute', route: '/docs/contribute' },
+    { text: 'Components', route: '/docs/components' },
+    { text: 'Release Notes', route: '/docs/release-notes' },
+    { text: 'Contact', route: '/contact' },
     ...componentStore.value.items.flatMap(({ label, componentName, description, route, disabled = false, props = [] }) => [
       { text: label, route, disabled },
       { text: componentName, route, disabled },
       { text: description, route, disabled },
-      { text: 'Get Started', route: '/docs/get-started' },
-      { text: 'Contribute', route: '/docs/contribute' },
-      { text: 'Components', route: '/docs/components' },
-      { text: 'Contact', route: '/contact' },
       ...props.map(({ label, hash }) => ({ text: `<b>${componentName}</b> <br> ${label}`, route: `${route}#${hash}`, disabled }))
     ])
   ]
