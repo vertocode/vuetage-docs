@@ -1,5 +1,8 @@
 <template>
-  <div class="page px-5 w-full mt-4" :class="{
+  <div class="relative m-auto mt-52" v-if="isLoading">
+    <Spinner size="large" color-spinner="green"/>
+  </div>
+  <div v-else class="page px-5 w-full mt-4" :class="{
         'ml-0 lg:ml-[13em]': generalStore.showSidebar,
         'lg:ml-6': !generalStore.showSidebar
       }">
@@ -26,12 +29,17 @@
 
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { Spinner } from 'vuetage'
 
 const route = useRoute()
 const generalStore = useGeneralStore()
 const previousPageData = ref({})
 const nextPageData = ref({})
-const { data } = await useAsyncData('home', () => queryContent(route.path).findOne())
+const { data, status, pending } = await useAsyncData('home', () => queryContent(route.path).findOne())
+
+const isLoading = computed(() => {
+  return pending.value || status.value !== 'success'
+})
 
 onMounted(async () => {
   const [previous, next] = await queryContent().findSurround(route.path)
