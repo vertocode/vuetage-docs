@@ -33,10 +33,16 @@ description: 'Vuetage is a library of custom Vue components designed to simplify
 
 # Installation
 
-You can install the Vuetage library using your package manager as shown above.
+> Note (important)
+>
+> To use the Vuetage library, you must have installed the Vue 3 in your project. Probably you will find problems if you try to use it on Vue 2.
+
+<br>
+
+You can install the Vuetage library using your prefer package manager as shown below.
 
 ```bash
-npm install --save-dev vuetage
+yarn add -D vuetage
 ```
 
 # Usage
