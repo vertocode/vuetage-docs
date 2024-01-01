@@ -160,6 +160,13 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             ]
         },
         {
+            label: 'Base Select',
+            componentName: 'BaseSelect',
+            description: 'The "BaseSelect" is a useful component that can help you to use a custom select, easily change of styles, state, options, and more.',
+            route: '/docs/components/base-select',
+            props: []
+        },
+        {
             label: 'Base Select (Labs)',
             componentName: 'BaseSelect',
             description: '',
