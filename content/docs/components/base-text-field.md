@@ -3,7 +3,7 @@ title: 'Base Text Field component from Vuetage library'
 description: 'Base Text Field is a vue component useful to manage easily variants, validations, icons, and other things according to the props.'
 ---
 
-# Base Text Field (In development)
+# Base Text Field
 
 Base Text Field is a vue component useful to manage easily variants, validations, icons, and other things according to the props.
 
