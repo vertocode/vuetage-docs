@@ -92,7 +92,7 @@ This prop is used to define if the select component are multiple or not. The def
 If the base select is multiple, we can select more than one option as show below.
 
 ```vue
-  <BaseSelect :options="options" multiple />
+<BaseSelect :options="options" multiple />
 ```
 
 ::base-select{label="Multiple" :multiple="true" :use-demo-options="true"}
@@ -156,7 +156,7 @@ This is the default value for `variant` props of the base select component.
 This is the outlined value for `variant` props of the base select component.
 
 ```vue
-BaseSelect :options="options" variant="outlined" />
+<BaseSelect :options="options" variant="outlined" />
 ```
 
 ::base-select{label="Outlined" :use-demo-options="true" variant="outlined"}
