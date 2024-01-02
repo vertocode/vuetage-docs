@@ -2,4 +2,5 @@ import { addComponent } from '@nuxt/kit'
 
 await addComponent({ name: 'BaseButton',  filePath: 'vuetage' })
 await addComponent({ name: 'BaseTextField',  filePath: 'vuetage' })
+await addComponent({ name: 'BaseSelect',  filePath: 'vuetage' })
 await addComponent({ name: 'Spinner',  filePath: 'vuetage' })

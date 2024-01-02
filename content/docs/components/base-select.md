@@ -9,7 +9,8 @@ Base Select is a vue component useful to manage easily variants, options, icons,
 
 <br>
 
-# TODO: Add example
+::base-select{use-demo-options="true" label="Base Select" left-icon="fa fa-fire" margin="auto" variant="outlined"}
+::
 
 # Props
 
@@ -17,13 +18,15 @@ Base Select is a vue component useful to manage easily variants, options, icons,
 
 There are 2 ways to pass the `options` props to the component:
 
+<br>
+
 - Normal
 
 This is the more common select options, this will be used to define the available options to the component.
 
 ```vue
 <template>
-  <BaseSelect :options="options" />
+  <BaseSelect label="Normal Options" :options="options" />
 </template>
 
 <script setup lang="ts">
@@ -38,7 +41,10 @@ const options = ref<NormalOption[]>([
 </script>
 ```
 
-# TODO: Add example
+::base-select{label="Normal Options" :use-normal-options="true"}
+::
+
+<br>
 
 - Grouped
 
@@ -46,7 +52,7 @@ This is the grouped select options, this will be used to define the available op
 
 ```vue
 <template>
-  <BaseSelect :options="options" />
+  <BaseSelect label="Group Options" :options="options" />
 </template>
 
 <script setup lang="ts">
@@ -74,7 +80,10 @@ const options = ref<GroupOption[]>([
 </script>
 ```
 
-# TODO: Add example
+::base-select{label="Group Options" :use-normal-options="false"}
+::
+
+<br>
 
 ## Multiple
 
@@ -86,7 +95,10 @@ If the base select is multiple, we can select more than one option as show below
   <BaseSelect :options="options" multiple />
 ```
 
-# TODO: Add an example
+::base-select{label="Multiple" :multiple="true" :use-demo-options="true"}
+::
+
+<br>
 
 ## Selected Options
 
@@ -94,7 +106,7 @@ This prop is used to define the selected options of the select component. The de
 
 ```vue
 <template>
-  <BaseSelect :options="options" :selectedOptions="selectedOptions" />
+  <BaseSelect :options="options" multiple :selectedOptions="selectedOptions" />
 </template>
 
 <script setup lang="ts">
@@ -110,13 +122,21 @@ const selectedOptions = ref<NormalOption[]>(options.value.slice(0, 2))
 </script>
 ```
 
+::base-select{label="Selected Options" :use-normal-options="true" :multiple="true" :use-selected-options="true"}
+::
+
+
 > NOTE
 >
 > The selected options must have the same type that `NormalOption` as show above.
 
+<br>
+
 ## Variant
 
 The variant prop is used to define the variant of the select component. The available variants are:
+
+<br>
 
 - `default`
 
@@ -126,17 +146,23 @@ This is the default value for `variant` props of the base select component.
 <BaseSelect :options="options"/> 
 ```
 
-# TODO: Add an example
+::base-select{label="Default" :use-demo-options="true"}
+::
 
-- `outline`
+<br>
 
-This is the outline value for `variant` props of the base select component.
+- `outlined`
+
+This is the outlined value for `variant` props of the base select component.
 
 ```vue
-BaseSelect :options="options" variant="outline" />
+BaseSelect :options="options" variant="outlined" />
 ```
 
-# TODO: Add an example
+::base-select{label="Outlined" :use-demo-options="true" variant="outlined"}
+::
+
+<br>
 
 - `underlined`
 
@@ -146,15 +172,23 @@ This is the underlined value for `variant` props of the base select component.
 <BaseSelect :options="options" variant="underlined" />
 ```
 
-# TODO: Add an example
+::base-select{label="Underlined" :use-demo-options="true" variant="underlined"}
+::
+
+<br>
 
 - `dark`
 
 This is the dark value for `variant` props of the base select component.
 
+<br>
+
 ```vue
 <BaseSelect :options="options" variant="dark" />
 ```
 
-# TODO: Add an example
+::base-select{label="Dark" :use-demo-options="true" variant="dark"}
+::
+
+<br>
 

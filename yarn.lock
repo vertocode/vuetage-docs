@@ -7523,10 +7523,10 @@ vue@^3.3.7, vue@^3.3.8:
     "@vue/server-renderer" "3.3.12"
     "@vue/shared" "3.3.12"
 
-vuetage@^0.0.47:
-  version "0.0.47"
-  resolved "https://registry.yarnpkg.com/vuetage/-/vuetage-0.0.47.tgz#c3f57e6a46bc02e0418583115286915368e6ec8c"
-  integrity sha512-o1HyxKuQNn4xgrvUmHliQJr+crpt3lLXrbpskScXt7t96xfkX6Wf5lzf2uY60r4EFCkXroKgkZi2HxXJxIqXEA==
+vuetage@^0.0.51:
+  version "0.0.51"
+  resolved "https://registry.yarnpkg.com/vuetage/-/vuetage-0.0.51.tgz#1e78d5e861b6f50644d661418dd6196bf646e3e9"
+  integrity sha512-z2c/XATi0hE2o8vIgTz6vemORuh2UNAGe9z4x0tZw7FEpXG0+plIfBby/gi2+z85hnrJe1YC/x8A48ealdji9g==
   dependencies:
     font-awesome "^4.7.0"
     vue "^3.3.7"
