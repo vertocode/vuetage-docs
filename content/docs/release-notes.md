@@ -14,6 +14,19 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.52" target="_blank" rel="noopener noreferrer">
+        v.0.0.52
+    </a>
+</h2>
+
+- Resolve bug: `BaseSelect` with state `disabled` is opening the menu when we click on right icon
+- Add transition for a border, and background of `BaseTextField`, and `BaseSelect` components
+- Add a type for BaseSelect (This is a problem in v.0.0.51 because, when we were importing, it is not being recognized as a component)
+- Add a string model for BaseSelect
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.51" target="_blank" rel="noopener noreferrer">
         v.0.0.51
     </a>
