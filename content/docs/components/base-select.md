@@ -143,7 +143,7 @@ The variant prop is used to define the variant of the select component. The avai
 This is the default value for `variant` props of the base select component.
 
 ```vue
-<BaseSelect :options="options"/> 
+<BaseSelect label="Default" :options="options"/> 
 ```
 
 ::base-select{label="Default" :use-demo-options="true"}
@@ -156,7 +156,7 @@ This is the default value for `variant` props of the base select component.
 This is the outlined value for `variant` props of the base select component.
 
 ```vue
-<BaseSelect :options="options" variant="outlined" />
+<BaseSelect label="Outlined" :options="options" variant="outlined" />
 ```
 
 ::base-select{label="Outlined" :use-demo-options="true" variant="outlined"}
@@ -169,7 +169,7 @@ This is the outlined value for `variant` props of the base select component.
 This is the underlined value for `variant` props of the base select component.
 
 ```vue
-<BaseSelect :options="options" variant="underlined" />
+<BaseSelect label="Underlined" :options="options" variant="underlined" />
 ```
 
 ::base-select{label="Underlined" :use-demo-options="true" variant="underlined"}
@@ -184,11 +184,188 @@ This is the dark value for `variant` props of the base select component.
 <br>
 
 ```vue
-<BaseSelect :options="options" variant="dark" />
+<BaseSelect label="Dark" :options="options" variant="dark" />
 ```
 
 ::base-select{label="Dark" :use-demo-options="true" variant="dark"}
 ::
 
 <br>
+
+## Close on select
+
+This prop is used to define if the menu is closed when an option is selected. The default value is `true` for normal options, and `false` for grouped options.
+
+```vue
+<BaseSelect variant="underlined" label="Close on select" :options="options" :close-on-select="false" />
+```
+
+::base-select{label="Close on select" :use-normal-options="true" variant="underlined" :close-on-select="false"}
+::
+
+<br>
+
+## Loading
+
+This prop defines if the select component is loading or not. The default value is `false`.
+
+```vue
+<BaseSelect label="Loading" variant="outlined" :loading="true" />
+```
+
+::base-select{label="Loading" :use-demo-options="true" variant="outlined" :loading="true"}
+::
+
+<br>
+
+There are some props related for the loading props:
+
+| props            | type    | default                                            | description                                                                   |
+|------------------|---------|----------------------------------------------------|-------------------------------------------------------------------------------|
+| loading          | boolean | false                                              | Define if the component is in loading.                                        |
+| useBorderLoading | boolean | false                                              | Define if the loading will be an spinner or border loading style.             |
+| loadingColor     | string  | black                                              | Define the color of spinner or border loading.                                | 
+| loadingSize      | string  | small(0.7em) for spinner or 2px for border loading | Define the size of spinner or border loading.                                 |
+| disableOnLoading | boolean | false                                              | Define if when the props "loading" be true the field will be disabled or not. |
+
+<br>
+
+## Disabled
+
+This prop defines if the select component is disabled or not. The default value is `false`.
+
+```vue
+<BaseSelect label="Disabled" :disabled="true" />
+```
+
+::base-select{:disabled="true" label="Disabled"}
+::
+
+<br>
+
+## Icons
+
+We can add icons to the input, we have 2 kinds of icons, the left icon, and the right icon. The available icons are the same that we can use in <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">font awesome</a>.
+But if you have another library that adds an icon using this syntax "`<i class="icon"></i>`", you can use it passing it as a prop value.
+
+<br>
+
+### Left Icon
+
+This is a prop to add an icon to the left of the input.
+
+```vue
+<BaseSelect label="Left Icon" :options="options" left-icon="fa fa-fire" />
+```
+
+::base-select{left-icon="fa fa-fire" label="Left Icon"}
+::
+
+<br>
+
+### Right Icon
+
+This is a prop to add an icon to the left of the input.
+
+> Note
+> 
+> The right icon passed as prop will replace the default icon that is the arrow down("fa fa-caret-down").
+
+```vue
+<BaseSelect label="Left Icon" :options="options" left-icon="fa fa-fire" />
+```
+
+::base-select{right-icon="fa fa-fire" label="Left Icon"}
+::
+
+<br>
+
+## Styles
+
+There are some props to help you to customize the select component. 
+For these props, you can use the same syntax that you use in the style of some vue component.
+
+<br>
+
+You can also edit the hover passing the style as an object inside the hover key, as show below.
+
+```vue
+<BaseSelect
+  label="Styles" 
+  :options="options" 
+  :style="{
+      backgroundColor: '#90ee90',
+      color: 'green',
+      // You can use any style that you use in the style prop. It will be applied when the mouse is over the component.
+      hover: { 
+        backgroundColor: 'yellow',
+        color: 'green',
+      }
+  }"
+/>
+```
+
+<br>
+
+### Input Style
+
+This prop will modify the style of the input.
+
+```vue
+<BaseSelect label="Input Style" :options="options" input-style="background-color: #90ee90; color: green;" />
+```
+
+::base-select{label="Input Style" :use-demo-options="true" input-style="background-color: #90ee90; color: green;"}
+::
+
+<br>
+
+### Label Style
+
+This prop will modify the style of the label.
+
+```vue
+<BaseSelect label="Label Style" :options="options" label-style="color: red;" />
+```
+
+::base-select{label="Label Style" :use-demo-options="true" label-style="color: red;"}
+::
+
+<br>
+
+### Menu Style
+
+This prop will modify the style of the menu.
+
+```vue
+<BaseSelect label="Menu Style" :options="options" menu-style="background-color: #90ee90; color: green;" />
+```
+
+::base-select{label="Menu Style" :use-demo-options="true" menu-style="background-color: #90ee90; color: green;"}
+::
+
+<br>
+
+### Item Style
+
+This prop will modify the style of the menu item.
+
+```vue
+<BaseSelect label="Menu Item Style" :options="options" item-style="background-color: #90ee90; color: green;" />
+```
+
+::base-select{label="Menu Item Style" :use-demo-options="true" item-style="background-color: #90ee90; color: green;"}
+::
+
+<br>
+
+### Group Style
+
+This prop will modify the style of the menu group.
+
+```vue
+<BaseSelect label="Menu Group Style" :options="options" group-style="background-color: #90ee90; color: green;" />
+```
+
+::base-select{label="Menu Group Style" :use-demo-options="false" group-style="background-color: #90ee90; color: green;"}
 

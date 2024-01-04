@@ -184,7 +184,7 @@ There are some props related for the loading props:
 |------------------|---------|----------------------------------------------------|-------------------------------------------------------------------------------|
 | loading          | boolean | false                                              | Define if the component is in loading.                                        |
 | useBorderLoading | boolean | false                                              | Define if the loading will be an spinner or border loading style.             |
-| loadingColor     | string  | #3498db                                            | Define the color of spinner or border loading.                                | 
+| loadingColor     | string  | black                                              | Define the color of spinner or border loading.                                | 
 | loadingSize      | string  | small(0.7em) for spinner or 2px for border loading | Define the size of spinner or border loading.                                 |
 | disableOnLoading | boolean | false                                              | Define if when the props "loading" be true the field will be disabled or not. |
 
