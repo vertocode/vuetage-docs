@@ -47,28 +47,53 @@ yarn add -D vuetage
 
 # Usage
 
-To use the components, simply import them. For example, to use the BaseButton component, import it as shown below.
+To use the components, simply import them. For example, to use the BaseButton, BaseTextField, and BaseSelect component, import it as shown below.
 
 ```javascript
-import { BaseButton } from 'vuetage'
+import { BaseButton, BaseSelect, BaseTextField } from 'vuetage'
 ```
 
 # Full example
 
 ```vue
 <template>
-  <BaseButton variant="success" :loading="isLoading" :disabled="isDisabled">
-    Pay
-  </BaseButton>
+  <form @submit.prevent style="width: 240px; margin: 2em auto;">
+      <BaseTextField
+          label="Name"
+          placeholder="Enter your name"
+          v-model="name"
+      />
+      <BaseTextField
+          label="Email"
+          placeholder="Enter your email"
+          v-model="email"
+      />
+      <BaseSelect
+          label="Country"
+          :options="countries"
+          v-model="country"
+      />
+      <BaseButton
+          rightIcon="fa fa-rocket"
+          size="small"
+          :disabled="isDisabled"
+          :loading="isLoading"
+          @click="submit"
+      >
+        Submit form
+      </BaseButton>
+  </form>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-import { BaseButton } from 'vuetage'
-
-const isLoading = ref(false)
-const isDisabled = ref(false)
-</script>
 ```
+
+> NOTE
+>
+> There are a lot of props to modify the styles of component, this is just a default, you can edit the colors, size, effects, and add custom styles as you need.
+
+The Result of this code will be:
+
+![Imgur](https://i.imgur.com/HdgLOzLm.png)
+
+If you want to see it in action, you can check it on [storybook](https://vuetage-components.vertocode.com/?path=/story/doc-formexample--form-example).
 
 

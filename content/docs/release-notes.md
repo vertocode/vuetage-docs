@@ -14,6 +14,20 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.53" target="_blank" rel="noopener noreferrer">
+        v.0.0.53
+    </a>
+</h2>
+
+- Add a new prop `hideRightIcon` prop for `BaseButton` component to hide the right icon
+- Add a new prop `hideLeftIcon` prop for `BaseButton` component to hide the left icon
+- Add a padlock icon for `BaseButton` component when the state is `disabled` per default, you can disable it using the hideRightIcon with the same conditional passed for disabled
+- Fix some wrong alignments in general components
+- 
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.52" target="_blank" rel="noopener noreferrer">
         v.0.0.52
     </a>
