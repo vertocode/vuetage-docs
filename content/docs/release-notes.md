@@ -14,6 +14,20 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.54" target="_blank" rel="noopener noreferrer">
+        v.0.0.54
+    </a>
+</h2>
+
+- Fix padding-left on `BaseTextField` in an input element, the text was too close to the left border
+- Add a padlock icon for `BaseButton` component when the state is `disabled` per default, you can disable it using the hideRightIcon with the same conditional passed for disabled
+- Export type of props of `BaseButton`, `BaseTextField`, and `BaseSelect` components
+- Export type of options of `BaseSelect` component
+- Change hover color of outline variants of `BaseButton` component
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.53" target="_blank" rel="noopener noreferrer">
         v.0.0.53
     </a>
@@ -21,9 +35,8 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 
 - Add a new prop `hideRightIcon` prop for `BaseButton` component to hide the right icon
 - Add a new prop `hideLeftIcon` prop for `BaseButton` component to hide the left icon
-- Add a padlock icon for `BaseButton` component when the state is `disabled` per default, you can disable it using the hideRightIcon with the same conditional passed for disabled
 - Fix some wrong alignments in general components
-- 
+- Add a type for BaseSelect (This is a problem in v.0.0.51/v.0.0.52 because, when we were importing, it is not being recognized as a component)
 
 <br>
 
@@ -35,7 +48,6 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 
 - Resolve bug: `BaseSelect` with state `disabled` is opening the menu when we click on right icon
 - Add transition for a border, and background of `BaseTextField`, and `BaseSelect` components
-- Add a type for BaseSelect (This is a problem in v.0.0.51 because, when we were importing, it is not being recognized as a component)
 - Add a string model for BaseSelect
 
 <br>
@@ -79,4 +91,6 @@ Error version. Do not use it.
 </h2>
 
 - Added [`BaseTextField`](https://vuetage.vertocode.com/docs/components/base-text-field) component
+
+<br>
 

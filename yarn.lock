@@ -7524,9 +7524,9 @@ vue@^3.3.7, vue@^3.3.8:
     "@vue/shared" "3.3.12"
 
 vuetage@^0.0.54:
-  version "0.0.53"
-  resolved "https://registry.yarnpkg.com/vuetage/-/vuetage-0.0.53.tgz#1715153ba41e0f49ab02629503b95e6e7f733089"
-  integrity sha512-KwiaNk5lH1qdj/Z6kxX35yvVthn2/Yj5WXysCs3Fq4YlLmhFXCpkDwJz7f0NRz5Pc+ahdWyl55FQ/AIMV93LuA==
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/vuetage/-/vuetage-0.0.54.tgz#6d8de7a6bf10a6484d60f18ee669361caca91b35"
+  integrity sha512-fsS3Iez3wYxy6QHlP/cliYMmd2FuHu9615FdA4k7qtEj5kgxUVoPGNzo30/SESaNNR5NRYPPmClilAEqiMRfBw==
   dependencies:
     font-awesome "^4.7.0"
     vue "^3.3.7"

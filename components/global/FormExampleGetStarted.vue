@@ -36,15 +36,7 @@
 import { BaseTextField, BaseButton, BaseSelect } from 'vuetage'
 import { ref, reactive } from 'vue'
 
-const isDisabled = ref(false)
 const isLoading = ref(false)
-const submit = () => {
-  isLoading.value = true
-  setTimeout(() => {
-    isLoading.value = false
-  }, 2000)
-}
-
 const data = reactive({
   name: '',
   email: '',
@@ -53,9 +45,21 @@ const data = reactive({
     value: ''
   }
 })
+
 const countries = [
   { text: 'United States', value: 'us' },
   { text: 'Canada', value: 'ca' },
   { text: 'Mexico', value: 'mx' },
 ]
+
+const isDisabled = computed(() => {
+  return !data.name || !data.email || !data.country.value
+})
+
+const submit = () => {
+  isLoading.value = true
+  setTimeout(() => {
+    isLoading.value = false
+  }, 2000)
+}
 </script>
