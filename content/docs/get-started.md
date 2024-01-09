@@ -92,8 +92,5 @@ import { BaseButton, BaseSelect, BaseTextField } from 'vuetage'
 
 The Result of this code will be:
 
-![Imgur](https://i.imgur.com/HdgLOzLm.png)
-
-If you want to see it in action, you can check it on [storybook](https://vuetage-components.vertocode.com/?path=/story/doc-formexample--form-example).
-
-
+::form-example-get-started
+::
