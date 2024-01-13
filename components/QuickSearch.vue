@@ -52,5 +52,5 @@ const filteredItems = computed(() => {
   return options.value.filter(({ text }) => text.toLowerCase().includes(searchValue.value?.toLowerCase()))
 })
 
-const formatText = (text: string) => text.replace(searchValue.value, `<b>${searchValue.value}</b>`)
+const formatText = (text: string) => text.toLowerCase().replace(searchValue.value.slice().toLowerCase(), `<b>${searchValue.value}</b>`)
 </script>

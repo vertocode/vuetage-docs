@@ -14,6 +14,16 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.55" target="_blank" rel="noopener noreferrer">
+        v.0.0.55
+    </a>
+</h2>
+
+- Fix the wrong alignment of the spinners in the components.
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.54" target="_blank" rel="noopener noreferrer">
         v.0.0.54
     </a>

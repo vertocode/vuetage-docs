@@ -162,7 +162,7 @@ There are 2 kinds of loading; the spinner loading, and border loading.
 <BaseTextField v-model="myValue" :loading="true" />
 ```
 
-::base-text-field{:loading="true" label="Loading" loadingSize="20px"}
+::base-text-field{:loading="true" label="Loading"}
 ::
 
 <br>

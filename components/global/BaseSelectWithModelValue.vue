@@ -1,14 +1,18 @@
 <template>
   <div style="width: 200px;" :style="{ margin }">
-    <BaseSelect v-bind="{
+    <BaseSelect v-model="value" v-bind="{
     ...props,
-    options
+    options,
+    label: 'Model Value'
   }"></BaseSelect>
   </div>
+  <p> Model Value: <code style="color: #6AAF85;">{{ JSON.stringify(value) }}</code> </p>
 </template>
 
 <script setup lang="ts">
 import { BaseSelect } from 'vuetage'
+
+const value = ref(null)
 
 const props = defineProps({
   useNormalOptions: {

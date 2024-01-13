@@ -12,6 +12,35 @@ Base Select is a vue component useful to manage easily variants, options, icons,
 ::base-select{use-demo-options="true" label="Base Select" left-icon="fa fa-fire" margin="auto" variant="outlined"}
 ::
 
+# Model Value
+
+The model value of the base select component is the value of the selected option. It will be automated updated when we select/unselect an option.
+If is't a multiple select, the model value will be an array of the selected options.
+
+::base-select-with-model-value{use-normal-options="true"}
+::
+
+```vue
+<template>
+    <BaseSelect label="Model Value" :options="options" v-model="modelValue" />
+    <p> Model Value: <code style="color: #6AAF85;">{{ JSON.stringify(myValue) }}</code> </p>
+</template>
+
+<script setup lang="ts">
+  import { ref } from 'vue'
+  import { BaseSelect, NormalOption } from 'vuetage'
+
+  const myValue = ref<NormalOption>(null)
+  const options = [
+    { value: '1', text: 'Option 1' },
+    { value: '2', text: 'Option 2' },
+    { value: '3', text: 'Option 3' },
+  ]
+</script>
+```
+
+<br>
+
 # Props
 
 ## Options
@@ -97,38 +126,6 @@ If the base select is multiple, we can select more than one option as show below
 
 ::base-select{label="Multiple" :multiple="true" :use-demo-options="true"}
 ::
-
-<br>
-
-## Selected Options
-
-This prop is used to define the selected options of the select component. The default value is `[]`.
-
-```vue
-<template>
-  <BaseSelect :options="options" multiple :selectedOptions="selectedOptions" />
-</template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-import { BaseSelect, NormalOption } from 'vuetage'
-
-const options = ref<NormalOption[]>([
-  { value: '1', text: 'Option 1' },
-  { value: '2', text: 'Option 2' },
-  { value: '3', text: 'Option 3' },
-])
-const selectedOptions = ref<NormalOption[]>(options.value.slice(0, 2))
-</script>
-```
-
-::base-select{label="Selected Options" :use-normal-options="true" :multiple="true" :use-selected-options="true"}
-::
-
-
-> NOTE
->
-> The selected options must have the same type that `NormalOption` as show above.
 
 <br>
 
