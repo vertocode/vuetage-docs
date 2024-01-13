@@ -42,9 +42,18 @@ const isImgHovered = ref(false)
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #333;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 3em;
+  margin-bottom: 0.25em;
 }
 </style>

@@ -53,6 +53,8 @@ definePageMeta({
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 .page {
   background-color: white;
   margin-right: 1em;
@@ -77,16 +79,18 @@ definePageMeta({
       color: transparent;
       padding-bottom: 0.3em;
       margin-bottom: 0.5em;
+      font-family: 'Playfair Display', serif;
 
       a {
         background: linear-gradient(#3B6D60, #21C55D);
         background-clip: text;
         color: transparent;
+        font-family: 'Playfair Display', serif;
       }
     }
 
     h2 {
-      font-size: 2em;
+      font-size: 1.8em;
       color: #555;
       margin-bottom: 0.5em;
       text-decoration: none;
@@ -165,6 +169,10 @@ definePageMeta({
 
     tr:hover {
       background-color: #f5f5f5;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
     }
 
     .footer {
