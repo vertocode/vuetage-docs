@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   ],
   content: {
     highlight: {
-      theme: 'dracula-soft'
+      theme: 'material-theme-ocean'
     },
   },
   plugins: [
