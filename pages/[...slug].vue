@@ -4,7 +4,7 @@
   </div>
   <div v-else class="page px-5 w-full mt-4" :class="{
         'ml-0 lg:ml-[13em]': generalStore.showSidebar,
-        'lg:ml-6': !generalStore.showSidebar
+        '10 lg:ml-6': !generalStore.showSidebar
       }">
     <main class="pb-2 nuxt-content" ref="scrollDiv">
       <ContentDoc class="prose prose-light">
@@ -54,22 +54,42 @@ definePageMeta({
 
 <style lang="scss">
 .page {
+  background-color: white;
+  margin-right: 1em;
+  padding: 1em;
+  border: 1px solid #e5e7eb;
+
   .nuxt-content {
-    max-height: 80vh;
+    a {
+      color: #236251;
+      text-decoration: none !important;
+      border-bottom: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
 
     h1 {
       font-size: 2.5em;
-      color: #333;
-      border-bottom: 2px solid #333;
+      background: linear-gradient(#3B6D60, #21C55D);
+      background-clip: text;
+      color: transparent;
       padding-bottom: 0.3em;
       margin-bottom: 0.5em;
+
+      a {
+        background: linear-gradient(#3B6D60, #21C55D);
+        background-clip: text;
+        color: transparent;
+      }
     }
 
     h2 {
       font-size: 2em;
       color: #555;
       margin-bottom: 0.5em;
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     h3 {
@@ -79,9 +99,10 @@ definePageMeta({
     }
 
     pre {
-      background-color: #f8f8f8;
+      background-color: #272A37;
       margin-bottom: 2em;
-      border: 1px solid #ddd;
+      border: 1px solid #F8F859;
+      color: rgba(255, 255, 255, 0.60);
       padding: 10px;
       border-radius: 4px;
       overflow: auto;
@@ -102,16 +123,11 @@ definePageMeta({
       border-left: 2px solid #6a737d;
       padding-left: 10px;
       margin: 10px 0;
-      color: #6a737d;
-    }
-
-    a {
-      color: #236251;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+      font-style: italic;
+      font-size: 0.8em;
+      font-weight: bolder;
+      color: rgba(248, 248, 89, 0.7);
+      background-color: #272A37;
     }
 
     ul, ol {
@@ -132,16 +148,14 @@ definePageMeta({
     }
 
     table {
-      border-collapse: collapse;
       width: 100%;
+      border-collapse: collapse;
       margin-bottom: 20px;
     }
 
     th, td {
-      max-width: 3px;
-      word-wrap: break-word;
       border: 1px solid #ddd;
-      padding: 8px;
+      padding: 12px;
       text-align: left;
     }
 
