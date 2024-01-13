@@ -22,7 +22,7 @@ If is't a multiple select, the model value will be an array of the selected opti
 
 ```vue
 <template>
-    <BaseSelect label="Model Value" :options="options" v-model="modelValue" />
+    <BaseSelect label="Model Value" :options="options" v-model="myValue" />
     <p> Model Value: <code style="color: #6AAF85;">{{ JSON.stringify(myValue) }}</code> </p>
 </template>
 
