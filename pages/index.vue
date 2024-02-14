@@ -13,7 +13,7 @@
           <div class="my-4">
             <img
                 class="mx-auto h-[200px]  transition-all duration-300 ease-in-out transform hover:scale-105"
-                :class="{ 'animate-spin': isImgHovered }"
+                :class="{ 'animate-pulse animate-pulse-reverse animate-pulse-shadow': isImgHovered }"
                 src="../assets/images/vuetage-homepage.png"
                 @mouseenter="isImgHovered = true"
                 @mouseleave="isImgHovered = false"
@@ -24,14 +24,14 @@
 
 
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a href="/docs/get-started" class="whitespace-nowrap inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-green-500 text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <NuxtLink to="/docs/get-started" class="whitespace-nowrap inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-green-500 text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               Get started
               <font-awesome-icon class="mt-1 ml-2" icon="fa-solid fa-rocket" />
-            </a>
-            <a href="/docs" class="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-white/0 text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 ">
+            </NuxtLink>
+            <NuxtLink to="/docs" class="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-white/0 text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 ">
               Documentation
               <font-awesome-icon class="mt-1 ml-2" icon="fa-solid fa-book" />
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>

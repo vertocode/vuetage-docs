@@ -15,13 +15,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, useRuntimeConfig } from '#imports'
+import { onMounted, useRuntimeConfig } from '#imports'
 import { loadFull } from 'tsparticles'
 import { tsParticles } from 'tsparticles-engine'
 
-const { mode } = useRuntimeConfig().public.particles;
+useSeoMeta({
+  title: 'Vuetage',
+  description: 'Vuetage is a library of custom Vue components designed to simplify and enhance your web development experience with Vue.js.',
+  ogImage: 'https://i.imgur.com/TJQ7yVv.png'
+})
 
-const show = ref(true);
+const { mode } = useRuntimeConfig().public.particles;
 
 const options = {
   fullScreen: {

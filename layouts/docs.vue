@@ -25,7 +25,11 @@ import { tsParticles } from 'tsparticles-engine'
 
 const { mode } = useRuntimeConfig().public.particles
 
-const show = ref(true)
+useSeoMeta({
+  title: 'Vuetage',
+  description: 'Vuetage is a library of custom Vue components designed to simplify and enhance your web development experience with Vue.js.',
+})
+
 const generalStore = useGeneralStore()
 
 const options = {

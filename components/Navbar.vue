@@ -2,9 +2,9 @@
   <header class="fixed border inset-x-0 top-0 bg-slate-50 z-10">
     <div v-show="generalStore.showHeader">
       <nav class="flex items-center justify-between p-2 ml-8 lg:px-6" aria-label="Global">
-        <div class="flex gap-2 lg:flex-1 justify-between">
+        <div class="flex gap-4 lg:flex-1 justify-between w-full mr-5">
           <NuxtLink to="/" class="-my-1.5 py-1.5 z-50">
-            <img class="h-8 w-auto" src="https://i.imgur.com/E8WdocW.png" alt="logo" />
+            <img class="h-8 w-auto" src="/logo.png" alt="logo" />
           </NuxtLink>
           <div class="lg:mr-20">
             <QuickSearch />
@@ -29,7 +29,7 @@
           <div class="flex items-center justify-between">
             <NuxtLink to="/" class="-m-1.5 p-1.5">
               <span class="sr-only">Logo</span>
-              <img class="h-8 w-auto" src="https://i.imgur.com/E8WdocW.png" alt="logo" />
+              <img class="h-8 w-auto" src="/logo.png" alt="logo" />
             </NuxtLink>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
               <span class="sr-only">Close</span>

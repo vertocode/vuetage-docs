@@ -67,6 +67,11 @@ import { ref } from 'vue'
 import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
 import lodash from 'lodash'
 
+useSeoMeta({
+  title: 'Contact - Vuetage',
+  description: 'Vuetage is a library of custom Vue components designed to simplify and enhance your web development experience with Vue.js.',
+})
+
 const agreed = ref(false)
 const formData = reactive({
   firstName: '',
