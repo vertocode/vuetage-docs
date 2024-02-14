@@ -14,19 +14,19 @@ description: 'Vuetage is a library of custom Vue components designed to simplify
 </div>
 
 <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 1em;">
- <a href="https://npm.im/vuetage">
+ <a href="https://npm.im/vuetage" target="_blank">
       <img src="https://badgen.net/npm/v/vuetage?color=blue" alt="npm version">
     </a>
- <a href="https://npm.im/vuetage">
+ <a href="https://npm.im/vuetage" target="_blank">
       <img src="https://badgen.net/npm/dw/vuetage?color=blue" alt="npm downloads">
     </a>
- <a href="https://npm.im/vuetage">
+ <a href="https://npm.im/vuetage" target="_blank">
       <img src="https://badgen.net/npm/types/tslib" alt="typescript types">
     </a>
- <a href="https://bundlephobia.com/result?p=vuetage">
+ <a href="https://bundlephobia.com/result?p=vuetage" target="_blank">
       <img src="https://badgen.net/bundlephobia/minzip/vuetage?color=blue" alt="minzip size">
     </a>
- <a href="https://npm.im/vuetage">
+ <a href="https://npm.im/vuetage" target="_blank">
       <img src="https://badgen.net/npm/license/vuetage" alt="license">
     </a>
 </div>
