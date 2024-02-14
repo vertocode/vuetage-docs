@@ -3,9 +3,9 @@
     <div v-show="generalStore.showHeader">
       <nav class="flex items-center justify-between p-2 ml-8 lg:px-6" aria-label="Global">
         <div class="flex gap-2 lg:flex-1 justify-between">
-          <a href="/" class="-my-1.5 py-1.5 z-50">
+          <NuxtLink to="/" class="-my-1.5 py-1.5 z-50">
             <img class="h-8 w-auto" src="https://i.imgur.com/E8WdocW.png" alt="logo" />
-          </a>
+          </NuxtLink>
           <div class="lg:mr-20">
             <QuickSearch />
           </div>
@@ -17,7 +17,7 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <a v-for="item in navigation" :key="item.name" :href="item.route" class="z-50 text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
+          <NuxtLink v-for="item in navigation" :key="item.name" :to="item.route" class="z-50 text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</NuxtLink>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <NuxtLink to="https://vuetage-components.vertocode.com" target="_blank" class="z-50 text-sm font-semibold leading-6 text-gray-900 cursor-pointer">Storybook Components <span aria-hidden="true">&rarr;</span></NuxtLink>
@@ -27,10 +27,10 @@
         <div class="fill-transparent fixed inset-0 z-50" />
         <DialogPanel class="bg-white fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
-            <a href="/" class="-m-1.5 p-1.5">
+            <NuxtLink to="/" class="-m-1.5 p-1.5">
               <span class="sr-only">Logo</span>
               <img class="h-8 w-auto" src="https://i.imgur.com/E8WdocW.png" alt="logo" />
-            </a>
+            </NuxtLink>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
               <span class="sr-only">Close</span>
               <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -41,13 +41,13 @@
               <div class="py-10 flex flex-col justify-between h-full">
                 <div>
                   <div class="flex flex-col py-2" v-for="item in navigation" :key="item.name">
-                    <a :href="item.route" class="block rounded-lg text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
+                    <NuxtLink :to="item.route" class="block rounded-lg text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</NuxtLink>
                     <ul v-if="item?.subItems?.length">
                       <li class="ml-3 text-base op-50" v-for="subItem in item.subItems">
-                        <a :href="subItem.route" class="cursor-pointer block hover:bg-gray-50">
+                        <NuxtLink :to="subItem.route" class="cursor-pointer block hover:bg-gray-50">
                           <font-awesome-icon icon="fa-solid fa-fire" class="mr-2"/>
                           <span>{{ subItem.name }}</span>
-                        </a>
+                        </NuxtLink>
                       </li>
                     </ul>
                   </div>

@@ -7057,8 +7057,10 @@ vue@^3.3.7, vue@^3.3.8, vue@^3.4.5:
     "@vue/server-renderer" "3.4.13"
     "@vue/shared" "3.4.13"
 
-vuetage@../vuetage:
+vuetage@^0.0.54:
   version "0.0.54"
+  resolved "https://registry.yarnpkg.com/vuetage/-/vuetage-0.0.54.tgz#6d8de7a6bf10a6484d60f18ee669361caca91b35"
+  integrity sha512-fsS3Iez3wYxy6QHlP/cliYMmd2FuHu9615FdA4k7qtEj5kgxUVoPGNzo30/SESaNNR5NRYPPmClilAEqiMRfBw==
   dependencies:
     font-awesome "^4.7.0"
     vue "^3.3.7"
