@@ -98,7 +98,10 @@ const submit = async () => {
 
     if (response.ok) {
       alertStatus.value = { status: 'success' }
-      console.log('Form submitted successfully!')
+      formData.firstName = ''
+      formData.lastName = ''
+      formData.email = ''
+      formData.message = ''
     } else {
       alertStatus.value = { status: 'failed' }
       console.error('Failed to submit form')
