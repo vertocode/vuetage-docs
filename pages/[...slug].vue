@@ -74,7 +74,7 @@ definePageMeta({
 
     h1 {
       font-size: 2.5em;
-      background: linear-gradient(#3B6D60, #21C55D);
+      background: #21C55D;
       background-clip: text;
       color: transparent;
       padding-bottom: 0.3em;
@@ -82,7 +82,7 @@ definePageMeta({
       font-family: 'Playfair Display', serif;
 
       a {
-        background: linear-gradient(#3B6D60, #21C55D);
+        background: #21C55D;
         background-clip: text;
         color: transparent;
         font-family: 'Playfair Display', serif;
