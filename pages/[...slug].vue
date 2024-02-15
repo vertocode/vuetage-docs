@@ -35,7 +35,7 @@ const route = useRoute()
 const generalStore = useGeneralStore()
 const previousPageData = ref({})
 const nextPageData = ref({})
-const { data, status, pending } = await useAsyncData('home', () => queryContent(route.path).findOne())
+const { status, pending } = await useAsyncData('home', () => queryContent(route.path).findOne())
 
 const isLoading = computed(() => {
   return pending.value || status.value !== 'success'
@@ -125,7 +125,7 @@ definePageMeta({
 
     blockquote {
       border-left: 2px solid #6a737d;
-      padding-left: 10px;
+      padding: 10px;
       margin: 10px 0;
       font-style: italic;
       font-size: 0.8em;

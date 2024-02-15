@@ -19,7 +19,7 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
     </a>
 </h2>
 
-- Fix the wrong alignment of the spinners in the components.
+- Fix the wrong alignment of the left, and right icon in the BaseTextField.
 
 <br>
 
