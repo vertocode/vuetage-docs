@@ -14,6 +14,15 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.56" target="_blank" rel="noopener noreferrer">
+        v.0.0.56
+    </a>
+</h2>
+
+- Fix the wrong alignment of the left, and right icon in the BaseTextField when there is an error message.
+- Fix the wrong alignment in the spinner of the BaseButton component.
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.55" target="_blank" rel="noopener noreferrer">
         v.0.0.55
     </a>
