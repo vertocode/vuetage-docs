@@ -14,6 +14,17 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.58" target="_blank" rel="noopener noreferrer">
+        v.0.0.58
+    </a>
+</h2>
+
+- Add BaseGroup component
+- Add BaseItem component
+- Add BaseMenu component
+- Change the font-family, font-weight, and line-height globally of the library
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.57" target="_blank" rel="noopener noreferrer">
         v.0.0.57
     </a>
