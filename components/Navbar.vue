@@ -23,9 +23,9 @@
           <NuxtLink to="https://vuetage-components.vertocode.com" target="_blank" class="z-50 text-sm font-semibold leading-6 text-gray-900 cursor-pointer">Storybook Components <span aria-hidden="true">&rarr;</span></NuxtLink>
         </div>
       </nav>
-      <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
+      <div class="lg:hidden" v-if="mobileMenuOpen">
         <div class="fill-transparent fixed inset-0 z-50" />
-        <DialogPanel class="bg-white fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="bg-white fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
             <NuxtLink to="/" class="-m-1.5 p-1.5">
               <span class="sr-only">Logo</span>
@@ -41,13 +41,11 @@
               <div class="py-10 flex flex-col justify-between h-full">
                 <div>
                   <div class="flex flex-col py-2" v-for="item in navigation" :key="item.name">
-                    <NuxtLink :to="item.route" class="block rounded-lg text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</NuxtLink>
+                    <h3 @click="redirect(item.route)" class="block rounded-lg text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer">{{ item.name }}</h3>
                     <ul v-if="item?.subItems?.length">
-                      <li class="ml-3 text-base op-50" v-for="subItem in item.subItems">
-                        <NuxtLink :to="subItem.route" class="cursor-pointer block hover:bg-gray-50">
-                          <font-awesome-icon icon="fa-solid fa-fire" class="mr-2"/>
-                          <span>{{ subItem.name }}</span>
-                        </NuxtLink>
+                      <li class="ml-3 text-base op-50 cursor-pointer block hover:bg-gray-50" v-for="subItem in item.subItems" @click="redirect(subItem.route)">
+                        <font-awesome-icon icon="fa-solid fa-fire" class="mr-2"/>
+                        <span>{{ subItem.name }}</span>
                       </li>
                     </ul>
                   </div>
@@ -59,8 +57,8 @@
               </div>
             </div>
           </div>
-        </DialogPanel>
-      </Dialog>
+        </div>
+      </div>
     </div>
     <div v-if="generalStore.showControlNavbar">
       <div
@@ -89,7 +87,7 @@ import {Bars3Icon, XMarkIcon} from "@heroicons/vue/24/outline";
 import { ref } from 'vue'
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
-
+const router = useRouter()
 const generalStore = useGeneralStore()
 const componentStore = useComponentDataStore()
 
@@ -106,4 +104,9 @@ const navigation = computed(() => [
   { name: 'Contact', route: '/contact' },
 ])
 const mobileMenuOpen = ref(false)
+
+const redirect = (route) => {
+  router.push(route)
+  mobileMenuOpen.value = false
+}
 </script>
