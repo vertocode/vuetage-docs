@@ -164,15 +164,185 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseSelect',
             description: 'The "BaseSelect" is a useful component that can help you to use a custom select, easily change of styles, state, options, and more.',
             route: '/docs/components/base-select',
-            props: []
+            props: [
+                {
+                    label: 'Model Value',
+                    hash: 'model-value',
+                    bind: {}
+                },
+                {
+                    label: 'Normal Options',
+                    hash: 'options',
+                    bind: {}
+                },
+                {
+                    label: 'Group Options',
+                    hash: 'options',
+                    bind: {}
+                },
+                {
+                    label: 'Multiple',
+                    hash: 'multiple',
+                    bind: {}
+                },
+                {
+                    label: 'Variant',
+                    hash: 'variant',
+                    bind: {}
+                },
+                {
+                    label: 'Close on Select',
+                    hash: 'close-on-select',
+                    bind: {}
+                },
+                {
+                    label: 'Loading',
+                    hash: 'loading',
+                    bind: {}
+                },
+                {
+                    label: 'Disabled',
+                    hash: 'disabled',
+                    bind: {}
+                },
+                {
+                    label: 'Icons',
+                    hash: 'icons',
+                    bind: {}
+                },
+                {
+                    label: 'Styles',
+                    hash: 'styles',
+                    bind: {}
+                }
+            ]
         },
         {
-            label: 'Base Select (Labs)',
-            componentName: 'BaseSelect',
-            description: '',
-            disabled: true,
-            route: '/docs/components/base-select',
-            props: []
+            label: 'Base Group',
+            componentName: 'BaseGroup',
+            description: 'BaseGroup is a component that allows you to group elements with some predefined styles and props that can help you, it is been used in some components from Vuetage, and you can use to customize something that is using it as you need.',
+            disabled: false,
+            route: '/docs/components/base-group',
+            props: [
+                {
+                   label: 'Title',
+                   hash: 'title',
+                   bind: {}
+                },
+                {
+                    label: 'Left Icon',
+                    hash: 'left-icon',
+                    bind: {}
+                },
+                {
+                    label: 'Right Icon',
+                    hash: 'right-icon',
+                    bind: {}
+                },
+                {
+                    label: 'Custom Style',
+                    hash: 'custom-style',
+                    bind: {}
+                },
+                {
+                    label: 'Slots',
+                    hash: 'slots',
+                    bind: {}
+                }
+            ]
+        },
+        {
+            label: 'Base Item',
+            componentName: 'BaseItem',
+            description: 'BaseItem is a component that allows you to define item(s) with some predefined styles and props that can help you, it is been used in some components from Vuetage, and you can use to customize something that is using it as you need.',
+            disabled: false,
+            route: '/docs/components/base-item',
+            props: [
+                {
+                    label: 'Active',
+                    hash: 'active',
+                    bind: {}
+                },
+                {
+                    label: 'Active Text Color',
+                    hash: 'active-text-color',
+                    bind: {}
+                },
+                {
+                    label: 'Active Background Color',
+                    hash: 'active-background-color',
+                    bind: {}
+                },
+                {
+                    label: 'Cursor',
+                    hash: 'cursor',
+                    bind: {}
+                },
+                {
+                    label: 'Custom Style',
+                    hash: 'custom-style',
+                    bind: {}
+                },
+                {
+                    label: 'Left Icon',
+                    hash: 'left-icon',
+                    bind: {}
+                },
+                {
+                    label: 'Right Icon',
+                    hash: 'right-icon',
+                    bind: {}
+                },
+                {
+                    label: 'Slots',
+                    hash: 'slots',
+                    bind: {}
+                }
+            ]
+        },
+        {
+            label: 'Base Menu',
+            componentName: 'BaseMenu',
+            description: 'BaseMenu is a component that allows you to define a menu with some predefined styles and props that can help you, it is been used in some components from Vuetage, and you can use to customize something that is using it as you need.',
+            disabled: false,
+            route: '/docs/components/base-menu',
+            props: [
+                {
+                    label: 'Show',
+                    hash: 'show',
+                    bind: {}
+                },
+                {
+                    label: 'Title',
+                    hash: 'title',
+                    bind: {}
+                },
+                {
+                    label: 'Left Icon',
+                    hash: 'left-icon',
+                    bind: {}
+                },
+                {
+                    label: 'Right Icon',
+                    hash: 'right-icon',
+                    bind: {}
+                },
+                {
+                    label: 'Close Icon',
+                    hash: 'close-icon',
+                    bind: {}
+                },
+                {
+                    label: 'Show Close Button',
+                    hash: 'show-close-button',
+                    bind: {}
+                },
+                {
+                    label: 'Custom Styles',
+                    hash: 'styles',
+                    bind: {}
+                }
+            ]
         },
         {
             label: 'Base Autocomplete (Labs)',
