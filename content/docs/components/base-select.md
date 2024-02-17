@@ -3,7 +3,7 @@ title: 'Base Select component from Vuetage library'
 description: 'Base Select is a vue component useful to manage easily variants, options, icons, and other things according to the props.'
 ---
 
-# Base Select (Labs)
+# Base Select
 
 Base Select is a vue component useful to manage easily variants, options, icons, and other things according to the props.
 
