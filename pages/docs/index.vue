@@ -1,7 +1,7 @@
 <template>
   <div class="docs w-full">
     <div class="container mx-auto py-8">
-      <div class="mx-4 lg:ml-64 lg:mr-4 flex flex-wrap gap-4">
+      <div class="mx-4 lg:mr-4 flex flex-wrap gap-4">
         <DocCard route="/docs/get-started" color="bg-blue-500">
           <h2 class="text-lg font-semibold">Get Started</h2>
           <ul class="list-disc list-inside text-gray-400">

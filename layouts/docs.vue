@@ -7,7 +7,7 @@
           :options="options"
       />
     </div>
-    <div class="flex transition-all mb-20" :class="{
+    <div class="flex transition-all" :class="{
         'mt-[3em]': generalStore.showHeader,
         'lg:ml-1 mt-[1em]': !generalStore.showHeader
     }">

@@ -2,10 +2,7 @@
   <div class="relative m-auto mt-52" v-if="isLoading">
     <Spinner size="large" color-spinner="green"/>
   </div>
-  <div v-else class="page px-5 w-full mt-4" :class="{
-        'ml-0 lg:ml-[13em]': generalStore.showSidebar,
-        '10 lg:ml-6': !generalStore.showSidebar
-      }">
+  <div v-else class="page px-5 w-full mt-4 lg:ml-6">
     <main class="pb-2 nuxt-content" ref="scrollDiv">
       <ContentDoc class="prose prose-light">
         <template #not-found>
@@ -32,7 +29,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { Spinner } from 'vuetage'
 
 const route = useRoute()
-const generalStore = useGeneralStore()
 const previousPageData = ref({})
 const nextPageData = ref({})
 const { status, pending } = await useAsyncData('home', () => queryContent(route.path).findOne())
@@ -59,7 +55,6 @@ definePageMeta({
   background-color: white;
   margin-right: 1em;
   padding: 1em;
-  border: 1px solid #e5e7eb;
 
   .nuxt-content {
     a {
@@ -152,6 +147,9 @@ definePageMeta({
     }
 
     table {
+      overflow-x: auto;
+      display: block;
+      white-space: nowrap;
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
