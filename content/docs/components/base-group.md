@@ -81,3 +81,30 @@ This prop is very useful to modify any style of this component.
 
 ::base-group{title="TO DO" customStyle="backgroundColor: #90ee90; color: green" useTodo=true}
 ::
+
+## Slots
+
+There are 2 slots:
+
+- Title: You can use it to customize the title of the group.
+
+```vue
+<BaseGroup>
+    <template #title>
+        <h1>TO DO</h1>
+    </template>
+    <BaseItem>Task 1</BaseItem>
+    <BaseItem active>Task 2</BaseItem>
+    <BaseItem>Task 3</BaseItem>
+</BaseGroup>
+```
+
+- Default: You can use it to add items or anything else that you want.
+
+```vue
+<BaseGroup title="TO DO">
+    <BaseItem>Task 1</BaseItem>
+    <BaseItem active>Task 2</BaseItem>
+    <BaseItem>Task 3</BaseItem>
+</BaseGroup>
+```

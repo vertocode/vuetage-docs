@@ -338,7 +338,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     bind: {}
                 },
                 {
-                    label: 'Custom Styles',
+                    label: 'Custom Style',
                     hash: 'styles',
                     bind: {}
                 }
