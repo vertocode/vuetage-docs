@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-slate-100 bottom-0 sticky w-full text-white text-center">
+  <footer class="bg-slate-100 bottom-0 absolute w-full text-white text-center">
     <div class="flex items-center justify-center">
       <font-awesome-icon class="mr-2" color="black" icon="fa-solid fa-copyright" />
       <span class="text-black font-bold">
