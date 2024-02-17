@@ -279,11 +279,6 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     bind: {}
                 },
                 {
-                    label: 'Custom Style',
-                    hash: 'custom-style',
-                    bind: {}
-                },
-                {
                     label: 'Left Icon',
                     hash: 'left-icon',
                     bind: {}
@@ -291,6 +286,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                 {
                     label: 'Right Icon',
                     hash: 'right-icon',
+                    bind: {}
+                },
+                {
+                    label: 'Custom Style',
+                    hash: 'custom-style',
                     bind: {}
                 },
                 {

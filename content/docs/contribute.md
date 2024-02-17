@@ -8,16 +8,26 @@ description: 'Welcome to the Vuetage project! Thank you for considering contribu
 
 Welcome to the Vuetage project! Thank you for considering contributing. Your help is essential to make Vuetage even better.
 
+<br>
+
 ## How to Contribute
 
 There are various ways to contribute to the Vuetage project:
 
+<br>
+
 ### Contribute to Documentation
+
+You can get ideas about what you can do in the todo list clicking [here](/todo).
+
+<br>
 
 1. Fork the documentation repository: [vuetage-docs](https://github.com/vertocode/vuetage-docs)
 2. Create a branch for your changes: `git checkout -b feature/new-documentation`
 3. Make your contributions to the documentation.
 4. Submit a Pull Request to the main branch in the repository.
+
+<br>
 
 ### Contribute to Components
 
@@ -26,6 +36,8 @@ There are various ways to contribute to the Vuetage project:
 3. Develop and test your components.
 4. Submit a Pull Request to the main branch in the repository.
 
+<br>
+
 ### Report Bugs in Components
 
 Found a bug? Please report it!
@@ -33,12 +45,16 @@ Found a bug? Please report it!
 1. Open a new issue at: [Vuetage Issues](https://github.com/vertocode/vuetage/issues)
 2. Provide details about the bug, including steps to reproduce.
 
+<br>
+
 ### Help Resolve Issues
 
 Want to help resolve existing issues?
 
 1. Check open issues: [Vuetage Issues](https://github.com/vertocode/vuetage/issues)
 2. Comment on existing issues if you have additional information or solutions.
+
+<br>
 
 ## General Guidelines
 
