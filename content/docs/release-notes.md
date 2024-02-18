@@ -14,6 +14,41 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.61" target="_blank" rel="noopener noreferrer">
+        v.0.0.61
+    </a>
+</h2>
+
+- Fix instability with tailwindcss problem caused by version v.0.0.60
+
+<br>
+
+<br>
+
+<h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.60" target="_blank" rel="noopener noreferrer">
+        v.0.0.60 (Instable version with tailwindcss, do not use it)
+    </a>
+</h2>
+
+- Fix place of customClass in BaseGroup component
+
+<br>
+
+<br>
+
+<h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.59" target="_blank" rel="noopener noreferrer">
+        v.0.0.59
+    </a>
+</h2>
+
+- Add CustomClass prop to all components to give the possibility to add classes to the components from tailwindcss or custom classes
+- Add the tailwindcss classes to the components
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.58" target="_blank" rel="noopener noreferrer">
         v.0.0.58
     </a>

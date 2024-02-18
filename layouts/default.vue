@@ -10,7 +10,7 @@
     <div class="min-h-[93.3vh]">
       <slot ></slot>
     </div>
-    <Footer></Footer>
+    <Footer class="bottom-0 absolute"></Footer>
   </div>
 </template>
 

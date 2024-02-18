@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-[3em] min-h-[92vh] max-h-80 scroll-auto">
+  <div class="sticky top-[3em] min-h-[91vh] max-h-80 scroll-auto">
     <div
         v-if="generalStore.showSidebar"
         class="duration-75 overflow-hidden op-0.1 flex flex-col justify-between h-auto p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg relative"

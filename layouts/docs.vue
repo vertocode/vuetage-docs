@@ -14,7 +14,7 @@
       <DocSidebar class="hidden lg:flex"/>
       <slot></slot>
     </div>
-    <Footer></Footer>
+    <Footer class="sticky bottom-0"></Footer>
   </div>
 </template>
 
