@@ -35,7 +35,7 @@ pnpm run dev
 yarn dev
 
 # bun
-bun run dev
+bun dev
 ```
 
 ## Production

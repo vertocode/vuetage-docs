@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-auto w-1/2 relative">
-    <BaseMenu custom-class="px-10 bg-blue-50 text-blue-400" close-icon="fa fa-window-close" left-icon="fa fa-fire" title="Movies" show show-close-button>
+  <div class="mx-auto w-1/2 relative h-72">
+    <BaseMenu z-index="20" :custom-class :close-icon :left-icon :title="title" show :show-close-button>
       <div>
         <BaseGroup custom-class="text-blue-500 bg-green-100" title="Marvel Movies">
           <BaseItem>The Avengers</BaseItem>
@@ -22,5 +22,9 @@ import { BaseMenu, BaseGroup, BaseItem } from 'vuetage'
 
 defineProps<{
   title?: string
+  customClass?: string
+  closeIcon?: string
+  leftIcon?: string
+  showCloseButton?: boolean
 }>()
 </script>

@@ -308,38 +308,23 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             route: '/docs/components/base-menu',
             props: [
                 {
-                    label: 'Show',
-                    hash: 'show',
+                    label: 'Introduction',
+                    hash: 'introduction',
                     bind: {}
                 },
                 {
-                    label: 'Title',
-                    hash: 'title',
+                    label: 'Props',
+                    hash: 'props',
                     bind: {}
                 },
                 {
-                    label: 'Left Icon',
-                    hash: 'left-icon',
+                    label: 'Slots',
+                    hash: 'slots',
                     bind: {}
                 },
                 {
-                    label: 'Right Icon',
-                    hash: 'right-icon',
-                    bind: {}
-                },
-                {
-                    label: 'Close Icon',
-                    hash: 'close-icon',
-                    bind: {}
-                },
-                {
-                    label: 'Show Close Button',
-                    hash: 'show-close-button',
-                    bind: {}
-                },
-                {
-                    label: 'Custom Style',
-                    hash: 'styles',
+                    label: 'Events',
+                    hash: 'events',
                     bind: {}
                 }
             ]
