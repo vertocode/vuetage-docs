@@ -111,6 +111,16 @@ You can use the style prop to customize the item as you need.
 
 <br>
 
+## Custom Class
+
+We can use the custom class to add some style with tailwind css, for example.
+
+```vue
+<BaseItem custom-class="bg-blue-500 text-white">Custom Class</BaseItem>
+```
+
+<br>
+
 ## Slots
 
 There is only one slot in the BaseItem component, and it is the default slot, you can use it to customize the content of the item as you need.

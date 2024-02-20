@@ -82,6 +82,18 @@ This prop is very useful to modify any style of this component.
 ::base-group{title="TO DO" customStyle="backgroundColor: #90ee90; color: green" useTodo=true}
 ::
 
+### Custom Class
+
+We can use the custom class to add some style with tailwind css, for example.
+
+```vue
+<BaseGroup title="TO DO" custom-class="px-10 bg-blue-50 text-blue-400">
+  <BaseItem>Task 1</BaseItem>
+  <BaseItem active>Task 2</BaseItem>
+  <BaseItem>Task 3</BaseItem>
+</BaseGroup>
+```
+
 ## Slots
 
 There are 2 slots:

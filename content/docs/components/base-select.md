@@ -367,7 +367,15 @@ This prop will modify the style of the menu group.
 ::base-select{label="Menu Group Style" :use-demo-options="false" group-style="background-color: #90ee90; color: green;"}
 ::
 
-## Slots
+<br>
+
+### Custom Class
+
+We can use the custom class to add some style with tailwind css, for example.
+
+```vue
+<BaseSelect label="Custom Class" :options="options" custom-class="rounded-none" />
+```
 
 There are some slots that you can use to customize the select component.
 

@@ -74,7 +74,7 @@ Result:
 | maxHeight       | String      | 200px                        | Define the max-height style of menu                                   |
 | boxShadow       | String      | 0 2px 5px rgba(0, 0, 0, 0.1) | Define the box-shadow style of menu                                   |
 | customClass     | String      | null                         | Define classes in base menu, you can use to apply some tailwind style |
-| customClass     | CustomStyle | null                         | Define custom styles in base menu, you can use to apply any style     |
+| customStyle     | CustomStyle | null                         | Define custom styles in base menu, you can use to apply any style     |
 
 
 ## Slots

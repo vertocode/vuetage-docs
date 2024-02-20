@@ -418,6 +418,23 @@ vue.js template
 
 This is a prop that will affect the parent element, the field. It works as the "Custom Style", and "Custom Style Label", but for the field.
 
+```vue
+<BaseTextField v-model="myValue" style="background-color: yellow;" />
+```
+
+<br>
+
+### Custom Class
+
+We can use the custom class to add some style with tailwind css, for example.
+
+```vue
+<BaseTextField v-model="myValue" custom-class="bg-blue-500 text-white" />
+```
+
+::base-text-field{custom-class="bg-blue-500 text-white" label="Custom Class"}
+::
+
 <br>
 
 ## Event emitter

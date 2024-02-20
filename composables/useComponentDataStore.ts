@@ -3,6 +3,7 @@ import type { ComponentData } from '~/typing/Component'
 export const useComponentDataStore = () => useState('componentsData', () => {
     const items: ComponentData[] = [
         {
+            disabled: false,
             label: 'Base Button',
             componentName: 'BaseButton',
             description: 'The "BaseButton" is a versatile button component that serves as a foundation for creating different button styles. You can customize it as you need using the props.',
@@ -77,6 +78,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             ]
         },
         {
+            disabled: false,
             label: 'Base Text Field',
             componentName: 'BaseTextField',
             description: 'The "BaseTextField" is a useful component that can help you with validations, easily change of styles, state, icons, and more.',
@@ -143,6 +145,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     bind: {}
                 },
                 {
+                    label: 'Custom Class',
+                    hash: 'custom-class',
+                    bind: {}
+                },
+                {
                     label: 'Event Emitter',
                     hash: 'event-emitter',
                     bind: {}
@@ -160,6 +167,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             ]
         },
         {
+            disabled: false,
             label: 'Base Select',
             componentName: 'BaseSelect',
             description: 'The "BaseSelect" is a useful component that can help you to use a custom select, easily change of styles, state, options, and more.',
@@ -216,6 +224,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     bind: {}
                 },
                 {
+                    label: 'Custom Class',
+                    hash: 'custom-class',
+                    bind: {}
+                },
+                {
                     label: 'Slots',
                     hash: 'slots',
                     bind: {}
@@ -247,6 +260,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                 {
                     label: 'Custom Style',
                     hash: 'custom-style',
+                    bind: {}
+                },
+                {
+                    label: 'Custom Class',
+                    hash: 'custom-class',
                     bind: {}
                 },
                 {
@@ -296,6 +314,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                 {
                     label: 'Custom Style',
                     hash: 'custom-style',
+                    bind: {}
+                },
+                {
+                    label: 'Custom Class',
+                    hash: 'custom-class',
                     bind: {}
                 },
                 {
