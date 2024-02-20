@@ -13,7 +13,7 @@ You can combine with other components, in BaseSelect component, for example, it'
 
 <br>
 
-::base-menu{title="Movies" custom-class="px-10 bg-blue-50 text-blue-400" closeIcon="fa fa-window-close" leftIcon="fa fa-fire" showCloseButton=true}
+::base-menu{title="Movies" custom-class="px-10 bg-blue-50 text-blue-400" closeIcon="fa fa-window-close" leftIcon="fa fa-fire" :showCloseButton=true}
 ::
 
 <br>

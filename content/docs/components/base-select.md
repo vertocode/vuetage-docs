@@ -9,7 +9,7 @@ Base Select is a vue component useful to manage easily variants, options, icons,
 
 <br>
 
-::base-select{use-demo-options="true" label="Base Select" left-icon="fa fa-fire" margin="auto" variant="outlined"}
+::base-select{:use-demo-options=true label="Base Select" left-icon="fa fa-fire" margin="auto" variant="outlined"}
 ::
 
 # Model Value
@@ -17,7 +17,7 @@ Base Select is a vue component useful to manage easily variants, options, icons,
 The model value of the base select component is the value of the selected option. It will be automated updated when we select/unselect an option.
 If is't a multiple select, the model value will be an array of the selected options.
 
-::base-select-with-model-value{use-normal-options="true"}
+::base-select-with-model-value{:use-normal-options=true}
 ::
 
 ```vue
@@ -70,7 +70,7 @@ const options = ref<NormalOption[]>([
 </script>
 ```
 
-::base-select{label="Normal Options" :use-normal-options="true"}
+::base-select{label="Normal Options" :use-normal-options=true}
 ::
 
 <br>
@@ -109,7 +109,7 @@ const options = ref<GroupOption[]>([
 </script>
 ```
 
-::base-select{label="Group Options" :use-normal-options="false"}
+::base-select{label="Group Options" :use-normal-options=false}
 ::
 
 <br>
@@ -124,7 +124,7 @@ If the base select is multiple, we can select more than one option as show below
 <BaseSelect :options="options" multiple />
 ```
 
-::base-select{label="Multiple" :multiple="true" :use-demo-options="true"}
+::base-select{label="Multiple" :multiple=true :use-demo-options=true}
 ::
 
 <br>
@@ -143,7 +143,7 @@ This is the default value for `variant` props of the base select component.
 <BaseSelect label="Default" :options="options"/> 
 ```
 
-::base-select{label="Default" :use-demo-options="true"}
+::base-select{label="Default" :use-demo-options=true}
 ::
 
 <br>
@@ -156,7 +156,7 @@ This is the outlined value for `variant` props of the base select component.
 <BaseSelect label="Outlined" :options="options" variant="outlined" />
 ```
 
-::base-select{label="Outlined" :use-demo-options="true" variant="outlined"}
+::base-select{label="Outlined" :use-demo-options=true variant="outlined"}
 ::
 
 <br>
@@ -169,7 +169,7 @@ This is the underlined value for `variant` props of the base select component.
 <BaseSelect label="Underlined" :options="options" variant="underlined" />
 ```
 
-::base-select{label="Underlined" :use-demo-options="true" variant="underlined"}
+::base-select{label="Underlined" :use-demo-options=true variant="underlined"}
 ::
 
 <br>
@@ -184,7 +184,7 @@ This is the dark value for `variant` props of the base select component.
 <BaseSelect label="Dark" :options="options" variant="dark" />
 ```
 
-::base-select{label="Dark" :use-demo-options="true" variant="dark"}
+::base-select{label="Dark" :use-demo-options=true variant="dark"}
 ::
 
 <br>
@@ -197,7 +197,7 @@ This prop is used to define if the menu is closed when an option is selected. Th
 <BaseSelect variant="underlined" label="Close on select" :options="options" :close-on-select="false" />
 ```
 
-::base-select{label="Close on select" :use-normal-options="true" variant="underlined" :close-on-select="false"}
+::base-select{label="Close on select" :use-normal-options=true variant="underlined" :close-on-select=false}
 ::
 
 <br>
@@ -210,7 +210,7 @@ This prop defines if the select component is loading or not. The default value i
 <BaseSelect label="Loading" variant="outlined" :loading="true" />
 ```
 
-::base-select{label="Loading" :use-demo-options="true" variant="outlined" :loading="true"}
+::base-select{label="Loading" :use-demo-options=true variant="outlined" :loading=true}
 ::
 
 <br>
@@ -235,7 +235,7 @@ This prop defines if the select component is disabled or not. The default value 
 <BaseSelect label="Disabled" :disabled="true" />
 ```
 
-::base-select{:disabled="true" label="Disabled"}
+::base-select{:disabled=true label="Disabled"}
 ::
 
 <br>
@@ -312,7 +312,7 @@ This prop will modify the style of the input.
 <BaseSelect label="Input Style" :options="options" input-style="background-color: #90ee90; color: green;" />
 ```
 
-::base-select{label="Input Style" :use-demo-options="true" input-style="background-color: #90ee90; color: green;"}
+::base-select{label="Input Style" :use-demo-options=true input-style="background-color: #90ee90; color: green;"}
 ::
 
 <br>
@@ -325,7 +325,7 @@ This prop will modify the style of the label.
 <BaseSelect label="Label Style" :options="options" label-style="color: red;" />
 ```
 
-::base-select{label="Label Style" :use-demo-options="true" label-style="color: red;"}
+::base-select{label="Label Style" :use-demo-options=true label-style="color: red;"}
 ::
 
 <br>
@@ -338,7 +338,7 @@ This prop will modify the style of the menu.
 <BaseSelect label="Menu Style" :options="options" menu-style="background-color: #90ee90; color: green;" />
 ```
 
-::base-select{label="Menu Style" :use-demo-options="true" menu-style="background-color: #90ee90; color: green;"}
+::base-select{label="Menu Style" :use-demo-options=true menu-style="background-color: #90ee90; color: green;"}
 ::
 
 <br>
@@ -351,7 +351,7 @@ This prop will modify the style of the menu item.
 <BaseSelect label="Menu Item Style" :options="options" item-style="background-color: #90ee90; color: green;" />
 ```
 
-::base-select{label="Menu Item Style" :use-demo-options="true" item-style="background-color: #90ee90; color: green;"}
+::base-select{label="Menu Item Style" :use-demo-options=true item-style="background-color: #90ee90; color: green;"}
 ::
 
 <br>
@@ -364,7 +364,7 @@ This prop will modify the style of the menu group.
 <BaseSelect label="Menu Group Style" :options="options" group-style="background-color: #90ee90; color: green;" />
 ```
 
-::base-select{label="Menu Group Style" :use-demo-options="false" group-style="background-color: #90ee90; color: green;"}
+::base-select{label="Menu Group Style" :use-demo-options=false group-style="background-color: #90ee90; color: green;"}
 ::
 
 <br>

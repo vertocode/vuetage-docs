@@ -162,7 +162,7 @@ There are 2 kinds of loading; the spinner loading, and border loading.
 <BaseTextField v-model="myValue" :loading="true" />
 ```
 
-::base-text-field{:loading="true" label="Loading"}
+::base-text-field{:loading=true label="Loading"}
 ::
 
 <br>
@@ -173,7 +173,7 @@ There are 2 kinds of loading; the spinner loading, and border loading.
 <BaseTextField v-model="myValue" :loading="true" use-border-loading />
 ```
 
-::base-text-field{:loading="true" label="Loading" :use-border-loading="true"}
+::base-text-field{:loading=true label="Loading" :use-border-loading=true}
 ::
 
 <br>
@@ -198,7 +198,7 @@ Control the disabled state of the component.
 <BaseTextField v-model="myValue" :disabled="true" />
 ```
 
-::base-text-field{:disabled="true" label="Disabled"}
+::base-text-field{:disabled=true label="Disabled"}
 ::
 
 <br>
@@ -211,7 +211,7 @@ Control the readonly state of the component.
 <BaseTextField v-model="myValue" :readonly="true" />
 ```
 
-::base-text-field{:readonly="true" label="Readonly"}
+::base-text-field{:readonly=true label="Readonly"}
 ::
 
 <br>
@@ -224,7 +224,7 @@ This boolean prop defines if the base text field has the "password" type, it wil
 <BaseTextField password v-model="myValue" :min-length="5" :max-length="20" label="true" />
 ```
 
-::base-text-field{:max-length="20" :min-length="5" label="Password" :password="true"}
+::base-text-field{:max-length="20" :min-length="5" label="Password" :password=true}
 ::
 
 ## Rules
@@ -254,7 +254,7 @@ const rules = [
 </script>
 ```
 
-::base-text-field{:use-rules="true" label="Should include vuetage word"}
+::base-text-field{:use-rules=true label="Should include vuetage word"}
 ::
 
 Type should be an array of function that will return a boolean or string.
@@ -276,7 +276,7 @@ It also affect as an required field when we use inside a form.
 ```
 
 You can test it by clicking on the input, and then cause the blur event. Or type any value and after clear it.
-::base-text-field{:required="true" label="Required" event-emitter="blur"}
+::base-text-field{:required=true label="Required" event-emitter="blur"}
 ::
 
 If you want to became a field required inside a form, but you don't want to show the error message(apply this rule to validation), you can use the prop "disableRequiredRule" as show below:

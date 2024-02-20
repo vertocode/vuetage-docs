@@ -1,12 +1,6 @@
 <template>
   <div class="main-layout">
     <Navbar />
-    <div>
-      <NuxtParticles
-          id="tsparticles"
-          :options="options"
-      />
-    </div>
     <div class="flex transition-all" :class="{
         'mt-[3em]': generalStore.showHeader,
         'lg:ml-1 mt-[1em]': !generalStore.showHeader
@@ -19,9 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, useRuntimeConfig } from '#imports'
-import { loadFull } from 'tsparticles'
-import { tsParticles } from 'tsparticles-engine'
+import { useRuntimeConfig } from '#imports'
 
 const { mode } = useRuntimeConfig().public.particles
 
@@ -31,34 +23,6 @@ useSeoMeta({
 })
 
 const generalStore = useGeneralStore()
-
-const options = {
-  fullScreen: {
-    enable: true,
-    zIndex: -1,
-  },
-  particles: {
-    color: {
-      value: "#A7F3D0",
-    },
-    links: {
-      color: "#A7F3D0",
-      enable: true,
-    },
-    move: {
-      enable: true,
-    },
-    number: {
-      value: 100,
-    },
-  },
-};
-
-onMounted(async () => {
-  if (process.client && mode === 'custom') {
-    await loadFull(tsParticles);
-  }
-})
 </script>
 
 

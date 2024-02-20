@@ -175,7 +175,7 @@ We can control the disabled state of button using the props "disabled".
 <BaseButton :disabled="true">Loading</BaseButton>
 ```
 
-::base-button{disabled="true"}
+::base-button{:disabled=true}
 Disabled
 ::
 
@@ -189,7 +189,7 @@ We can control the loading state of button using the props "loading".
 <BaseButton :loading="true">Loading</BaseButton>
 ```
 
-::base-button{loading="true"}
+::base-button{:loading=true}
 Loading
 ::
 

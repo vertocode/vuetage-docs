@@ -32,7 +32,7 @@ For example, we can use it to define as "TO DO" in a list of tasks.
 </BaseGroup>
 ```
 
-::base-group{title="TO DO" useTodo=true}
+::base-group{title="TO DO" :useTodo=true}
 ::
 
 ## Left Icon
@@ -47,7 +47,7 @@ This prop is used to define the icon that will be placed on the left of the titl
 </BaseGroup>
 ```
 
-::base-group{title="TO DO" left-icon="fa fa-check" useTodo=true}
+::base-group{title="TO DO" left-icon="fa fa-check" :useTodo=true}
 ::
 
 ## Right Icon
@@ -64,7 +64,7 @@ This prop is used to define the icon that will be placed on the right of the tit
 
 <br>
 
-::base-group{title="TO DO" rightIcon="fa fa-check" useTodo=true}
+::base-group{title="TO DO" rightIcon="fa fa-check" :useTodo=true}
 ::
 
 ## Custom Style
@@ -79,7 +79,7 @@ This prop is very useful to modify any style of this component.
 </BaseGroup>
 ```
 
-::base-group{title="TO DO" customStyle="backgroundColor: #90ee90; color: green" useTodo=true}
+::base-group{title="TO DO" customStyle="backgroundColor: #90ee90; color: green" :useTodo=true}
 ::
 
 ### Custom Class

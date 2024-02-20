@@ -13,7 +13,7 @@ It can be useful, for example, when you want to create a list of items, it is ex
 
 <br>
 
-::base-item{active=true label="Base Item Active Customized" activeBgColor="#90ee90" activeTextColor="green"}
+::base-item{:active=true label="Base Item Active Customized" activeBgColor="#90ee90" activeTextColor="green"}
 ::
 ::base-item{label="Default Base Item"}
 ::
@@ -28,7 +28,7 @@ This prop will define the state of the item if it is active or not. There is a d
 <BaseItem active>Active</BaseItem>
 ```
 
-::base-item{label="Active" active=true}
+::base-item{label="Active" :active=true}
 ::
 
 <br>
@@ -41,7 +41,7 @@ Basically it will change the text color when the item is active.
 <BaseItem active activeTextColor="green">Active Text Color</BaseItem>
 ```
 
-::base-item{label="Active Text Color" active=true activeTextColor="green"}
+::base-item{label="Active Text Color" :active=true activeTextColor="green"}
 ::
 
 <br>
@@ -54,7 +54,7 @@ Basically it will change the background color when the item is active.
 <BaseItem active activeBgColor="#90ee90">Active Background Color</BaseItem>
 ```
 
-::base-item{label="Active Background Color" active=true activeBgColor="#90ee90"}
+::base-item{label="Active Background Color" :active=true activeBgColor="#90ee90"}
 ::
 
 <br>
