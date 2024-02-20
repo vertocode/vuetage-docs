@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, useRuntimeConfig } from '#imports'
+import { onMounted, useRuntimeConfig } from '#imports'
 import { loadFull } from 'tsparticles'
 import { tsParticles } from 'tsparticles-engine'
 

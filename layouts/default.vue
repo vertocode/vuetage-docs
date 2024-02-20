@@ -1,4 +1,5 @@
 <template>
+  <NuxtLoadingIndicator />
   <div class="main-layout">
     <Navbar />
     <div>
@@ -8,7 +9,7 @@
       />
     </div>
     <div class="min-h-[93.3vh]">
-      <slot ></slot>
+      <slot></slot>
     </div>
     <Footer class="bottom-0 absolute"></Footer>
   </div>
