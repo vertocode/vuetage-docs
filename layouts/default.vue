@@ -8,10 +8,10 @@
           :options="options"
       />
     </div>
-    <div class="min-h-[93.3vh]">
+    <div class="min-h-[96.5vh]">
       <slot></slot>
     </div>
-    <Footer class="bottom-0 absolute"></Footer>
+    <Footer class="sticky bottom-0"></Footer>
   </div>
 </template>
 
