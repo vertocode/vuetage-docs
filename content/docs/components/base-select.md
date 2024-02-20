@@ -365,4 +365,49 @@ This prop will modify the style of the menu group.
 ```
 
 ::base-select{label="Menu Group Style" :use-demo-options="false" group-style="background-color: #90ee90; color: green;"}
+::
+
+## Slots
+
+There are some slots that you can use to customize the select component.
+
+| Slot      | Description                                                                                                                                     |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| rightIcon | Replace content of right icon                                                                                                                   |
+| menu      | Replace the menu when the user clicks on base select to select options (you receive if the menu is opened in "show" attribute, and the options) |
+| item      | Replace each item content inside menu when the user clicks on base select (you receive the option, and index to use)                            |
+
+<br>
+
+### Slot Examples
+
+#### Menu Slot
+
+This is an example of how to use the menu slot to customize the menu.
+
+```vue
+<BaseSelect label="Menu Slot" :options="options">
+  <template #menu="{ show, options }">
+    <BaseMenu :show="show">
+      <BaseItem v-for="(option, index) in options" :key="index">
+        <i :class="option.icon"></i> {{ option.text }}
+      </BaseItem>
+    </BaseMenu>
+  </template>
+</BaseSelect>
+```
+
+#### Item Slot
+
+This is an example of how to use the item slot to customize the item.
+
+```vue
+<BaseSelect label="Item Slot" :options="options">
+  <template #item="{ option, index }">
+    <BaseItem :key="index">
+      <i :class="option.icon"></i> {{ option.text }}
+    </BaseItem>
+  </template>
+</BaseSelect>
+```
 

@@ -214,7 +214,12 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     label: 'Styles',
                     hash: 'styles',
                     bind: {}
-                }
+                },
+                {
+                    label: 'Slots',
+                    hash: 'slots',
+                    bind: {}
+                },
             ]
         },
         {
