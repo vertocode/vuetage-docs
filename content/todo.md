@@ -12,3 +12,5 @@
 - [x] Add a loading when we change the route, there is a delay when we change from homepage route to doc route
 - [x] BUG | Fix wrong redirection when click on disabled component in /components route
 - [x] BUG | Fix the wrong behavior of sidebar disappearing when we click on the link about some props or children links
+- [ ] Talk about the custom size in `size` props from `BaseButton` in the doc
+- [ ] Add doc for `BaseAutocomplete`

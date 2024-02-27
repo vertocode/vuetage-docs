@@ -14,6 +14,21 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.62" target="_blank" rel="noopener noreferrer">
+        v.0.0.62
+    </a>
+</h2>
+
+- Add [BaseAutocomplete](https://vuetage.vertocode.com/docs/components/base-autocomplete) component
+- Close the menu of BaseSelect when click outside the menu
+- For `size` props from BaseButton, in addition about what we already have now we can custom sizes like for example `24px`, `2rem`, `2em`, etc.
+- Fix wrong padding in BaseMenu component
+
+<br>
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.61" target="_blank" rel="noopener noreferrer">
         v.0.0.61
     </a>
