@@ -21,6 +21,7 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 
 - Add [BaseAutocomplete](https://vuetage.vertocode.com/docs/components/base-autocomplete) component
 - Close the menu of BaseSelect when click outside the menu
+- Add new event enter, and key up/down for BaseTextField
 - For `size` props from BaseButton, in addition about what we already have now we can custom sizes like for example `24px`, `2rem`, `2em`, etc.
 - Fix wrong padding in BaseMenu component
 

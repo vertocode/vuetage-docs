@@ -14,3 +14,4 @@
 - [x] BUG | Fix the wrong behavior of sidebar disappearing when we click on the link about some props or children links
 - [ ] Talk about the custom size in `size` props from `BaseButton` in the doc
 - [ ] Add doc for `BaseAutocomplete`
+- [ ] Add event "enter" for base text field
