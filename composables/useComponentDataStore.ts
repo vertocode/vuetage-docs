@@ -243,8 +243,18 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             route: '/docs/components/base-autocomplete',
             props: [
                 {
-                    label: 'Model Value',
-                    hash: 'model-value',
+                    label: 'Props',
+                    hash: 'props',
+                    bind: {}
+                },
+                {
+                    label: 'Events',
+                    hash: 'events',
+                    bind: {}
+                },
+                {
+                    label: 'Slots',
+                    hash: 'slots',
                     bind: {}
                 },
             ]
