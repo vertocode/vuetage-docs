@@ -14,6 +14,16 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.64" target="_blank" rel="noopener noreferrer">
+        v.0.0.64
+    </a>
+</h2>
+
+- Add the necessary type for BaseAutocomplete component
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.62" target="_blank" rel="noopener noreferrer">
         v.0.0.62
     </a>
