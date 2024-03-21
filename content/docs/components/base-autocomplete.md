@@ -16,21 +16,21 @@ The BaseAutocomplete component is a great component when we have a lot of option
 
 ## Props
 
-| Prop               | Type                                       | Default               | Description                                                                                               |
-|---------------------|--------------------------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------|
-| options             | `Array<NormalOption | GroupOption>`        | -                     | An array of options to be displayed in the autocomplete menu. Each option should have a `text` property representing the display text.                             |
-| label               | `string`                                   | -                     | Label text for the autocomplete field.                                                                    |
-| autoFilter          | `boolean`                                  | `true`                | Enables or disables automatic filtering of options based on user input.                                   |
-| caseSensitiveFilter | `boolean`                                  | `true`                | Enables or disables case-sensitive filtering of options.                                                   |
-| multiple            | `boolean`                                  | `false`               | Allows selecting multiple options.                                                                        |
-| menuLoading         | `boolean`                                  | `false`               | Indicates whether the menu is in a loading state.                                                          |
-| menuLoadingText     | `string`                                   | `'Loading more items'`| Custom loading text to display when the menu is in a loading state.                                        |
-| inputFieldStyle     | `object` or `string`                       | -                     | Style object or CSS string to be applied to the input field of the autocomplete.                           |
-| inputStyle          | `object` or `string`                       | -                     | Style object or CSS string to be applied to the input element of the autocomplete.                          |
-| labelStyle          | `object` or `string`                       | -                     | Style object or CSS string to be applied to the label of the autocomplete.                                  |
-| menuStyle           | `object` or `string`                       | -                     | Style object or CSS string to be applied to the autocomplete menu.                                         |
-| groupStyle          | `object` or `string`                       | -                     | Style object or CSS string to be applied to the groups in the autocomplete menu.                            |
-| itemStyle           | `object` or `string`                       | -                     | Style object or CSS string to be applied to the items in the autocomplete menu.                             |
+| Prop               | Type                                 | Default                | Description                                                                                               |
+|---------------------|--------------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------|
+| options             | `Array<NormalOption or GroupOption>` | []                     | An array of options to be displayed in the autocomplete menu. Each option should have a `text` property representing the display text.                             |
+| label               | `string`                             | -                      | Label text for the autocomplete field.                                                                    |
+| autoFilter          | `boolean`                            | `true`                 | Enables or disables automatic filtering of options based on user input.                                   |
+| caseSensitiveFilter | `boolean`                            | `true`                 | Enables or disables case-sensitive filtering of options.                                                   |
+| multiple            | `boolean`                            | `false`                | Allows selecting multiple options.                                                                        |
+| menuLoading         | `boolean`                            | `false`                | Indicates whether the menu is in a loading state.                                                          |
+| menuLoadingText     | `string`                             | `'Loading more items'` | Custom loading text to display when the menu is in a loading state.                                        |
+| inputFieldStyle     | `object` or `string`                 | -                      | Style object or CSS string to be applied to the input field of the autocomplete.                           |
+| inputStyle          | `object` or `string`                 | -                      | Style object or CSS string to be applied to the input element of the autocomplete.                          |
+| labelStyle          | `object` or `string`                 | -                      | Style object or CSS string to be applied to the label of the autocomplete.                                  |
+| menuStyle           | `object` or `string`                 | -                      | Style object or CSS string to be applied to the autocomplete menu.                                         |
+| groupStyle          | `object` or `string`                 | -                      | Style object or CSS string to be applied to the groups in the autocomplete menu.                            |
+| itemStyle           | `object` or `string`                 | -                      | Style object or CSS string to be applied to the items in the autocomplete menu.                             |
 
 ## Events
 
