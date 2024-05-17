@@ -14,6 +14,26 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.66" target="_blank" rel="noopener noreferrer">
+        v.0.0.65
+    </a>
+</h2>
+
+- Fix the vModel of BaseAutocomplete, from this version we are able to set a default initial value to the field
+
+<br>
+
+<h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.65" target="_blank" rel="noopener noreferrer">
+        v.0.0.65
+    </a>
+</h2>
+
+- Fix the export for BaseAutocomplete component, from this version we are able to use this component
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.64" target="_blank" rel="noopener noreferrer">
         v.0.0.64
     </a>

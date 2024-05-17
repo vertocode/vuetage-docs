@@ -1,11 +1,11 @@
 <template>
   <div style="width: 200px; margin: auto; ">
-<!--    <BaseAutocomplete-->
-<!--        label="States"-->
-<!--        :options="states"-->
-<!--        v-model="myValue"-->
-<!--    />-->
-<!--    <p>Model Value: <br><span style="font-weight: bold; color: black;">{{ myValue }}</span> </p>-->
+    <BaseAutocomplete
+        label="States"
+        :options="states"
+        v-model="myValue"
+    />
+    <p>Model Value: <br><span style="font-weight: bold; color: black;">{{ myValue }}</span> </p>
     <a
         style="text-wrap: nowrap;"
       href="https://vuetage-components.vertocode.com/?path=/story/input-baseautocomplete--default"
@@ -15,9 +15,9 @@
 </template>
 
 <script setup lang="ts">
-// import { BaseAutocomplete } from 'vuetage'
+import { BaseAutocomplete } from 'vuetage'
 
-const myValue = ref({})
+const myValue = ref({ text: '', value: ''})
 
 const states = [
   {
