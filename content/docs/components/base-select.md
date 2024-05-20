@@ -189,6 +189,19 @@ This is the dark value for `variant` props of the base select component.
 
 <br>
 
+## Label
+
+This prop is used to define the label of the select component.
+
+```vue
+<BaseSelect label="Label" :options="options" />
+```
+
+::base-select{label="Label" :use-demo-options=true}
+::
+
+<br>
+
 ## Close on select
 
 This prop is used to define if the menu is closed when an option is selected. The default value is `true` for normal options, and `false` for grouped options.

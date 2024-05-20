@@ -199,6 +199,11 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     bind: {}
                 },
                 {
+                    label: 'Label',
+                    hash: 'label',
+                    bind: {}
+                },
+                {
                     label: 'Close on Select',
                     hash: 'close-on-select',
                     bind: {}
@@ -243,8 +248,58 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             route: '/docs/components/base-autocomplete',
             props: [
                 {
-                    label: 'Props',
-                    hash: 'props',
+                    label: 'Model Value',
+                    hash: 'model-value',
+                    bind: {}
+                },
+                {
+                    label: 'Normal Options',
+                    hash: 'options',
+                    bind: {}
+                },
+                {
+                    label: 'Group Options',
+                    hash: 'options',
+                    bind: {}
+                },
+                {
+                    label: 'Filter',
+                    hash: 'filter',
+                    bind: {}
+                },
+                {
+                    label: 'Variant',
+                    hash: 'variant',
+                    bind: {}
+                },
+                {
+                    label: 'Label',
+                    hash: 'label',
+                    bind: {}
+                },
+                {
+                    label: 'Loading',
+                    hash: 'loading',
+                    bind: {}
+                },
+                {
+                    label: 'Disabled',
+                    hash: 'disabled',
+                    bind: {}
+                },
+                {
+                    label: 'Icons',
+                    hash: 'icons',
+                    bind: {}
+                },
+                {
+                    label: 'Styles',
+                    hash: 'styles',
+                    bind: {}
+                },
+                {
+                    label: 'Custom Class',
+                    hash: 'custom-class',
                     bind: {}
                 },
                 {

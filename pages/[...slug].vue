@@ -151,12 +151,12 @@ definePageMeta({
       display: block;
       white-space: nowrap;
       width: 100%;
-      border-collapse: collapse;
       margin-bottom: 20px;
     }
 
     th, td {
       border: 1px solid #ddd;
+      overflow: auto;
       padding: 12px;
       text-align: left;
     }
