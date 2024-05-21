@@ -14,8 +14,18 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.68" target="_blank" rel="noopener noreferrer">
+        v.0.0.68
+    </a>
+</h2>
+
+- Fix the label position of BaseTextField component
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.66" target="_blank" rel="noopener noreferrer">
-        v.0.0.65
+        v.0.0.66
     </a>
 </h2>
 
