@@ -14,6 +14,18 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.70" target="_blank" rel="noopener noreferrer">
+        v.0.0.70
+    </a>
+</h2>
+
+- Fix of variants colors, margins, and paddings of BaseTextField component
+
+<br>
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.68" target="_blank" rel="noopener noreferrer">
         v.0.0.68
     </a>
