@@ -14,6 +14,28 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.73" target="_blank" rel="noopener noreferrer">
+        v.0.0.73
+    </a>
+</h2>
+
+- Fix the left position of rightIcon, leftIcon, and label according to the height set in the BaseButton component
+
+<br>
+
+<br>
+
+<h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.72" target="_blank" rel="noopener noreferrer">
+        v.0.0.72
+    </a>
+</h2>
+
+- Fix the top position of rightIcon, leftIcon, and label according to the height set in the BaseButton component
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.71" target="_blank" rel="noopener noreferrer">
         v.0.0.71
     </a>
