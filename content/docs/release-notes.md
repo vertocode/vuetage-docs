@@ -14,14 +14,25 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.71" target="_blank" rel="noopener noreferrer">
+        v.0.0.71
+    </a>
+</h2>
+
+- Add the possibility to use "BaseGroup" as a dropdown menu, and it's configured as default, but we available to disable using the new props "showDropdown" with the value "false"
+- Increase the default height of Input components (it includes, BaseTextField, BaseSelect, and BaseAutocomplete)
+- Decrease the default padding bottom of BaseTextField component to "underlined" variant
+- Resolve the problem in BaseSelect, when we was using the variant "dark", it wasn't be passed to menu
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.70" target="_blank" rel="noopener noreferrer">
         v.0.0.70
     </a>
 </h2>
 
 - Fix of variants colors, margins, and paddings of BaseTextField component
-
-<br>
 
 <br>
 
