@@ -23,8 +23,6 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 
 <br>
 
-<br>
-
 <h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.72" target="_blank" rel="noopener noreferrer">
         v.0.0.72

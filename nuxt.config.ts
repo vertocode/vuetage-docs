@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ['~/assets/css/main.css', '@fortawesome/fontawesome-svg-core/styles.css'],
@@ -11,9 +12,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  build: {
-    transpile: ['vuetage']
-  },
   modules: [
     'nuxt-particles',
     '@nuxt/content'
@@ -24,7 +22,8 @@ export default defineNuxtConfig({
     },
   },
   plugins: [
-    '~/plugins/fontawesome.ts'
+    '~/plugins/fontawesome.ts',
+    '~/plugins/vuetage.ts'
   ],
   postcss: {
     plugins: {
