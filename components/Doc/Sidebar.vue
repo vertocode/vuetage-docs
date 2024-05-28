@@ -1,92 +1,31 @@
 <template>
-  <div class="sticky top-[3em] min-h-[91vh] max-h-80 scroll-auto">
+  <div class="sticky top-[3em] min-h-[91vh] max-h-80">
     <div
         v-if="generalStore.showSidebar"
-        class="duration-75 overflow-hidden op-0.1 flex flex-col justify-between h-auto p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg relative"
+        class="duration-75 op-0.1 flex flex-col justify-between h-auto p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg relative"
     >
-      <div class="space-y-1">
-        <NuxtLink to="/docs/get-started">
-          <div class="flex items-center overflow-hidden">
-            <h2 class="text-xl font-bold flex gap-2">
-              <svg class="mt-1 flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
-                <path d="M16 14V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 0 0 0-2h-1v-2a2 2 0 0 0 2-2ZM4 2h2v12H4V2Zm8 16H3a1 1 0 0 1 0-2h9v2Z"/>
-              </svg>
-              Get Started
-            </h2>
-          </div>
-        </NuxtLink>
-        <NuxtLink to="/docs/components">
-          <div class="flex items-center overflow-hidden mt-1">
-            <h2 class="text-xl font-bold flex gap-2">
-              <svg class="mt-1 flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                <path d="M18 0H6a2 2 0 0 0-2 2h14v12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Z"/>
-                <path d="M14 4H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM2 16v-6h12v6H2Z"/>
-              </svg>
-              Components
-            </h2>
-          </div>
-        </NuxtLink>
-
-        <div class="flex-1" v-if="$route.path.includes('/components')">
-          <ul class="text-sm">
-            <li v-show="!item?.disabled" class="rounded-sm pt-1" v-for="item in componentDataStore.items" :key="item.label">
-              <NuxtLink
-                  :to="item.route"
-                  class="flex items-center pl-2 space-x-3 rounded-md overflow-hidden"
-              >
-                <span class="font-bold">
-                  <font-awesome-icon icon="fa-solid fa-fire" class="mr-2"/>
-                  {{ item.label }}
-                </span>
-              </NuxtLink>
-                <ul v-if="$route.path.includes(item.route)">
-                  <li class="pl-4 pt-1 font-medium opacity-50 items-center break-all" v-for="props in item.props" :key="props.hash">
-                    <a :href="`${item.route}#${props.hash}`">
-                      <font-awesome-icon icon="fa-solid fa-sitemap" class="mr-2"/>
-                      {{ props.label }}
-                    </a>
-                  </li>
-                </ul>
-            </li>
-          </ul>
-        </div>
-
-        <NuxtLink to="/docs/theme">
-          <div class="flex items-center overflow-hidden mt-1">
-            <h2 class="text-xl font-bold flex gap-2">
-              <svg class="mt-1 flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z"/>
-                <path d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z"/>
-                <path d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z"/>
-              </svg>
-
-              Theme
-            </h2>
-          </div>
-        </NuxtLink>
-
-        <NuxtLink to="/docs/contribute">
-          <div class="flex items-center overflow-hidden mt-1">
-            <h2 class="text-xl font-bold flex gap-2">
-              <svg class="mt-1 flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                <path d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
-              </svg>
-              Contribute
-            </h2>
-          </div>
-        </NuxtLink>
-
-        <NuxtLink to="/docs/release-notes">
-          <div class="flex items-center overflow-hidden mt-1">
-            <h2 class="text-xl font-bold flex gap-2">
-              <font-awesome-icon class="mt-1 flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" icon="fa-solid fa-code-merge" />
-              Release Notes
-            </h2>
-          </div>
-        </NuxtLink>
+      <div>
+        <BaseGroup :show-dropdown="menu.items.length" :leftIcon="menu.leftIcon" :title="menu.label" v-for="(menu, index) in menuConfig" :key="`item-sidebar-${index}`">
+          <NuxtLink
+              class="text-center m-0 p-0"
+              v-for="(item, subIndex) in menu.items"
+              :key="`sub-item-sidebar-${subIndex}`"
+              :to="menu.route + ((item?.pathname || '') + (item?.hash || ''))"
+          >
+            <BaseItem
+                :leftIcon="item?.leftIcon"
+                :active="$route.path.includes(item?.pathname)"
+                style="padding: 4px 12px"
+            >
+                {{ item.label }}
+            </BaseItem>
+          </NuxtLink>
+        </BaseGroup>
       </div>
 
-      <div class="bg-slate-50 inset-y-1/2 inset-x-1/2 cursor-pointer hover:bg-slate-200 p-2 mb-10 flex justify-between" @click="generalStore.showSidebar = false">
+
+
+      <div class="bg-slate-50 inset-y-1/2 inset-x-1/2 cursor-pointer hover:bg-slate-200 p-2 flex justify-between" @click="generalStore.showSidebar = false">
         <font-awesome-icon class="mt-1 ml-2" icon="fa-solid fa-arrow-left"/>
         <span>Hide Sidebar</span>
       </div>
@@ -101,7 +40,57 @@
 
 <script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { BaseGroup, BaseItem } from 'vuetage'
 
-const componentDataStore = useComponentDataStore()
 const generalStore = useGeneralStore()
+const componentDataStore = useComponentDataStore()
+
+const menuConfig = computed(() => ([
+  {
+    label: 'Get Started',
+    leftIcon: 'fa fa-book',
+    route: '/docs/get-started',
+    items: [
+      { label: 'Installation', hash: '#installation' },
+      { label: 'Usage', hash: '#usage' },
+      { label: 'Full Example', hash: '#full-example' },
+    ],
+  },
+  ...(componentDataStore.value.items && componentDataStore.value.items?.length > 0 ? [
+    {
+      label: 'Components',
+      leftIcon: 'fa fa-table',
+      route: '/docs/components',
+      items: componentDataStore.value.items.filter(item => !item?.disabled).map(component => ({
+        label: component.label,
+        pathname: component.route
+      })),
+    },
+  ] : []),
+  {
+    label: 'Theme',
+    leftIcon: 'fa fa-palette',
+    route: '/docs/theme',
+    items: [
+      { label: 'Customization', hash: '#customization' },
+      { label: 'Dark Mode', hash: '#dark-mode' },
+    ],
+  },
+  {
+    label: 'Contribute',
+    leftIcon: 'fa fa-user-plus',
+    route: '/docs/contribute',
+    items: [
+      { label: 'Contributing', hash: '#contributing' },
+      { label: 'Development', hash: '#development' },
+    ],
+  },
+  {
+    label: 'Release Notes',
+    leftIcon: 'fa-solid fa-code-branch',
+    route: '/docs/release-notes',
+    items: [],
+  }
+]))
+
 </script>

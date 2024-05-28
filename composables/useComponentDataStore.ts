@@ -7,7 +7,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             label: 'BaseButton',
             componentName: 'BaseButton',
             description: 'The "BaseButton" is a versatile button component that serves as a foundation for creating different button styles. You can customize it as you need using the props.',
-            route: '/docs/components/base-button',
+            route: '/base-button',
             props: [
                 {
                     label: 'Variant',
@@ -82,7 +82,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             label: 'BaseTextField',
             componentName: 'BaseTextField',
             description: 'The "BaseTextField" is a useful component that can help you with validations, easily change of styles, state, icons, and more.',
-            route: '/docs/components/base-text-field',
+            route: '/base-text-field',
             props: [
                 {
                     label: 'Model Value',
@@ -171,7 +171,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             label: 'BaseSelect',
             componentName: 'BaseSelect',
             description: 'The "BaseSelect" is a useful component that can help you to use a custom select, easily change of styles, state, options, and more.',
-            route: '/docs/components/base-select',
+            route: '/base-select',
             props: [
                 {
                     label: 'Model Value',
@@ -245,7 +245,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseAutocomplete',
             description: 'The "BaseAutocomplete" component is a great component when we have a lot of options and we need to filter them, it is a great component to use in forms, and it is very customizable.',
             disabled: false,
-            route: '/docs/components/base-autocomplete',
+            route: '/base-autocomplete',
             props: [
                 {
                     label: 'Model Value',
@@ -319,7 +319,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseGroup',
             description: 'BaseGroup is a component that allows you to group elements with some predefined styles and props that can help you, it is been used in some components from Vuetage, and you can use to customize something that is using it as you need.',
             disabled: false,
-            route: '/docs/components/base-group',
+            route: '/base-group',
             props: [
                 {
                    label: 'Title',
@@ -358,7 +358,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseItem',
             description: 'BaseItem is a component that allows you to define item(s) with some predefined styles and props that can help you, it is been used in some components from Vuetage, and you can use to customize something that is using it as you need.',
             disabled: false,
-            route: '/docs/components/base-item',
+            route: '/base-item',
             props: [
                 {
                     label: 'Active',
@@ -412,7 +412,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseMenu',
             description: 'BaseMenu is a component that allows you to define a menu with some predefined styles and props that can help you, it is been used in some components from Vuetage, and you can use to customize something that is using it as you need.',
             disabled: false,
-            route: '/docs/components/base-menu',
+            route: '/base-menu',
             props: [
                 {
                     label: 'Introduction',
@@ -441,7 +441,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseCheckbox',
             description: '',
             disabled: true,
-            route: '/docs/components/base-checkbox',
+            route: '/base-checkbox',
             props: []
         },
         {
@@ -449,7 +449,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseSwitch',
             description: '',
             disabled: true,
-            route: '/docs/components/base-switch',
+            route: '/base-switch',
             props: []
         },
         {
@@ -457,7 +457,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseRadio',
             description: '',
             disabled: true,
-            route: '/docs/components/base-radio',
+            route: '/base-radio',
             props: []
         },
         {
@@ -465,7 +465,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseSpan',
             description: '',
             disabled: true,
-            route: '/docs/components/base-span',
+            route: '/base-span',
             props: []
         },
         {
@@ -473,7 +473,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseSpan',
             description: '',
             disabled: true,
-            route: '/docs/components/base-tooltip',
+            route: '/base-tooltip',
             props: []
         },
         {
@@ -481,7 +481,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseChip',
             description: '',
             disabled: true,
-            route: '/docs/components/base-chip',
+            route: '/base-chip',
             props: []
         },
         {
@@ -489,7 +489,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseModal',
             description: '',
             disabled: true,
-            route: '/docs/components/base-modal',
+            route: '/base-modal',
             props: []
         },
         {
@@ -497,7 +497,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseCard',
             description: '',
             disabled: true,
-            route: '/docs/components/base-card',
+            route: '/base-card',
             props: []
         },
         {
@@ -505,7 +505,7 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             componentName: 'BaseCodeWriter',
             description: '',
             disabled: true,
-            route: '/docs/components/base-code-writer',
+            route: '/base-code-writer',
             props: []
         },
     ]
