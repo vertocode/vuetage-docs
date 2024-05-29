@@ -22,8 +22,7 @@ export default defineNuxtConfig({
     },
   },
   plugins: [
-    '~/plugins/fontawesome.ts',
-    '~/plugins/vuetage.ts'
+    '~/plugins/fontawesome.ts'
   ],
   postcss: {
     plugins: {
