@@ -14,6 +14,20 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.75" target="_blank" rel="noopener noreferrer">
+        v.0.0.75
+    </a>
+</h2>
+
+- Add function `changeTheme` to change the theme styles of the library in runtime
+
+<br>
+
+This library is available on [npm](https://www.npmjs.com/package/vuetage).
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.73" target="_blank" rel="noopener noreferrer">
         v.0.0.73
     </a>

@@ -5,7 +5,18 @@
         class="duration-75 op-0.1 flex flex-col justify-between h-auto p-3 bg-slate-50 shadow whitespace-nowrap rounded-lg relative"
     >
       <div>
-        <BaseGroup :show-dropdown="menu.items.length" :leftIcon="menu.leftIcon" :title="menu.label" v-for="(menu, index) in menuConfig" :key="`item-sidebar-${index}`">
+        <BaseGroup
+            :show-dropdown="menu.items.length"
+            :leftIcon="menu.leftIcon"
+            :title="menu.label"
+            v-for="(menu, index) in menuConfig"
+            :key="`item-sidebar-${index}`"
+            @click="() => {
+              if (!menu.items.length) {
+                $router.push(menu.route)
+              }
+            }"
+        >
           <NuxtLink
               class="text-center m-0 p-0"
               v-for="(item, subIndex) in menu.items"
@@ -71,19 +82,13 @@ const menuConfig = computed(() => ([
     label: 'Theme',
     leftIcon: 'fa fa-palette',
     route: '/docs/theme',
-    items: [
-      { label: 'Customization', hash: '#customization' },
-      { label: 'Dark Mode', hash: '#dark-mode' },
-    ],
+    items: [],
   },
   {
     label: 'Contribute',
     leftIcon: 'fa fa-user-plus',
     route: '/docs/contribute',
-    items: [
-      { label: 'Contributing', hash: '#contributing' },
-      { label: 'Development', hash: '#development' },
-    ],
+    items: [],
   },
   {
     label: 'Release Notes',

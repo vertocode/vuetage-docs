@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { BaseTextField } from 'vuetage'
 
-const props = defineProps(BaseTextField.props)
+defineProps(BaseTextField.props)
 
 const myValue = ref('Hello World')
 

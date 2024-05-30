@@ -19,6 +19,6 @@ const router = useRouter()
 const maybeRedirect = (route: string, isDisabled: boolean) => {
   if (isDisabled) return
 
-  router.push(route)
+  router.push(`/docs/components${route}`)
 }
 </script>
