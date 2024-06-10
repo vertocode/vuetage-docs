@@ -80,7 +80,7 @@ const menuConfig = computed(() => ([
   ] : []),
   {
     label: 'Theme',
-    leftIcon: 'fa fa-palette',
+    leftIcon: 'fa fa-paint-brush',
     route: '/docs/theme',
     items: [],
   },
@@ -92,7 +92,7 @@ const menuConfig = computed(() => ([
   },
   {
     label: 'Release Notes',
-    leftIcon: 'fa-solid fa-code-branch',
+    leftIcon: 'fa fa-bookmark',
     route: '/docs/release-notes',
     items: [],
   }

@@ -315,6 +315,50 @@ export const useComponentDataStore = () => useState('componentsData', () => {
             ]
         },
         {
+            label: 'BaseCheckbox',
+            componentName: 'BaseCheckbox',
+            description: 'BaseCheckbox is a customizable checkbox component that allows you to use predefined styles or use your own styles to create a new checkbox easily with ready states to use.',
+            route: '/base-checkbox',
+            disabled: false,
+            props: [
+                {
+                    label: 'Default Checked',
+                    hash: 'default-checked',
+                    bind: {}
+                },
+                {
+                    label: 'Color',
+                    hash: 'color',
+                    bind: {}
+                },
+                {
+                    label: 'Size',
+                    hash: 'size',
+                    bind: {}
+                },
+                {
+                    label: 'Disabled',
+                    hash: 'disabled',
+                    bind: {}
+                },
+                {
+                    label: 'Custom Checkbox',
+                    hash: 'custom-checkbox',
+                    bind: {}
+                },
+                {
+                    label: 'Events',
+                    hash: 'events',
+                    bind: {}
+                },
+                {
+                    label: 'Slots',
+                    hash: 'slots',
+                    bind: {}
+                }
+            ]
+        },
+        {
             label: 'BaseGroup',
             componentName: 'BaseGroup',
             description: 'BaseGroup is a component that allows you to group elements with some predefined styles and props that can help you, it is been used in some components from Vuetage, and you can use to customize something that is using it as you need.',
@@ -435,14 +479,6 @@ export const useComponentDataStore = () => useState('componentsData', () => {
                     bind: {}
                 }
             ]
-        },
-        {
-            label: 'BaseCheckbox (Labs)',
-            componentName: 'BaseCheckbox',
-            description: '',
-            disabled: true,
-            route: '/base-checkbox',
-            props: []
         },
         {
             label: 'BaseSwitch (Labs)',
