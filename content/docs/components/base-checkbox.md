@@ -151,5 +151,43 @@ The BaseCheckbox component emits the following events:
 
 Need other events? You can [contact me](/contact) or [contribute](/docs/contribute).
 
+<br>
 
+### Slots
+
+You can customize the checkbox using the slots `checkmark`, `label`, and `checkIcon`.
+
+<br>
+
+#### Checkmark
+
+You can customize the checkmark using the `checkmark` slot. This slot is a scoped slot that receives the `checked` prop as a boolean.
+
+<br>
+
+```vue
+<BaseCheckbox defaultChecked>
+    <template #checkmark="{ checked }">
+        <span>{{ checked ? '✅' : '❌' }}</span>
+    </template>
+</BaseCheckbox>
+```
+
+::base-checkbox-checkmark
+::
+
+<br>
+
+#### Label
+
+You can customize the label using the `label` slot. This slot is a scoped slot that receives the `checked` prop as a boolean.
+
+<br>
+
+```vue
+<BaseCheckbox defaultChecked>
+    <template #label="{ checked }">
+        <span>{{ checked ? 'Checked' : 'Unchecked' }}</span>
+    </template>
+</BaseCheckbox>
 
