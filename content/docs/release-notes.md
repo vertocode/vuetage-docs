@@ -14,6 +14,16 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.78" target="_blank" rel="noopener noreferrer">
+        v.0.0.78
+    </a>
+</h2>
+
+- Add more props, slots, and events for `BaseCheckbox` component
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.76" target="_blank" rel="noopener noreferrer">
         v.0.0.76
     </a>

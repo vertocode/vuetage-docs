@@ -118,6 +118,19 @@ You can disable the checkbox using the `disabled` prop. The default value is `fa
 ::
 
 <br>
+
+### Label
+
+You can add a label to the checkbox using the `label` prop. The default value is an empty string.
+
+```vue
+<BaseCheckbox label="Label" />
+```
+
+::base-checkbox{code="Label" label="Label"}
+::
+
+<br>
 <br>
 
 ### Events
@@ -159,7 +172,7 @@ You can customize the checkbox using the slots `checkmark`, `label`, and `checkI
 
 <br>
 
-#### Checkmark
+#### checkmark
 
 You can customize the checkmark using the `checkmark` slot. This slot is a scoped slot that receives the `checked` prop as a boolean.
 
@@ -178,7 +191,7 @@ You can customize the checkmark using the `checkmark` slot. This slot is a scope
 
 <br>
 
-#### Label
+#### label
 
 You can customize the label using the `label` slot. This slot is a scoped slot that receives the `checked` prop as a boolean.
 
@@ -190,4 +203,26 @@ You can customize the label using the `label` slot. This slot is a scoped slot t
         <span>{{ checked ? 'Checked' : 'Unchecked' }}</span>
     </template>
 </BaseCheckbox>
+```
+
+<br>
+
+#### checkIcon
+
+You can customize the check icon using the `checkIcon` slot. This slot is a scoped slot that receives the `checked` prop as a boolean.
+
+<br>
+
+```vue
+<BaseCheckbox defaultChecked>
+    <template #checkIcon="{ checked }">
+        <i :class="checked ? 'fas fa-check' : 'fas fa-times'"></i>
+    </template>
+</BaseCheckbox>
+```
+
+<br>
+
+
+
 
