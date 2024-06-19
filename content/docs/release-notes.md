@@ -14,6 +14,18 @@ This library is available on [npm](https://www.npmjs.com/package/vuetage).
 <br>
 
 <h2>
+    <a href="https://www.npmjs.com/package/vuetage/v/0.0.79" target="_blank" rel="noopener noreferrer">
+        v.0.0.79
+    </a>
+</h2>
+
+- Add wrong behavior of placeholder in basetextfield when we dont have a label
+
+<br>
+
+<br>
+
+<h2>
     <a href="https://www.npmjs.com/package/vuetage/v/0.0.78" target="_blank" rel="noopener noreferrer">
         v.0.0.78
     </a>

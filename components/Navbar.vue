@@ -2,12 +2,12 @@
   <header class="fixed border inset-x-0 top-0 bg-slate-50 z-50">
     <div v-show="generalStore.showHeader">
       <nav class="flex items-center justify-between p-2 ml-8 lg:px-6" aria-label="Global">
-        <div class="flex gap-4 lg:flex-1 justify-between w-full mr-5">
-          <NuxtLink to="/" class="-my-1.5 py-1.5 z-50">
-            <img class="h-8 w-auto" src="/logo.png" alt="logo" />
+        <div class="flex gap-4 lg:flex-1 justify-between w-full">
+          <NuxtLink to="/">
+            <img class="h-10 mt-1 w-auto" src="/logo.png" alt="logo" />
           </NuxtLink>
-          <div class="lg:mr-20">
-            <QuickSearch />
+          <div class="mr-12">
+            <QuickSearch  />
           </div>
         </div>
         <div class="flex lg:hidden">
@@ -17,7 +17,7 @@
           </button>
         </div>
         <div class="hidden lg:flex lg:gap-x-12">
-          <NuxtLink v-for="item in navigation" :key="item.name" :to="item.route" class="z-50 text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</NuxtLink>
+          <NuxtLink v-for="item in menuConfig" :key="item.name" :to="item.route" class="z-50 text-sm font-semibold leading-6 text-gray-900">{{ item.label }}</NuxtLink>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <NuxtLink to="https://vuetage-components.vertocode.com" target="_blank" class="z-50 text-sm font-semibold leading-6 text-gray-900 cursor-pointer">Storybook Components <span aria-hidden="true">&rarr;</span></NuxtLink>
@@ -40,15 +40,34 @@
             <div class="-my-6 divide-y divide-gray-500/10 h-full">
               <div class="py-10 flex flex-col justify-between h-full">
                 <div>
-                  <div class="flex flex-col py-2" v-for="item in navigation" :key="item.name">
-                    <h3 @click="redirect(item.route)" class="block rounded-lg text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 cursor-pointer">{{ item.name }}</h3>
-                    <ul v-if="item?.subItems?.length">
-                      <li class="ml-3 text-base op-50 cursor-pointer block hover:bg-gray-50" v-for="subItem in item.subItems" @click="redirect(subItem.route)">
-                        <font-awesome-icon icon="fa-solid fa-fire" class="mr-2"/>
-                        <span>{{ subItem.name }}</span>
-                      </li>
-                    </ul>
-                  </div>
+                    <BaseGroup
+                        :show-dropdown="menu.items.length"
+                        :leftIcon="menu.leftIcon"
+                        :title="menu.label"
+                        v-for="(menu, index) in menuConfig"
+                        :key="`item-sidebar-${index}`"
+                        @click="() => {
+                          if (!menu.items.length) {
+                            redirect(menu.route)
+                          }
+                        }"
+                        >
+                      <NuxtLink
+                          class="text-center m-0 p-0"
+                          v-for="(item, subIndex) in menu.items"
+                          :key="`sub-item-sidebar-${subIndex}`"
+                          :to="menu.route + ((item?.pathname || '') + (item?.hash || ''))"
+                          @click="() => mobileMenuOpen = false"
+                        >
+                        <BaseItem
+                            :leftIcon="item?.leftIcon"
+                            :active="$route.path.includes(item?.pathname)"
+                            style="padding: 4px 12px"
+                          >
+                          {{ item.label }}
+                        </BaseItem>
+                      </NuxtLink>
+                    </BaseGroup>
                 </div>
                 <div class="flex flex-col gap-3">
                   <NuxtLink to="https://github.com/vertocode/vuetage" target="_blank" class="z-50 text-sm font-semibold leading-6 text-gray-900 cursor-pointer">Github <span aria-hidden="true">&rarr;</span></NuxtLink>
@@ -82,27 +101,56 @@
 </template>
 
 <script setup>
-import {Dialog, DialogPanel} from "@headlessui/vue";
 import {Bars3Icon, XMarkIcon} from "@heroicons/vue/24/outline";
 import { ref } from 'vue'
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {BaseGroup, BaseItem} from "vuetage";
 
 const router = useRouter()
 const generalStore = useGeneralStore()
-const componentStore = useComponentDataStore()
+const componentDataStore = useComponentDataStore()
 
-const components = computed(() => componentStore.value.items?.filter(item => !item.disabled).map(item => ({ name: item.label, route: item.route })))
-
-const navigation = computed(() => [
-  { name: 'Get Started', route: '/docs/get-started' },
+const menuConfig = computed(() => ([
   {
-    name: 'Components',
-    route: '/docs/components',
-    subItems: components.value
+    label: 'Get Started',
+    leftIcon: 'fa fa-book',
+    route: '/docs/get-started',
+    items: [
+      { label: 'Installation', hash: '#installation' },
+      { label: 'Usage', hash: '#usage' },
+      { label: 'Full Example', hash: '#full-example' },
+    ],
   },
-  { name: 'Contribute', route: '/docs/contribute' },
-  { name: 'Contact', route: '/contact' },
-])
+  ...(componentDataStore.value.items && componentDataStore.value.items?.length > 0 ? [
+    {
+      label: 'Components',
+      leftIcon: 'fa fa-table',
+      route: '/docs/components',
+      items: componentDataStore.value.items.filter(item => !item?.disabled).map(component => ({
+        label: component.label,
+        pathname: component.route
+      })),
+    },
+  ] : []),
+  {
+    label: 'Theme',
+    leftIcon: 'fa fa-paint-brush',
+    route: '/docs/theme',
+    items: [],
+  },
+  {
+    label: 'Contribute',
+    leftIcon: 'fa fa-user-plus',
+    route: '/docs/contribute',
+    items: [],
+  },
+  {
+    label: 'Release Notes',
+    leftIcon: 'fa fa-bookmark',
+    route: '/docs/release-notes',
+    items: [],
+  }
+]))
 const mobileMenuOpen = ref(false)
 
 const redirect = (route) => {
