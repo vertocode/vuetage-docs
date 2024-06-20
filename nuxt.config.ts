@@ -12,6 +12,9 @@ export default defineNuxtConfig({
       }
     }
   },
+  build: {
+    transpile: ['vuetage']
+  },
   modules: [
     'nuxt-particles',
     '@nuxt/content'
